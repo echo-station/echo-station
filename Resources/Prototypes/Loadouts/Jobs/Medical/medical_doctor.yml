@@ -34,9 +34,9 @@
 - type: loadout
   id: SeniorPhysicianBeret
   equipment: SeniorPhysicianBeret
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorPhysician
+  #effects: # Delta V - Separate senior roles
+  #- !type:GroupLoadoutEffect
+  #  proto: SeniorPhysician
 
 - type: startingGear
   id: SeniorPhysicianBeret
@@ -132,9 +132,9 @@
 - type: loadout
   id: SeniorPhysicianJumpsuit
   equipment: SeniorPhysicianJumpsuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorPhysician
+  #effects: # Delta V - Separate senior roles
+  #- !type:GroupLoadoutEffect
+  #  proto: SeniorPhysician
 
 - type: startingGear
   id: SeniorPhysicianJumpsuit
@@ -144,9 +144,9 @@
 - type: loadout
   id: SeniorPhysicianJumpskirt
   equipment: SeniorPhysicianJumpskirt
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorPhysician
+  #effects: # Delta V - Separate senior roles
+  #- !type:GroupLoadoutEffect
+  #  proto: SeniorPhysician
 
 - type: startingGear
   id: SeniorPhysicianJumpskirt
@@ -221,9 +221,9 @@
 - type: loadout
   id: SeniorPhysicianLabCoat
   equipment: SeniorPhysicianLabCoat
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorPhysician
+  #effects: # Delta V - Separate senior roles
+  #- !type:GroupLoadoutEffect
+  #  proto: SeniorPhysician
 
 - type: startingGear
   id: SeniorPhysicianLabCoat
@@ -253,9 +253,9 @@
 - type: loadout
   id: SeniorPhysicianPDA
   equipment: SeniorPhysicianPDA
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorPhysician
+  #effects: # Delta V - Separate senior roles
+  #- !type:GroupLoadoutEffect
+  #  proto: SeniorPhysician
 
 - type: startingGear
   id: SeniorPhysicianPDA

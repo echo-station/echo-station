@@ -137,9 +137,9 @@
 - type: loadout
   id: SeniorOfficerJumpsuit
   equipment: SeniorOfficerJumpsuit
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+  #effects: # Delta V - Separate senior roles
+  #- !type:GroupLoadoutEffect
+  #  proto: SeniorOfficer
 
 - type: startingGear
   id: SeniorOfficerJumpsuit
@@ -149,7 +149,7 @@
 #- type: loadout # DeltaV
 #  id: SeniorOfficerJumpskirt
 #  equipment: SeniorOfficerJumpskirt
-#  effects:
+#  effects:# Delta V - Separate senior roles
 #  - !type:GroupLoadoutEffect
 #    proto: SeniorOfficer
 
@@ -310,9 +310,9 @@
 - type: loadout
   id: SeniorOfficerPDA
   equipment: SeniorOfficerPDA
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+  #effects: # Delta V - Separate senior roles
+  #- !type:GroupLoadoutEffect
+  #  proto: SeniorOfficer
 
 - type: startingGear
   id: SeniorOfficerPDA

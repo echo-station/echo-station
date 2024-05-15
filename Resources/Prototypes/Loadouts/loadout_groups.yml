@@ -769,7 +769,7 @@
   - StationEngineerHardhatYellow
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
-  - SeniorEngineerBeret
+  #- SeniorEngineerBeret # Delta V - Separate senior roles
 
 - type: loadoutGroup # DeltaV
   id: StationEngineerNeck
@@ -785,8 +785,8 @@
   - StationEngineerJumpsuit
   - StationEngineerJumpskirt
   - StationEngineerHazardsuit
-  - SeniorEngineerJumpsuit
-  - SeniorEngineerJumpskirt
+  #- SeniorEngineerJumpsuit # Delta V - Separate senior roles
+  #- SeniorEngineerJumpskirt # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: StationEngineerBackpack
@@ -816,7 +816,7 @@
   name: loadout-group-station-engineer-id
   loadouts:
   - StationEngineerPDA
-  - SeniorEngineerPDA
+  #- SeniorEngineerPDA # Delta V - Separate senior roles
 
 - type: loadoutGroup # DeltaV
   id: AtmosphericTechnicianNeck
@@ -913,7 +913,7 @@
   loadouts:
   - RoboticistCap
   - SkullBandana
-  - ScientificBeret
+  #- ScientificBeret # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: ScientistNeck
@@ -931,8 +931,8 @@
   - ScientistJumpskirt
   - RoboticistJumpsuit
   - RoboticistJumpskirt
-  - SeniorResearcherJumpsuit
-  - SeniorResearcherJumpskirt
+  #- SeniorResearcherJumpsuit # Delta V - Separate senior roles
+  #- SeniorResearcherJumpskirt # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: ScientistBackpack
@@ -951,7 +951,7 @@
   - ScienceLabCoat
   - RoboticistLabCoat # DeltaV
   - ScienceWintercoat
-  - SeniorResearcherLabCoat
+  #- SeniorResearcherLabCoat # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: ScientistGloves
@@ -974,7 +974,7 @@
   name: loadout-group-scientist-id
   loadouts:
   - ScientistPDA
-  - SeniorResearcherPDA
+  #- SeniorResearcherPDA # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: ResearchAssistantJumpsuit
@@ -1088,8 +1088,8 @@
   - SecurityJumpskirtGrey
   - SecurityJumpsuitBlue # DeltaV
   - SecurityJumpskirtBlue # DeltaV
-  - SeniorOfficerJumpsuit
-#  - SeniorOfficerJumpskirt # DeltaV
+  #- SeniorOfficerJumpsuit # Delta V - Separate senior roles
+  #- SeniorOfficerJumpskirt # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: SecurityBackpack
@@ -1131,7 +1131,7 @@
   name: loadout-group-security-id
   loadouts:
   - SecurityPDA
-  - SeniorOfficerPDA
+  #- SeniorOfficerPDA # Delta V - Separate senior roles
 
 - type: loadoutGroup # DeltaV
   id: SecurityNeck
@@ -1250,8 +1250,8 @@
   minLimit: 0
   loadouts:
   - MedicalBeret
-  - SeniorPhysicianBeret
   - MedicalHeadMirror
+  #- SeniorPhysicianBeret # Delta V - Separate senior roles
   - BlueSurgeryCap
   - GreenSurgeryCap
   - PurpleSurgeryCap
@@ -1271,8 +1271,8 @@
   loadouts:
   - MedicalDoctorJumpsuit
   - MedicalDoctorJumpskirt
-  - SeniorPhysicianJumpsuit
-  - SeniorPhysicianJumpskirt
+  #- SeniorPhysicianJumpsuit # Delta V - Separate senior roles
+  #- SeniorPhysicianJumpskirt # Delta V - Separate senior roles
   - MedicalBlueScrubs
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
@@ -1284,7 +1284,7 @@
   loadouts:
   - RegularLabCoat
   - MedicalDoctorWintercoat
-  - SeniorPhysicianLabCoat
+  #- SeniorPhysicianLabCoat # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: MedicalBackpack
@@ -1306,7 +1306,7 @@
   name: loadout-group-medical-doctor-id
   loadouts:
   - MedicalDoctorPDA
-  - SeniorPhysicianPDA
+  #- SeniorPhysicianPDA # Delta V - Separate senior roles
 
 - type: loadoutGroup
   id: MedicalGloves

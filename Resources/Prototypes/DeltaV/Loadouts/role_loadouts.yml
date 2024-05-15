@@ -12,6 +12,7 @@
   - Trinkets
 
 # Security
+## Brig medic
 - type: roleLoadout
   id: JobBrigmedic
   groups:
@@ -23,7 +24,7 @@
   - SecurityShoes
   - MedicalGloves
   - Trinkets
-  
+
 # Justice
 - type: roleLoadout
   id: JobChiefJustice
@@ -36,7 +37,7 @@
   - ChiefJusticeShoes
   - Glasses
   - Trinkets
-  
+
 - type: roleLoadout
   id: JobClerk
   groups:
@@ -47,12 +48,67 @@
   - ClerkShoes
   - Glasses
   - Trinkets
-  
+
 - type: roleLoadout
   id: JobProsecutor
   groups:
   - ProsecutorJumpsuit
   - ProsecutorNeck
   - LawyerBackpack
+  - Glasses
+  - Trinkets
+
+## Senior Officer
+- type: roleLoadout
+  id: JobSeniorOfficer
+  groups:
+  - SecurityHead
+  - SeniorOfficerJumpsuit
+  - SecurityBackpack
+  - SecurityOuterClothing
+  - SecurityShoes
+  - SecurityBelt
+  - Trinkets
+
+# Engineering
+## Senior Engineer
+- type: roleLoadout
+  id: JobSeniorEngineer
+  groups:
+  - SeniorEngineerHead
+  - SeniorEngineerJumpsuit
+  - StationEngineerBackpack
+  - StationEngineerOuterClothing
+  - StationEngineerShoes
+  - Trinkets
+
+# Epistemics
+## Senior Scientist
+- type: roleLoadout
+  id: JobSeniorResearcher
+  groups:
+  - SeniorScientistHead
+  - ScientistNeck
+  - SeniorScientistJumpsuit
+  - ScientistBackpack
+  - SeniorScientistOuterClothing
+  - ScientistGloves
+  - ScientistShoes
+  - Glasses
+  - Trinkets
+
+# Medical
+## Senior Physician
+
+- type: roleLoadout
+  id: JobSeniorPhysician
+  groups:
+  - SeniorPhysicianHead
+  - MedicalMask
+  - SeniorPhysicianJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - SeniorPhysicianOuterClothing
+  - MedicalShoes
   - Glasses
   - Trinkets
