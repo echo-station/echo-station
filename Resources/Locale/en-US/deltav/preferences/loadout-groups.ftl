@@ -45,6 +45,10 @@ loadout-group-chemist-neck = Chemist neck
 
 loadout-group-medical-doctor-neck = Medical Doctor neck
 
+loadout-group-senior-physician-head = Senior Physician head
+loadout-group-senior-physician-jumpsuit = Senior Physician jumpsuit
+loadout-group-senior-physician-outerclothing = Senior Physician outer clothing
+
 # Miscellaneous
 loadout-group-scarfs = Scarf
 
@@ -56,10 +60,16 @@ loadout-group-mantis-outerclothing = Mantis outer clothing
 loadout-group-mantis-shoes = Mantis shoes
 loadout-group-mantis-gloves = Mantis gloves
 
+loadout-group-senior-scientist-head = Senior Researcher head
+loadout-group-senior-scientist-jumpsuit = Senior Researcher jumpsuit
+loadout-group-senior-scientist-outerclothing = Senior Researcher outer clothing
+
 # Engineering
 loadout-group-station-engineer-neck = Station Engineer neck
-
 loadout-group-atmospheric-technician-neck = Atmospheric Technician neck
+
+loadout-group-senior-engineer-head = Senior Engineer head
+loadout-group-senior-engineer-jumpsuit = Senior Engineer jumpsuit
 
 # Security
 loadout-group-security-eyes = Security eyes
@@ -74,6 +84,8 @@ loadout-group-brig-medic-outerclothing = Corpsman outer clothing
 
 loadout-group-prison-guard-head = Prison Guard head
 loadout-group-prison-guard-jumpsuit = Prison Guard jumpsuit
+
+loadout-group-senior-officer-jumpsuit = Senior Officer jumpsuit
 
 # Justice
 loadout-group-chiefjustice-head = Chief Justice head
