@@ -4,7 +4,41 @@
   antagonist: true
   setPreference: false
   objective: roles-antag-space-ninja-objective
+<<<<<<< HEAD
   requirements:
   - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
     time: 259200 # DeltaV - 72 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+=======
+  guides: [ SpaceNinja ]
+
+#Ninja Gear
+- type: startingGear
+  id: SpaceNinjaGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNinja
+    back: ClothingBackpackSatchel
+    mask: ClothingMaskNinja
+    head: ClothingHeadHelmetSpaceNinja
+    eyes: ClothingEyesVisorNinja
+    gloves: ClothingHandsGlovesSpaceNinja
+    outerClothing: ClothingOuterSuitSpaceNinja
+    shoes: ClothingShoesSpaceNinja
+    id: AgentIDCard
+    ears: ClothingHeadsetGrey
+    pocket1: SpiderCharge
+    pocket2: PinpointerStation
+    belt: EnergyKatana
+    suitstorage: OxygenTankFilled
+  inhand:
+    - JetpackBlackFilled
+  storage:
+    back: # belt holds katana so satchel has the tools for sabotaging things
+    - BoxSurvival
+    - Crowbar
+    - Wrench
+    - Screwdriver
+    - Wirecutter
+    - Welder
+    - Multitool
+>>>>>>> e7f2ae52ab (Give jobs & antags prototypes a guide field (#28614))
