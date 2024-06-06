@@ -11,6 +11,7 @@
     department: Command
     time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+  guides: [ Revolutionaries ]
 
 - type: antag
   id: Rev
@@ -18,3 +19,4 @@
   antagonist: true
   setPreference: false
   objective: roles-antag-rev-objective
+  guides: [ Revolutionaries ]

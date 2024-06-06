@@ -17,6 +17,7 @@
     department: Security
     time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+  guides: [ NuclearOperatives ]
 
 - type: antag
   id: NukeopsMedic
@@ -31,6 +32,7 @@
     department: Medical
     time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+  guides: [ NuclearOperatives ]
 
 - type: antag
   id: NukeopsCommander
@@ -48,3 +50,44 @@
     department: Command
     time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+  guides: [ NuclearOperatives ]
+
+#Nuclear Operative Commander Gear
+- type: startingGear
+  id: SyndicateCommanderGearFull
+  parent: SyndicateOperativeGearFull
+  equipment:
+    neck: SyndicateWhistle
+    outerClothing: ClothingOuterHardsuitSyndieCommander
+  inhand:
+    - NukeOpsDeclarationOfWar
+
+#Nuclear Operative Medic Gear
+- type: startingGear
+  id: SyndicateOperativeMedicFull
+  parent: SyndicateOperativeGearFull
+  equipment:
+    eyes: ClothingEyesHudSyndicateAgent
+    outerClothing: ClothingOuterHardsuitSyndieMedic
+    shoes: ClothingShoesBootsMagSyndie
+    id: SyndiAgentPDA
+    belt: ClothingBeltMilitaryWebbingMedFilled
+  storage:
+    back:
+    - SyndiHypo
+    - BoxSurvivalSyndicate
+    - SawAdvanced
+    - Cautery
+    - CombatKnife
+    - WeaponPistolViper
+    - PinpointerSyndicateNuclear
+    - HandheldHealthAnalyzer
+    - CombatMedipen
+    - DeathAcidifierImplanter
+
+#Lone Operative Gear
+- type: startingGear
+  id: SyndicateLoneOperativeGearFull
+  parent: SyndicateOperativeGearFull
+  equipment:
+    pocket2: BaseUplinkRadio60TC

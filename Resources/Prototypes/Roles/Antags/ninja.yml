@@ -4,12 +4,10 @@
   antagonist: true
   setPreference: false
   objective: roles-antag-space-ninja-objective
-<<<<<<< HEAD
   requirements:
   - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
     time: 259200 # DeltaV - 72 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
-=======
   guides: [ SpaceNinja ]
 
 #Ninja Gear
@@ -41,4 +39,3 @@
     - Wirecutter
     - Welder
     - Multitool
->>>>>>> e7f2ae52ab (Give jobs & antags prototypes a guide field (#28614))
