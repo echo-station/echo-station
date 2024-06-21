@@ -204,6 +204,7 @@
         - SimpleHostile
 #    - type: GhostRole #DeltaV - all slimes neutral when ghost role
 #      description: ghost-role-information-angry-slimes-description
+#      rules: ghost-role-information-angry-slimes-rules
 #      raffle:
 #        settings: short
 
@@ -241,6 +242,7 @@
         - SimpleHostile
 #    - type: GhostRole #DeltaV - all slimes neutral when ghost role
 #      description: ghost-role-information-angry-slimes-description
+#      rules: ghost-role-information-angry-slimes-rules
 #      raffle:
 #        settings: short
 
@@ -278,5 +280,6 @@
         - SimpleHostile
 #    - type: GhostRole #DeltaV - all slimes neutral when ghost role
 #      description: ghost-role-information-angry-slimes-description
+#      rules: ghost-role-information-angry-slimes-rules
 #      raffle:
 #        settings: short
