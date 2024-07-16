@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
+using Content.Shared.Alert;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.CCVar;
 using Content.Shared.Friction;
@@ -25,6 +26,7 @@ using Robust.Shared.Utility;
 using PullableComponent = Content.Shared.Movement.Pulling.Components.PullableComponent;
 using Content.Shared.StepTrigger.Components; // Delta V-NoShoesSilentFootstepsComponent
 
+
 namespace Content.Shared.Movement.Systems
 {
     /// <summary>
@@ -33,6 +35,7 @@ namespace Content.Shared.Movement.Systems
     /// </summary>
     public abstract partial class SharedMoverController : VirtualController
     {
+        [Dependency] private   readonly AlertsSystem _alerts = default!;
         [Dependency] private   readonly IConfigurationManager _configManager = default!;
         [Dependency] protected readonly IGameTiming Timing = default!;
         [Dependency] private   readonly IMapManager _mapManager = default!;
@@ -59,6 +62,9 @@ namespace Content.Shared.Movement.Systems
         protected EntityQuery<TransformComponent> XformQuery;
         protected EntityQuery<CanMoveInAirComponent> CanMoveInAirQuery;
         protected EntityQuery<NoRotateOnMoveComponent> NoRotateQuery;
+
+        [ValidatePrototypeId<AlertPrototype>]
+        public const string WalkingAlert = "Walking";
 
         /// <summary>
         /// <see cref="CCVars.StopSpeed"/>
@@ -159,6 +165,7 @@ namespace Content.Shared.Movement.Systems
             var weightless = _gravity.IsWeightless(physicsUid, physicsComponent, xform);
             var (walkDir, sprintDir) = GetVelocityInput(mover);
             var touching = false;
+
 
             // Handle wall-pushes.
             if (weightless)
@@ -278,6 +285,15 @@ namespace Content.Shared.Movement.Systems
 
             // Ensures that players do not spiiiiiiin
             PhysicsSystem.SetAngularVelocity(physicsUid, 0, body: physicsComponent);
+        }
+
+        public void ShowWalkingAlert(EntityUid player, bool walking)
+        {
+            if (HasComp<CanWalkComponent>(player))
+            {
+
+                _alerts.ShowAlert(player, WalkingAlert, walking ? (short) 0 : (short) 1);
+            }
         }
 
         public void LerpRotation(EntityUid uid, InputMoverComponent mover, float frameTime)
