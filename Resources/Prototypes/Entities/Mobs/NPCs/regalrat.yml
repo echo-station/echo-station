@@ -123,6 +123,7 @@
     attributes:
       gender: male
   - type: PotentialPsionic # Nyano
+  - type: CanWalk
 
 - type: entity
   id: MobRatKingBuff

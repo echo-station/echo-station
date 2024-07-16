@@ -221,6 +221,7 @@
     visMask:
       - PsionicInvisibility
       - Normal
+  - type: CanWalk
 
 - type: entity
   abstract: true
