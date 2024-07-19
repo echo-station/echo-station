@@ -36,7 +36,7 @@
   id: DeathSquad
   parent: EventHumanoidMindShielded
   randomizeName: false
-  components:        
+  components:
     - type: GhostRole
       name: ghost-role-information-Death-Squad-name
       description: ghost-role-information-Death-Squad-description
@@ -487,11 +487,7 @@
   id: CentcomOfficial
   parent: EventHumanoidMindShielded
   components:
-    - type: GhostRole
-      name: ghost-role-information-centcom-official-name
-      description: ghost-role-information-centcom-official-description
-      raffle:
-        settings: default
+    - type: MindShield
     - type: Loadout
       prototypes: [ CentcomGear ]
 
@@ -533,7 +529,7 @@
     - type: RandomHumanoidAppearance
       randomizeName: false
     - type: NukeOperative
-    - type: PsionicBonusChance #Nyano - Summary: makes more likely to be psionic. 
+    - type: PsionicBonusChance #Nyano - Summary: makes more likely to be psionic.
       multiplier: 7
       warn: false
 
