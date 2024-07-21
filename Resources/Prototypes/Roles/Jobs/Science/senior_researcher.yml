@@ -18,8 +18,6 @@
 - type: startingGear
   id: SeniorResearcherGear
   equipment:
-    head: ClothingHeadHatBeretRND
-    outerClothing: ClothingOuterCoatLabSeniorResearcher
     id: SeniorResearcherPDA
     ears: ClothingHeadsetScience
     innerClothingSkirt: ClothingUniformJumpskirtSeniorResearcher
