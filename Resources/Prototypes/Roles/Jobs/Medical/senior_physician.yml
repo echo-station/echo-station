@@ -26,8 +26,6 @@
 - type: startingGear
   id: SeniorPhysicianGear
   equipment:
-    head: ClothingHeadHatBeretSeniorPhysician
-    outerClothing: ClothingOuterCoatLabSeniorPhysician
     id: SeniorPhysicianPDA
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
