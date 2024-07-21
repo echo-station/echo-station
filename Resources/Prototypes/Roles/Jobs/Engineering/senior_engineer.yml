@@ -26,7 +26,6 @@
 - type: startingGear
   id: SeniorEngineerGear
   equipment:
-    head: ClothingHeadHatBeretEngineering
     id: SeniorEngineerPDA
     eyes: ClothingEyesGlassesMeson
     belt: ClothingBeltUtilityEngineering
