@@ -70,6 +70,7 @@ loadout-group-atmospheric-technician-neck = Atmospheric Technician neck
 
 loadout-group-senior-engineer-head = Senior Engineer head
 loadout-group-senior-engineer-jumpsuit = Senior Engineer jumpsuit
+loadout-group-senior-engineer-outerclothing = Senior Engineer outer clothing
 
 # Security
 loadout-group-security-eyes = Security eyes

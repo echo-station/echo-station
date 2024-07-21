@@ -211,7 +211,7 @@
   name: loadout-group-senior-officer-jumpsuit
   loadouts:
   - SeniorOfficerJumpsuit
-  - SeniorOfficerJumpskirt
+#  - SeniorOfficerJumpskirt
   - SecurityJumpsuit
   - SecurityJumpskirt
   - SecurityJumpsuitGrey
@@ -244,14 +244,6 @@
   loadouts:
   - SeniorEngineerOuterVest
   - SeniorEngineerWintercoat
-
-- type: loadoutGroup
-  id: SeniorEngineerShoes
-  name: loadout-group-senior-engineer-shoes
-  minLimit: 0
-  loadouts:
-  - WorkBoots
-  - EngineeringWinterBoots
 
 # Epistemics
 ## Senior Researcher
@@ -301,7 +293,7 @@
   name: loadout-group-senior-physician-jumpsuit
   loadouts:
   - SeniorPhysicianJumpsuit
-  - SeniorPhysicianJumpskir
+  - SeniorPhysicianJumpskirt
   - MedicalBlueScrubs
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
