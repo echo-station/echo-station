@@ -15,7 +15,6 @@
       time: 36000 # 10 hours
     - !type:OverallPlaytimeRequirement
       time: 90000 # 25 hours
-  whitelisted: true
   weight: 20
   startingGear: CJGear
   icon: "JobIconChiefJustice"
