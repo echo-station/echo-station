@@ -31,6 +31,7 @@
             ServiceWorker: [ 2, 2 ]
           #engineering
             ChiefEngineer: [ 1, 1 ]
+            SeniorEngineer: [ 1, 2 ]
             AtmosphericTechnician: [ 1, 2 ]
             StationEngineer: [ 2, 4 ]
             TechnicalAssistant: [ 3, 5 ]
@@ -43,12 +44,14 @@
             ChiefMedicalOfficer: [ 1, 1 ]
             Chemist: [ 1, 2 ]
             Paramedic: [ 1, 2 ]
+            SeniorPhysician: [ 1, 2 ]
             MedicalDoctor: [ 2, 4 ]
             MedicalIntern: [ 2, 4 ]
           #science
             ResearchDirector: [ 1, 1 ]
             Chaplain: [ 1, 1 ]
             ForensicMantis: [ 1, 1 ]
+            SeniorResearcher: [ 1, 2 ]
             Scientist: [ 2, 3 ]
             ResearchAssistant: [ 2, 4 ]
             Borg: [ 1, 2 ]
@@ -57,6 +60,7 @@
             Warden: [ 1, 1 ]
             Detective: [ 1, 1 ]
             Brigmedic: [ 1, 1 ]
+            SeniorOfficer: [ 1, 2 ]
             SecurityOfficer: [ 2, 4 ]
             SecurityCadet: [ 2, 4 ]
             Prisoner: [ 1, 2 ] # :^)
