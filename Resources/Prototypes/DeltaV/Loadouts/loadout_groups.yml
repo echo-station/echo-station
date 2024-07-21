@@ -237,14 +237,6 @@
   - SeniorEngineerJumpsuit
   - SeniorEngineerJumpskirt
 
-- type: loadoutGroup
-  id: SeniorEngineerOuterClothing
-  name: loadout-group-senior-engineer-outerclothing
-  minLimit: 0
-  loadouts:
-  - SeniorEngineerOuterVest
-  - SeniorEngineerWintercoat
-
 # Epistemics
 ## Senior Researcher
 

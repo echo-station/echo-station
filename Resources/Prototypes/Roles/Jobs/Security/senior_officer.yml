@@ -39,6 +39,6 @@
     id: SeniorOfficerPDA
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58Nonlethal
-  innerClothingSkirt: ClothingUniformJumpskirtSeniorOfficer
-  satchel: ClothingBackpackSatchelSecurityFilled
-  duffelbag: ClothingBackpackDuffelSecurityFilled
+    innerClothingSkirt: ClothingUniformJumpskirtSeniorOfficer
+    satchel: ClothingBackpackSatchelSecurityFilled
+    duffelbag: ClothingBackpackDuffelSecurityFilled
