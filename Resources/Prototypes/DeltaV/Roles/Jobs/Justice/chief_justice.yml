@@ -4,7 +4,7 @@
   description: job-description-chief-justice
   playTimeTracker: JobChiefJustice
   requirements:
-#    - !type:RoleTimeRequirement # DeltaV - Comment out clerk time till more people have clerk time. Maybe a week or so. 
+#    - !type:RoleTimeRequirement # DeltaV - Comment out clerk time till more people have clerk time. Maybe a week or so.
 #      role: JobClerk
 #      time: 36000 # DeltaV - 10 hours
     - !type:RoleTimeRequirement
@@ -15,7 +15,7 @@
       time: 36000 # 10 hours
     - !type:OverallPlaytimeRequirement
       time: 90000 # 25 hours
-    - !type:WhitelistRequirement # whitelist requirement because I don't want any dingus judges
+  whitelisted: true
   weight: 20
   startingGear: CJGear
   icon: "JobIconChiefJustice"
