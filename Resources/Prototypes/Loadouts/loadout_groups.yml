@@ -769,7 +769,7 @@
   - StationEngineerHardhatYellow
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
-  #- SeniorEngineerBeret # Delta V - Separate senior roles
+  #- SeniorEngineerBeret # Echo Station - Separate senior roles
 
 - type: loadoutGroup # DeltaV
   id: StationEngineerNeck
@@ -785,8 +785,8 @@
   - StationEngineerJumpsuit
   - StationEngineerJumpskirt
   - StationEngineerHazardsuit
-  #- SeniorEngineerJumpsuit # Delta V - Separate senior roles
-  #- SeniorEngineerJumpskirt # Delta V - Separate senior roles
+  #- SeniorEngineerJumpsuit # Echo Station - Separate senior roles
+  #- SeniorEngineerJumpskirt # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: StationEngineerBackpack
@@ -816,7 +816,7 @@
   name: loadout-group-station-engineer-id
   loadouts:
   - StationEngineerPDA
-  #- SeniorEngineerPDA # Delta V - Separate senior roles
+  #- SeniorEngineerPDA # Echo Station - Separate senior roles
 
 - type: loadoutGroup # DeltaV
   id: AtmosphericTechnicianNeck
@@ -913,7 +913,7 @@
   loadouts:
   - RoboticistCap
   - SkullBandana
-  #- ScientificBeret # Delta V - Separate senior roles
+  #- ScientificBeret # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: ScientistNeck
@@ -931,8 +931,8 @@
   - ScientistJumpskirt
   - RoboticistJumpsuit
   - RoboticistJumpskirt
-  #- SeniorResearcherJumpsuit # Delta V - Separate senior roles
-  #- SeniorResearcherJumpskirt # Delta V - Separate senior roles
+  #- SeniorResearcherJumpsuit # Echo Station - Separate senior roles
+  #- SeniorResearcherJumpskirt # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: ScientistBackpack
@@ -951,7 +951,7 @@
   - ScienceLabCoat
   - RoboticistLabCoat # DeltaV
   - ScienceWintercoat
-  #- SeniorResearcherLabCoat # Delta V - Separate senior roles
+  #- SeniorResearcherLabCoat # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: ScientistGloves
@@ -974,7 +974,7 @@
   name: loadout-group-scientist-id
   loadouts:
   - ScientistPDA
-  #- SeniorResearcherPDA # Delta V - Separate senior roles
+  #- SeniorResearcherPDA # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: ResearchAssistantJumpsuit
@@ -1088,8 +1088,8 @@
   - SecurityJumpskirtGrey
   - SecurityJumpsuitBlue # DeltaV
   - SecurityJumpskirtBlue # DeltaV
-  #- SeniorOfficerJumpsuit # Delta V - Separate senior roles
-  #- SeniorOfficerJumpskirt # Delta V - Separate senior roles
+  #- SeniorOfficerJumpsuit # Echo Station - Separate senior roles
+  #- SeniorOfficerJumpskirt # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: SecurityBackpack
@@ -1131,7 +1131,7 @@
   name: loadout-group-security-id
   loadouts:
   - SecurityPDA
-  #- SeniorOfficerPDA # Delta V - Separate senior roles
+  #- SeniorOfficerPDA # Echo Station - Separate senior roles
 
 - type: loadoutGroup # DeltaV
   id: SecurityNeck
@@ -1251,7 +1251,7 @@
   loadouts:
   - MedicalBeret
   - MedicalHeadMirror
-  #- SeniorPhysicianBeret # Delta V - Separate senior roles
+  #- SeniorPhysicianBeret # Echo Station - Separate senior roles
   - BlueSurgeryCap
   - GreenSurgeryCap
   - PurpleSurgeryCap
@@ -1271,8 +1271,8 @@
   loadouts:
   - MedicalDoctorJumpsuit
   - MedicalDoctorJumpskirt
-  #- SeniorPhysicianJumpsuit # Delta V - Separate senior roles
-  #- SeniorPhysicianJumpskirt # Delta V - Separate senior roles
+  #- SeniorPhysicianJumpsuit # Echo Station - Separate senior roles
+  #- SeniorPhysicianJumpskirt # Echo Station - Separate senior roles
   - MedicalBlueScrubs
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
@@ -1284,7 +1284,7 @@
   loadouts:
   - RegularLabCoat
   - MedicalDoctorWintercoat
-  #- SeniorPhysicianLabCoat # Delta V - Separate senior roles
+  #- SeniorPhysicianLabCoat # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: MedicalBackpack
@@ -1306,7 +1306,7 @@
   name: loadout-group-medical-doctor-id
   loadouts:
   - MedicalDoctorPDA
-  #- SeniorPhysicianPDA # Delta V - Separate senior roles
+  #- SeniorPhysicianPDA # Echo Station - Separate senior roles
 
 - type: loadoutGroup
   id: MedicalGloves

@@ -3,7 +3,7 @@
   name: job-name-scientist
   description: job-description-scientist
   playTimeTracker: JobScientist
-  antagAdvantage: 2 # DeltaV - Protolathe, anomaly stuff, glimmer factor.   
+  antagAdvantage: 2 # DeltaV - Protolathe, anomaly stuff, glimmer factor.
   requirements:
     - !type:DepartmentTimeRequirement
       department: Epistemics # DeltaV - Epistemics Department replacing Science
@@ -19,5 +19,5 @@
   id: ScientistGear
   equipment:
     ears: ClothingHeadsetScience
-    id: SciencePDA # Delta V - Separate senior roles
+    id: SciencePDA # Echo Station - Separate senior roles
 

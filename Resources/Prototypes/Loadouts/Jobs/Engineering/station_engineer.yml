@@ -50,7 +50,7 @@
 - type: loadout
   id: SeniorEngineerBeret
   equipment: EngineeringBeret
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorEngineering
 
@@ -90,7 +90,7 @@
 - type: loadout
   id: SeniorEngineerJumpsuit
   equipment: SeniorEngineerJumpsuit
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorEngineering
 
@@ -102,7 +102,7 @@
 - type: loadout
   id: SeniorEngineerJumpskirt
   equipment: SeniorEngineerJumpskirt
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorEngineering
 
@@ -190,7 +190,7 @@
 - type: loadout
   id: SeniorEngineerPDA
   equipment: SeniorEngineerPDA
-#  effects: # Delta V - Separate senior roles
+#  effects: # Echo Station - Separate senior roles
 #  - !type:GroupLoadoutEffect
 #    proto: SeniorEngineering
 

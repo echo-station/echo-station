@@ -28,4 +28,4 @@
 #    eyes: ClothingEyesGlassesSecurity # DeltaV
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58Nonlethal
-    id: SecurityPDA # Delta V - Separate senior roles
+    id: SecurityPDA # Echo Station - Separate senior roles

@@ -34,7 +34,7 @@
 - type: loadout
   id: SeniorPhysicianBeret
   equipment: SeniorPhysicianBeret
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorPhysician
 
@@ -132,7 +132,7 @@
 - type: loadout
   id: SeniorPhysicianJumpsuit
   equipment: SeniorPhysicianJumpsuit
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorPhysician
 
@@ -144,7 +144,7 @@
 - type: loadout
   id: SeniorPhysicianJumpskirt
   equipment: SeniorPhysicianJumpskirt
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorPhysician
 
@@ -221,7 +221,7 @@
 - type: loadout
   id: SeniorPhysicianLabCoat
   equipment: SeniorPhysicianLabCoat
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorPhysician
 
@@ -253,7 +253,7 @@
 - type: loadout
   id: SeniorPhysicianPDA
   equipment: SeniorPhysicianPDA
-  #effects: # Delta V - Separate senior roles
+  #effects: # Echo Station - Separate senior roles
   #- !type:GroupLoadoutEffect
   #  proto: SeniorPhysician
 
