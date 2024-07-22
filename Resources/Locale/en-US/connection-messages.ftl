@@ -1,4 +1,4 @@
-﻿whitelist-not-whitelisted = You are not whitelisted. You can apply to be whitelisted on our Discord.
+﻿whitelist-not-whitelisted = You are not whitelisted.
 
 # proper handling for having a min/max or not
 whitelist-playercount-invalid = {$min ->
