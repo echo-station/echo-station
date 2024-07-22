@@ -238,8 +238,7 @@ namespace Content.Server.Connection
                 var usedSlots = connectedPlayers - connectedWhitelist;
 
                 // Determine if there is a non-whitelisted slot available.
-                var nonWhitelistedSlotAvailable =
-                    nonWhitelistedSlotsEnabled && Math.Max(0, theoreticalSlots - usedSlots) > 0;
+                var nonWhitelistedSlotAvailable = nonWhitelistedSlotsEnabled && theoreticalSlots - usedSlots > 0;
                 // Echo Station: END Non-whitelisted slots
 
                 if (playerCountValid && await _db.GetWhitelistStatusAsync(userId) == false
@@ -251,15 +250,15 @@ namespace Content.Server.Connection
                     // Echo Station: If the non-whitelisted slot count is nonzero, return "slots are full" error
                     if (nonWhitelistedSlotsEnabled)
                     {
-                        msg += "\n" + Loc.GetString(theoreticalSlots > 0
-                                       ? "whitelist-nonwhitelisted-slots-zero"
-                                       : "whitelist-nonwhitelisted-slots-full",
+                        msg += " " + Loc.GetString(theoreticalSlots > 0
+                                       ? "whitelist-nonwhitelisted-slots-full"
+                                       : "whitelist-nonwhitelisted-slots-zero",
                             ("slots", theoreticalSlots));
                     }
                     else if (min > 0 || max < int.MaxValue)
                     {
                         // was the whitelist playercount changed?
-                        msg += "\n" + Loc.GetString("whitelist-playercount-invalid", ("min", min), ("max", max));
+                        msg += " " + Loc.GetString("whitelist-playercount-invalid", ("min", min), ("max", max));
                     }
                     return (ConnectionDenyReason.Whitelist, msg, null);
                 }
