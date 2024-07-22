@@ -1239,25 +1239,25 @@ namespace Content.Shared.CCVar
             CVarDef.Create("whitelist.max_players", int.MaxValue, CVar.SERVERONLY);
 
         /// <summary>
-        ///     TODO
+        ///     Enables a configurable amount of slots for non-whitelisted players to join.
         /// </summary>
         public static readonly CVarDef<bool> WhitelistNonWhitelistedSlotsEnabled =
             CVarDef.Create("whitelist.non_whitelisted_slots_enabled", false, CVar.SERVERONLY);
 
         /// <summary>
-        ///     TODO
+        ///     The minimum amount of slots for non-whitelisted players to join. For example, if set to 1, one unwhitelisted person will always be able to join, even if there is no admin online.
         /// </summary>
         public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMinimum =
             CVarDef.Create("whitelist.non_whitelisted_slots_min", 0, CVar.SERVERONLY);
 
         /// <summary>
-        ///     TODO
+        ///     The maximum amount of slots for non-whitelisted players to join.
         /// </summary>
         public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMaximum =
             CVarDef.Create("whitelist.non_whitelisted_slots_max", int.MaxValue, CVar.SERVERONLY);
 
         /// <summary>
-        ///     TODO
+        ///     The amount of non-whitelisted slots to add per ACTIVE admin, capped by the configured maximum.
         /// </summary>
         public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsPerAdmin =
             CVarDef.Create("whitelist.non_whitelisted_slots_per_admin", 0, CVar.SERVERONLY);
