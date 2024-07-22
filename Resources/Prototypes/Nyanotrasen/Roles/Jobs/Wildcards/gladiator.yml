@@ -14,6 +14,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 21600
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting
   special:
   - !type:AddComponentSpecial
     components:

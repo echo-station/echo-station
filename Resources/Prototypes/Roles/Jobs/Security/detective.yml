@@ -7,6 +7,7 @@
     - !type:RoleTimeRequirement # DeltaV - JobSecurityOfficer time requirement
       role: JobSecurityOfficer
       time: 21600 # DeltaV - 6 hrs
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos

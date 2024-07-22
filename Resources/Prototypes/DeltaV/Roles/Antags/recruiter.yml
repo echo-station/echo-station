@@ -9,6 +9,7 @@
   - !type:RoleTimeRequirement
     role: JobLawyer
     time: 3600 # 1h as lawyer so you maybe know how to paperwork
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: startingGear
   id: SyndicateRecruiterGear

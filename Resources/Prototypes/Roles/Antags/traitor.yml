@@ -7,3 +7,4 @@
   requirements:
   - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
     time: 86400 # DeltaV - 24 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles

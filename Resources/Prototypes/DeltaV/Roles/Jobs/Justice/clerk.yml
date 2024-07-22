@@ -13,6 +13,7 @@
     - !type:RoleTimeRequirement
       role: JobProsecutor
       time: 36000 # 10 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Justice roles
   startingGear: ClerkGear
   icon: "JobIconClerk"
   requireAdminNotify: true

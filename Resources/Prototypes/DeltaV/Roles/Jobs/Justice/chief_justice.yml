@@ -15,6 +15,7 @@
       time: 36000 # 10 hours
     - !type:OverallPlaytimeRequirement
       time: 90000 # 25 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 20
   startingGear: CJGear
   icon: "JobIconChiefJustice"

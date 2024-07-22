@@ -10,6 +10,7 @@
   - !type:DepartmentTimeRequirement # DeltaV - Command dept time requirement
     department: Command
     time: 36000 # DeltaV - 10 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: antag
   id: Rev

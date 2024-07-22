@@ -4,6 +4,8 @@
   description: ghost-role-information-syndicate-kobold-reinforcement-description
   rules: ghost-role-information-syndicate-kobold-reinforcement-rules
   entityPrototype: MobKoboldSyndicateAgent
+  requirements:
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: ghostRole
   id: SyndicateKoboldNukeops
@@ -11,6 +13,8 @@
   description: ghost-role-information-syndicate-kobold-reinforcement-description
   rules: ghost-role-information-syndicate-kobold-reinforcement-rules
   entityPrototype: MobKoboldSyndicateAgentNukeops
+  requirements:
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: ghostRole
   id: SyndicateMonkey
@@ -18,6 +22,8 @@
   description: ghost-role-information-syndicate-monkey-reinforcement-description
   rules: ghost-role-information-syndicate-monkey-reinforcement-name
   entityPrototype: MobMonkeySyndicateAgent
+  requirements:
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: ghostRole
   id: SyndicateMonkeyNukeops
@@ -25,3 +31,5 @@
   description: ghost-role-information-syndicate-monkey-reinforcement-description
   rules: ghost-role-information-syndicate-monkey-reinforcement-name
   entityPrototype: MobMonkeySyndicateAgentNukeops
+  requirements:
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles

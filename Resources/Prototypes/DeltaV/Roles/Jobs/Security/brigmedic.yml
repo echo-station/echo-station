@@ -10,6 +10,7 @@
     - !type:RoleTimeRequirement # DeltaV - JobSecurityOfficer time requirement
       role: JobSecurityOfficer
       time: 21600 # DeltaV - 6 hrs
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Security roles
   startingGear: CorpsmanGear
   icon: "JobIconBrigmedic"
   supervisors: job-supervisors-hos

@@ -17,6 +17,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 108000 # 30 hrs
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: SeniorOfficerGear
   icon: "JobIconSeniorOfficer"
   supervisors: job-supervisors-hos

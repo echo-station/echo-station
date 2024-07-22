@@ -6,13 +6,15 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 72000 # 20 hours
+      time: 36000 # 10 hours
     - !type:RoleTimeRequirement
       role: JobWarden
-      time: 18000 # 10 hours
+      time: 144000 # 4 hours
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 36000 # 10 hours
+      time: 144000 # 4 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
+  whitelisted: true # Echo Station: Also require role specific whitelist
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
