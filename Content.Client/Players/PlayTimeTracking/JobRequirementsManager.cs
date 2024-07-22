@@ -100,23 +100,20 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
             return false;
         }
 
-        if (!CheckWhitelist(job, out reason))
-            return false;
-
         var player = _playerManager.LocalSession;
         if (player == null)
             return true;
 
-        return CheckRoleTime(job, out reason);
+        return CheckRoleRequirements(job, out reason);
     }
 
-    public bool CheckRoleTime(JobPrototype job, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool CheckRoleRequirements(JobPrototype job, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         var reqs = _entManager.System<SharedRoleSystem>().GetJobRequirement(job);
-        return CheckRoleTime(reqs, out reason);
+        return CheckRoleRequirements(job, reqs, out reason);
     }
 
-    public bool CheckRoleTime(HashSet<JobRequirement>? requirements, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool CheckRoleRequirements(JobPrototype? job, HashSet<JobRequirement>? requirements, [NotNullWhen(false)] out FormattedMessage? reason)
     {
         reason = null;
 
@@ -132,7 +129,12 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
             reasons.Add(jobReason.ToMarkup());
         }
 
-        reason = reasons.Count == 0 ? null : FormattedMessage.FromMarkup(string.Join('\n', reasons));
+        if (job != null && !CheckWhitelist(job, out _))
+        {
+            reasons.Add(Loc.GetString("role-not-whitelisted"));
+        }
+
+        reason = reasons.Count == 0 ? null : FormattedMessage.FromMarkupOrThrow(string.Join('\n', reasons));
         return reason == null;
     }
 
