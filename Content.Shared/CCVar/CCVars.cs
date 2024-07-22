@@ -1238,6 +1238,30 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> WhitelistMaxPlayers =
             CVarDef.Create("whitelist.max_players", int.MaxValue, CVar.SERVERONLY);
 
+        /// <summary>
+        ///     TODO
+        /// </summary>
+        public static readonly CVarDef<bool> WhitelistNonWhitelistedSlotsEnabled =
+            CVarDef.Create("whitelist.non_whitelisted_slots_enabled", false, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     TODO
+        /// </summary>
+        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMinimum =
+            CVarDef.Create("whitelist.non_whitelisted_slots_min", 0, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     TODO
+        /// </summary>
+        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMaximum =
+            CVarDef.Create("whitelist.non_whitelisted_slots_max", int.MaxValue, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     TODO
+        /// </summary>
+        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsPerAdmin =
+            CVarDef.Create("whitelist.non_whitelisted_slots_per_admin", 0, CVar.SERVERONLY);
+
         /*
          * VOTE
          */

@@ -1,7 +1,8 @@
 using System.Collections.Immutable;
+using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using Content.Server.Administration.Managers;
 using Content.Server.Database;
 using Content.Server.GameTicking;
 using Content.Server.Preferences.Managers;
@@ -12,7 +13,6 @@ using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
-
 
 namespace Content.Server.Connection
 {
@@ -47,6 +47,7 @@ namespace Content.Server.Connection
         [Dependency] private readonly ServerDbEntryManager _serverDbEntry = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly ILogManager _logManager = default!;
+        [Dependency] private readonly IAdminManager _adminManager = default!;
 
         private readonly Dictionary<NetUserId, TimeSpan> _temporaryBypasses = [];
         private ISawmill _sawmill = default!;
@@ -215,45 +216,77 @@ namespace Content.Server.Connection
                 return (ConnectionDenyReason.Full, Loc.GetString("soft-player-cap-full"), null);
             }
 
-            // DeltaV - Replace existing softwhitelist implementation
-            if (false)// _cfg.GetCVar(CCVars.WhitelistEnabled))
+            var connectedPlayers = _plyMgr.PlayerCount;
+            var connectedWhitelist = _connectedWhitelistedPlayers.Count;
+
+            if (_cfg.GetCVar(CCVars.WhitelistEnabled))
             {
                 var min = _cfg.GetCVar(CCVars.WhitelistMinPlayers);
                 var max = _cfg.GetCVar(CCVars.WhitelistMaxPlayers);
                 var playerCountValid = _plyMgr.PlayerCount >= min && _plyMgr.PlayerCount < max;
 
+                // Echo Station: BEGIN Non-whitelisted slots
+                // Fetch configuration.
+                var nonWhitelistedSlotsEnabled = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsEnabled);
+                var nonWhitelistedSlotsMin = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsMinimum);
+                var nonWhitelistedSlotsMax = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsMaximum);
+                var nonWhitelistedSlotsPerAdmin = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsPerAdmin);
+
+                // Determine how many slots are theoretically available and used.
+                var currentSlotsFromAdmins = nonWhitelistedSlotsPerAdmin * _adminManager.ActiveAdmins.Count();
+                var theoreticalSlots = Math.Min(nonWhitelistedSlotsMax, Math.Max(nonWhitelistedSlotsMin, currentSlotsFromAdmins));
+                var usedSlots = connectedPlayers - connectedWhitelist;
+
+                // Determine if there is a non-whitelisted slot available.
+                var nonWhitelistedSlotAvailable =
+                    nonWhitelistedSlotsEnabled && Math.Max(0, theoreticalSlots - usedSlots) > 0;
+                // Echo Station: END Non-whitelisted slots
+
                 if (playerCountValid && await _db.GetWhitelistStatusAsync(userId) == false
-                                     && adminData is null)
+                                     && adminData is null
+                                     && !nonWhitelistedSlotAvailable) // Echo Station: Allow entry if non-whitelist slot available
                 {
                     var msg = Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason));
-                    // was the whitelist playercount changed?
-                    if (min > 0 || max < int.MaxValue)
+
+                    // Echo Station: If the non-whitelisted slot count is nonzero, return "slots are full" error
+                    if (nonWhitelistedSlotsEnabled)
+                    {
+                        msg += "\n" + Loc.GetString(theoreticalSlots > 0
+                                       ? "whitelist-nonwhitelisted-slots-zero"
+                                       : "whitelist-nonwhitelisted-slots-full",
+                            ("slots", theoreticalSlots));
+                    }
+                    else if (min > 0 || max < int.MaxValue)
+                    {
+                        // was the whitelist playercount changed?
                         msg += "\n" + Loc.GetString("whitelist-playercount-invalid", ("min", min), ("max", max));
+                    }
                     return (ConnectionDenyReason.Whitelist, msg, null);
                 }
             }
 
+            // Echo Station: Remove whitelist changes that were done without modifying the documentation ;-;
             // DeltaV - Soft whitelist improvements
-            if (_cfg.GetCVar(CCVars.WhitelistEnabled))
-            {
-                var connectedPlayers = _plyMgr.PlayerCount;
-                var connectedWhitelist = _connectedWhitelistedPlayers.Count;
-
-                var slots = _cfg.GetCVar(CCVars.WhitelistMinPlayers);
-
-                var noSlotsOpen = slots > 0 && slots < connectedPlayers - connectedWhitelist;
-
-                if (noSlotsOpen && await _db.GetWhitelistStatusAsync(userId) == false
-                                     && adminData is null)
-                {
-                    var msg = Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason));
-
-                    if (slots > 0)
-                        msg += "\n" + Loc.GetString("whitelist-playercount-invalid", ("min", slots), ("max", _cfg.GetCVar(CCVars.SoftMaxPlayers)));
-
-                    return (ConnectionDenyReason.Whitelist, msg, null);
-                }
-            }
+            // if (_cfg.GetCVar(CCVars.WhitelistEnabled))
+            // {
+            //     var connectedPlayers = _plyMgr.PlayerCount;
+            //     var connectedWhitelist = _connectedWhitelistedPlayers.Count;
+            //
+            //     var slots = _cfg.GetCVar(CCVars.WhitelistMinPlayers);
+            //
+            //     var noSlotsOpen = slots > 0 && slots < connectedPlayers - connectedWhitelist;
+            //
+            //     if (noSlotsOpen && await _db.GetWhitelistStatusAsync(userId) == false
+            //                          && adminData is null)
+            //     {
+            //         var msg = Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason));
+            //
+            //         if (slots > 0)
+            //             msg += "\n" + Loc.GetString("whitelist-playercount-invalid", ("min", slots), ("max", _cfg.GetCVar(CCVars.SoftMaxPlayers)));
+            //
+            //         return (ConnectionDenyReason.Whitelist, msg, null);
+            //     }
+            // }
 
             return null;
         }
