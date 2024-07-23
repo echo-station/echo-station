@@ -92,6 +92,8 @@
     rules: ghost-role-information-rat-king-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable
   - type: Tag
     tags:

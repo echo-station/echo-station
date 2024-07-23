@@ -14,6 +14,8 @@
     rules: ghost-role-information-syndicate-reinforcement-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostRoleMobSpawner
     prototype: MobHumanSyndicateAgent
   - type: EmitSoundOnUse
@@ -41,6 +43,8 @@
     rules: ghost-role-information-syndicate-monkey-reinforcement-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostRoleMobSpawner
     prototype: MobMonkeySyndicateAgent
     selectablePrototypes: ["SyndicateMonkey", "SyndicateKobold"]
@@ -66,6 +70,8 @@
     rules: ghost-role-information-SyndiCat-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostRoleMobSpawner
     prototype: MobCatSyndy
   - type: EmitSoundOnUse
@@ -84,5 +90,7 @@
       rules: Normal syndicate antagonist rules apply. Work with whoever called you in, and don't harm them.
       raffle:
         settings: default
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
     - type: GhostRoleMobSpawner
       prototype: PlayerBorgSyndicateAssaultBattery

@@ -611,6 +611,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 14400 # DeltaV - 4 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable # DeltaV
   - type: InteractionPopup
     successChance: 0.5 # spider is mean

@@ -42,6 +42,8 @@
       description: ghost-role-information-Death-Squad-description
       raffle:
         settings: short
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
     - type: Loadout
       prototypes: [ DeathSquadGear ]
     - type: RandomMetadata
@@ -78,6 +80,8 @@
       description: ghost-role-information-ert-leader-description
       raffle:
         settings: short
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
     - type: Loadout
       prototypes: [ ERTLeaderGear ]
     - type: RandomMetadata
@@ -380,6 +384,8 @@
       description: ghost-role-information-ert-security-description
       raffle:
         settings: short
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
     - type: Loadout
       prototypes: [ ERTSecurityGearEVALecter ]
 

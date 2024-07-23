@@ -62,6 +62,8 @@
     rules: ghost-role-information-revenant-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all  roles
   - type: GhostTakeoverAvailable
   - type: Revenant
     spawnOnDeathPrototype: EctoplasmRevenant #DeltaV - different prototype that contains more ectoplasm reagent for normality crystals

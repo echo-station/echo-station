@@ -8,7 +8,7 @@
     interactSuccessString: hugging-success-generic
     interactSuccessSound: /Audio/Effects/thudswoosh.ogg
     messagePerceivedByOthers: hugging-success-generic-others
-  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic. 
+  - type: PotentialPsionic #Nyano - Summary: makes potentially psionic.
 
 - type: entity
   name: skeleton pirate
@@ -20,6 +20,8 @@
     description: ghost-role-information-skeleton-pirate-description
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [PirateGear]
@@ -36,6 +38,8 @@
     description: ghost-role-information-skeleton-biker-description
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [SkeletonBiker]
@@ -53,6 +57,7 @@
     requirements:
     - !type:OverallPlaytimeRequirement
       time: 172800 # DeltaV - 48 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
     raffle:
       settings: default
   - type: GhostTakeoverAvailable

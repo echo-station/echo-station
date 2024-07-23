@@ -11,7 +11,7 @@
     layers:
     - map: [ "enum.DamageStateVisualLayers.Base" ]
       state: blue_adult_slime
-  - type: Carriable #DeltaV 
+  - type: Carriable #DeltaV
   - type: Fixtures
     fixtures:
       fix1:
@@ -131,6 +131,8 @@
     rules: deltav-ghost-role-information-softantag-rules #DeltaV
     raffle:
       settings: short
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime

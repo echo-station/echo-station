@@ -1333,6 +1333,8 @@
     description: ghost-role-information-monkey-description
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [SyndicateOperativeGearMonkey]
@@ -1494,6 +1496,9 @@
     - Syndicate
   - type: Loadout
     prototypes: [SyndicateOperativeGearMonkey]
+  - type: GhostRole
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
   id: MobKoboldSyndicateAgent
@@ -1834,7 +1839,7 @@
       state: slug
       sprite: Mobs/Animals/slug.rsi
   - type: Carriable #DeltaV
-    freeHandsRequired: 1 
+    freeHandsRequired: 1
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -2303,6 +2308,8 @@
       rules: deltav-ghost-role-information-softantag-rules #DeltaV
       raffle:
         settings: short
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
     - type: GhostTakeoverAvailable
 
 - type: entity
