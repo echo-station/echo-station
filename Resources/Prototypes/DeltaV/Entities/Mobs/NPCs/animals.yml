@@ -79,6 +79,8 @@
     allowMovement: true
     name: "sentient security dog"
     description: "Help out the security team by biting the baddies and barking at everything that moves."
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Security roles
   - type: GhostTakeoverAvailable
   - type: CombatMode
   - type: MovementSpeedModifier

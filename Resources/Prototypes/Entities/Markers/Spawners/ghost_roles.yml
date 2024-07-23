@@ -21,6 +21,8 @@
     rules: ghost-role-information-rat-king-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostRoleMobSpawner
     prototype: MobRatKing
   - type: Sprite
@@ -63,6 +65,8 @@
     rules: ghost-role-information-cerberus-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostRoleMobSpawner
     prototype: MobCorgiCerberus
   - type: Sprite
@@ -83,6 +87,8 @@
     rules: ghost-role-information-nukeop-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostRoleMobSpawner
     prototype: MobHumanNukeOp
   - type: Sprite
@@ -107,6 +113,7 @@
     - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
       department: Security
       time: 36000 # DeltaV - 10 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostRoleAntagSpawner
   - type: Sprite
     sprite: Markers/jobs.rsi
@@ -123,6 +130,8 @@
   - type: GhostRole
     name: roles-antag-nuclear-operative-commander-name
     description: roles-antag-nuclear-operative-commander-objective
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
   noSpawn: true
@@ -132,6 +141,8 @@
   - type: GhostRole
     name: roles-antag-nuclear-operative-agent-name
     description: roles-antag-nuclear-operative-agent-objective
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
   noSpawn: true

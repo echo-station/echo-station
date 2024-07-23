@@ -41,6 +41,7 @@
     - !type:DepartmentTimeRequirement
       department: Command
       time: 40000 # 11.1 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
   noSpawn: true
@@ -52,6 +53,8 @@
     name: ghost-role-information-paradox-anomaly-name
     description: ghost-role-information-paradox-anomaly-description
     rules: ghost-role-information-paradox-anomaly-rules
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
   noSpawn: true
@@ -83,6 +86,7 @@
     - !type:RoleTimeRequirement
       role: JobLawyer
       time: 3600 # 1h as lawyer so you maybe know how to paperwork
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: Sprite
     layers:
     - state: green

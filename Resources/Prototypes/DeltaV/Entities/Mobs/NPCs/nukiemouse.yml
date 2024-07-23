@@ -11,6 +11,8 @@
     allowMovement: true
     name: ghost-role-information-nukie-mouse-name
     description: ghost-role-information-nukie-mouse-description
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
   - type: RandomMetadata
     nameSegments: [names_mouse_death_commando]

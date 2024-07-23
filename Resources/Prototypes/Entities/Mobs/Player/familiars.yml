@@ -52,6 +52,8 @@
     rules: ghost-role-information-cerberus-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
   - type: MeleeWeapon
     altDisarm: false

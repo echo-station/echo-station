@@ -13,6 +13,8 @@
     name: salvage snake
     description: You are a salvage snake hunting for a meal.
     rules: deltav-ghost-role-information-salvageantag-rules # DeltaV salvage mob rules
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: SalvageMobRestrictions
 
 - type: entity
@@ -27,6 +29,8 @@
     name: salvage snake
     description: You are a salvage snake hunting for a meal.
     rules: deltav-ghost-role-information-salvageantag-rules # DeltaV salvage mob rules
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: SalvageMobRestrictions
 
 # Delta V variants of Xenos to allow ghost takeover again
@@ -46,6 +50,8 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
 
 - type: entity
@@ -63,6 +69,8 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
 
 - type: entity
@@ -80,6 +88,8 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
 
 - type: entity
@@ -97,6 +107,8 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
 
 - type: entity
@@ -114,6 +126,8 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
 
 - type: entity
@@ -131,6 +145,8 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
 
 - type: entity
@@ -147,6 +163,8 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable
 
 - type: entity
@@ -164,4 +182,6 @@
     rules: ghost-role-information-xeno-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   - type: GhostTakeoverAvailable

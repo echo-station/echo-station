@@ -14,6 +14,8 @@
     description: ghost-role-information-hellspawn-description
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90

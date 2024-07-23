@@ -124,6 +124,8 @@
       description: ghost-role-information-holoparasite-description
       raffle:
         settings: default
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
     - type: GhostTakeoverAvailable
     - type: NameIdentifier
       group: Holoparasite
@@ -156,6 +158,8 @@
       description: ghost-role-information-ifrit-description
       raffle:
         settings: default
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
     - type: GhostTakeoverAvailable
     - type: RandomSprite
       available:
@@ -184,6 +188,8 @@
       description: ghost-role-information-holoclown-description
       raffle:
         settings: default
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
     - type: GhostTakeoverAvailable
     - type: NameIdentifier
       group: Holoparasite

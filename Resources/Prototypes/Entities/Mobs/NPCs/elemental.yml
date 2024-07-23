@@ -234,6 +234,8 @@
     description: ghost-role-information-angry-slimes-description
     raffle:
       settings: short
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: NpcFactionMember
     factions:
     - SimpleHostile

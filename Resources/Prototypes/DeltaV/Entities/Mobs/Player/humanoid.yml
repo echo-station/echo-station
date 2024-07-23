@@ -22,6 +22,8 @@
     - type: GhostRole
       name: Mobster
       description: Break kneecaps, spray lead, keep your mouth shut.
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
     - type: GhostTakeoverAvailable
     - type: Loadout
       prototypes: [ MobsterGear ]
