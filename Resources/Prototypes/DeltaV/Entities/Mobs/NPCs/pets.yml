@@ -76,4 +76,5 @@
     - !type:DepartmentTimeRequirement
       department: Justice
       time: 3600 # 1 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable

@@ -1122,6 +1122,8 @@
     prob: 0.25
     name: ghost-role-information-kangaroo-name
     description: ghost-role-information-kangaroo-description
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable
   - type: Vocal
     sounds:
