@@ -5,6 +5,9 @@ lobbyenabled = false
 map = "Dev"
 role_timers = false
 
+[server]
+rules_file = "EchoRuleset"
+
 [gateway]
 generator_enabled = false
 
