@@ -1,0 +1,80 @@
+﻿[game]
+# Description of the game server in the launcher.
+desc = "A Delta-V fork focusing on high levels of roleplay. Senior roles, pionics, alternative spritework, and various other balances/reworks. Non-whitelisted slots are available when an admin is online! Feel free to join."
+# Controls if the lobby is enabled. If it is not, and there are no available jobs, you may get stuck on a black screen.
+lobbyenabled = true
+# The maximum number of players. Admins can join even when the cap is reached.
+soft_max_players = 30
+#
+role_timers = false
+# Some roles require players to be explicitly whitelisted for that individual role. Currently irrel
+role_whitelist = true
+
+[whitelist]
+# Whether joining requires being server whitelisted (but also read the next few settings!)
+enabled = true
+# Echo Station custom feature. This enables non-whitelisted to join based on *on-duty* (not de-admined) admins.
+non_whitelisted_slots_enabled = true
+# Minimum amount of slots for non-whitelisted players. Any non-zero value will mean people can join even if there is no admin on duty.
+non_whitelisted_slots_min = 0
+# Hard maximum amount of non-whitelisted players that can join the server.
+non_whitelisted_slots_max = 5
+# Amount of non-whitelisted slots to add per *on-duty* admin connected.
+non_whitelisted_slots_per_admin = 3
+
+[server]
+rules_file   = "EchoRuleset"
+rules_header = "ui-rules-header"
+
+[infolinks]
+discord = "https://discord.gg/m34HWue3h3"
+# forum =
+github = "https://github.com/echo-station/echo-station"
+# website =
+wiki = "https://wiki.echo-station.org/"
+# patreon =
+# bug_report =
+# appeal =
+
+[net]
+max_connections = 1024
+# Whether to bind IPv6 sockets in dual-stack mode (for main game networking).
+dualstack = true
+# Ticks per second on the server. This influences both how frequently game code processes, and how frequently updates are sent to clients.
+tickrate = 30
+
+[vote]
+# The required ratio of the server that must agree for a restart round vote to go through.
+restart_required_ratio = 0.7
+# Allows enabling/disabling player-started votes for ultimate authority, but specific to preset votes.
+preset_enabled = true
+# Allows enabling/disabling player-started votes for ultimate authority, but specific to map votes.
+map_enabled = true
+
+[admin]
+# Should users be able to see their own admin notes?
+see_own_notes = true
+# If an admin joins a round by reading up or using the late join button, automatically de-admin them.
+deadmin_on_join = true
+
+[ic]
+# Allows flavor text (character descriptions)
+flavor_text = true
+# Adds a period at the end of a sentence if the sentence ends in a letter.
+punctuation = true
+
+# Individual instances should set the following settings:
+#
+#[hub]
+## Don't appear in public listings just yet.
+#advertise = false
+## English, America > North America > East, High RP, don't guess tags based on server name.
+#tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
+#
+# [database]
+# engine = "postgres"
+# pg_host = "...
+# pg_port = 5432
+# pg_database = ss14
+# pg_user = "...
+# pg_password = "..."
