@@ -495,15 +495,3 @@
     state: deflecting0
   name: alerts-deflecting-name
   description: alerts-deflecting-desc
-
-- type: alert
-  id: Walking
-  icons:
-  - sprite: /Textures/Interface/Alerts/walking.rsi
-    state: walking0
-  - sprite: /Textures/Interface/Alerts/walking.rsi
-    state: walking1
-  name: alerts-walking-name
-  description: alerts-walking-desc
-  minSeverity: 0
-  maxSeverity: 1
