@@ -119,7 +119,7 @@
 
 - type: guideEntry
   id: EchoRuleC14
-  name: guide-entry-echo-rules-c4
+  name: guide-entry-echo-rules-c14
   ruleEntry: true
   priority: 14
-  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/Rule14ICinOOC.xml"
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC14ICinOOC.xml"
