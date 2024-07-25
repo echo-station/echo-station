@@ -14,28 +14,6 @@
     id: PassengerPDA
     ears: ClothingHeadsetGrey
 
-#Space Ninja Outfit
-- type: startingGear
-  id: SpaceNinjaGear
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitNinja
-    # belt holds katana so satchel has the tools for sabotaging things
-    back: ClothingBackpackSatchelTools
-    mask: ClothingMaskNinja
-    head: ClothingHeadHelmetSpaceNinja
-    eyes: ClothingEyesVisorNinja
-    gloves: ClothingHandsGlovesSpaceNinja
-    outerClothing: ClothingOuterSuitSpaceNinja
-    shoes: ClothingShoesSpaceNinja
-    id: AgentIDCard
-    ears: ClothingHeadsetGrey
-    pocket1: SpiderCharge
-    pocket2: PinpointerStation
-    belt: EnergyKatana
-    suitstorage: OxygenTankFilled
-  inhand:
-    - JetpackBlackFilled
-
 #Deathsquad Outfit
 - type: startingGear
   id: DeathSquadGear
@@ -97,60 +75,6 @@
 #Syndicate Operative Outfit - Full Kit
 - type: startingGear
   id: SyndicateOperativeGearFull
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitOperative
-    back: ClothingBackpackDuffelSyndicateOperative
-    mask: ClothingMaskGasSyndicate
-    eyes: ClothingEyesHudSyndicate
-    ears: ClothingHeadsetAltSyndicate
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterHardsuitSyndie
-    shoes: ClothingShoesBootsCombatFilled
-    id: SyndiPDA
-    pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: BaseUplinkRadio40TC
-    belt: ClothingBeltMilitaryWebbing
-
-#Nuclear Operative Commander Gear
-- type: startingGear
-  id: SyndicateCommanderGearFull
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitOperative
-    back: ClothingBackpackDuffelSyndicateOperative
-    mask: ClothingMaskGasSyndicate
-    eyes: ClothingEyesHudSyndicate
-    ears: ClothingHeadsetAltSyndicate
-    neck: SyndicateWhistle
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterHardsuitSyndieCommander
-    shoes: ClothingShoesBootsCombatFilled
-    id: SyndiPDA
-    pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: BaseUplinkRadio40TC
-    belt: ClothingBeltMilitaryWebbing
-  #inhand: # DeltaV - Prevent commander spawning with the declaration of war
-  #  - NukeOpsDeclarationOfWar
-
-#Nuclear Operative Medic Gear
-- type: startingGear
-  id: SyndicateOperativeMedicFull
-  equipment:
-    jumpsuit: ClothingUniformJumpsuitOperative
-    back: ClothingBackpackDuffelSyndicateOperativeMedic
-    mask: ClothingMaskGasSyndicate
-    eyes: ClothingEyesHudSyndicateAgent
-    ears: ClothingHeadsetAltSyndicate
-    gloves: ClothingHandsGlovesCombat
-    outerClothing: ClothingOuterHardsuitSyndieMedic
-    shoes: ClothingShoesBootsMagSyndie
-    id: SyndiAgentPDA
-    pocket1: DoubleEmergencyOxygenTankFilled
-    pocket2: BaseUplinkRadio40TC
-    belt: ClothingBeltMilitaryWebbingMedFilled
-
-#Syndicate Lone Operative Outfit - Full Kit
-- type: startingGear
-  id: SyndicateLoneOperativeGearFull
   equipment:
     jumpsuit: ClothingUniformJumpsuitOperative
     back: ClothingBackpackDuffelSyndicateOperative
