@@ -1,0 +1,147 @@
+﻿#
+# Roleplay Rules
+#
+
+# Index page
+#   Actually used in the guidebook. Contents of this file are duplicated to the EchoRuleset in index.yml.
+- type: guideEntry
+  id: EchoRuleR0
+  name: guide-entry-echo-rules-r0
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR0.xml"
+  children:
+  - EchoRuleR1
+  - EchoRuleR2
+  - EchoRuleR3
+  - EchoRuleR4
+  - EchoRuleR5
+  - EchoRuleR6
+  - EchoRuleR7
+  - EchoRuleR8
+  - EchoRuleR9
+  - EchoRuleR10
+  - EchoRuleR11
+  - EchoRuleR12
+  - EchoRuleR13
+  - EchoRuleR14
+  - EchoRuleR15
+
+- type: guideEntry
+  id: EchoRuleR1
+  name: guide-entry-echo-rules-r1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR1Silicons.xml"
+
+- type: guideEntry
+  id: EchoRuleR2
+  name: guide-entry-echo-rules-r2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR2Familiars.xml"
+
+- type: guideEntry
+  id: EchoRuleR3
+  name: guide-entry-echo-rules-r3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR3NormalRP.xml"
+
+- type: guideEntry
+  id: EchoRuleR4
+  name: guide-entry-echo-rules-r4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR4Metashield.xml"
+
+- type: guideEntry
+  id: EchoRuleR5
+  name: guide-entry-echo-rules-r5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR5Arrivals.xml"
+
+- type: guideEntry
+  id: EchoRuleR6
+  name: guide-entry-echo-rules-r6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR6SelfAntag.xml"
+
+- type: guideEntry
+  id: EchoRuleR7
+  name: guide-entry-echo-rules-r7
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR7RoundStalling.xml"
+
+- type: guideEntry
+  id: EchoRuleR8
+  name: guide-entry-echo-rules-r8
+  ruleEntry: true
+  priority: 8
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR8NoFriendlyAntag.xml"
+
+- type: guideEntry
+  id: EchoRuleR9
+  name: guide-entry-echo-rules-r9
+  ruleEntry: true
+  priority: 9
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR9MassSabotage.xml"
+
+- type: guideEntry
+  id: EchoRuleR10
+  name: guide-entry-echo-rules-r10
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR10Subordination.xml"
+
+- type: guideEntry
+  id: EchoRuleR11
+  name: guide-entry-echo-rules-r11
+  ruleEntry: true
+  priority: 11
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR11Escalation.xml"
+
+- type: guideEntry
+  id: EchoRuleR11-1
+  name: guide-entry-echo-rules-r11-1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR11-1AnimalEscalation.xml"
+
+- type: guideEntry
+  id: EchoRuleR11-2
+  name: guide-entry-echo-rules-r11-2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR11-2ConflictTypes.xml"
+
+- type: guideEntry
+  id: EchoRuleR12
+  name: guide-entry-echo-rules-r12
+  ruleEntry: true
+  priority: 12
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR12RoleAbandonment.xml"
+
+- type: guideEntry
+  id: EchoRuleR13
+  name: guide-entry-echo-rules-r13
+  ruleEntry: true
+  priority: 13
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR13PerformRole.xml"
+
+- type: guideEntry
+  id: EchoRuleR14
+  name: guide-entry-echo-rules-r14
+  ruleEntry: true
+  priority: 14
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR14SecComStandard.xml"
+
+- type: guideEntry
+  id: EchoRuleR15
+  name: guide-entry-echo-rules-r15
+  ruleEntry: true
+  priority: 15
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Roleplay/RuleR15SpaceLaw.xml"
