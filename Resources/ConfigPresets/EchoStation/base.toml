@@ -24,7 +24,6 @@ non_whitelisted_slots_per_admin = 3
 
 [server]
 rules_file   = "EchoRuleset"
-rules_header = "ui-rules-header"
 
 [infolinks]
 discord = "https://discord.gg/m34HWue3h3"
