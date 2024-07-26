@@ -59,8 +59,8 @@
   equipment:
     neck: SyndicateWhistle
     outerClothing: ClothingOuterHardsuitSyndieCommander
-  #inhand: # DeltaV - Prevent commander spawning with the declaration of war
-  #  - NukeOpsDeclarationOfWar
+  inhand:
+    - NukeOpsDeclarationOfWar
 
 #Nuclear Operative Medic Gear
 - type: startingGear
