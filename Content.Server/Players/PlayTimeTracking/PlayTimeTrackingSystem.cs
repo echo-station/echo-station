@@ -198,7 +198,8 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
     public bool IsAllowed(ICommonSession player, string role)
     {
-        if (!_prototypes.TryIndex<JobPrototype>(role, out var job))
+        if (!_prototypes.TryIndex<JobPrototype>(role, out var job) ||
+            !_cfg.GetCVar(CCVars.GameRoleTimers))
             return true;
 
         if (!_tracking.TryGetTrackerTimes(player, out var playTimes))
@@ -209,14 +210,14 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
         var isWhitelisted = player.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
 
-        return JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, _cfg.GetCVar(CCVars.GameRoleTimers), isWhitelisted);
+        return JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, isWhitelisted);
     }
 
     public HashSet<ProtoId<JobPrototype>> GetDisallowedJobs(ICommonSession player)
     {
         var roles = new HashSet<ProtoId<JobPrototype>>();
-        // if (!_cfg.GetCVar(CCVars.GameRoleTimers))
-        //     return roles;
+        if (!_cfg.GetCVar(CCVars.GameRoleTimers))
+            return roles;
 
         if (!_tracking.TryGetTrackerTimes(player, out var playTimes))
         {
@@ -225,13 +226,10 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         }
 
         var isWhitelisted = player.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
-        var roleTimersEnabled = _cfg.GetCVar(CCVars.GameRoleTimers);
-        // if (!_cfg.GetCVar(CCVars.GameRoleTimers))
-        //     return roles;
 
         foreach (var job in _prototypes.EnumeratePrototypes<JobPrototype>())
         {
-            if (JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, roleTimersEnabled, isWhitelisted))
+            if (JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, isWhitelisted))
                 roles.Add(job.ID);
         }
 
@@ -252,12 +250,11 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         }
 
         var isWhitelisted = player.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
-        var roleTimersEnabled = _cfg.GetCVar(CCVars.GameRoleTimers);
 
         for (var i = 0; i < jobs.Count; i++)
         {
             if (_prototypes.TryIndex(jobs[i], out var job)
-                && JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, roleTimersEnabled, isWhitelisted))
+                && JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, isWhitelisted))
             {
                 continue;
             }
