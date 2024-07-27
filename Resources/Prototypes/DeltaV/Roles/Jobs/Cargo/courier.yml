@@ -5,8 +5,9 @@
   startingGear: CourierGear
   playTimeTracker: JobCourier
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 3600 # 1 hr
+    # Echo Station: Remove most time requirements
+#  - !type:OverallPlaytimeRequirement
+#    time: 3600 # 1 hr
   icon: "JobIconCourier"
   supervisors: job-supervisors-qm
   access:

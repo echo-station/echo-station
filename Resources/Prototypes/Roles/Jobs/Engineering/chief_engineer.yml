@@ -4,12 +4,13 @@
   description: job-description-ce
   playTimeTracker: JobChiefEngineer
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobAtmosphericTechnician
-      time: 14400 # 4 hrs
-    - !type:RoleTimeRequirement # DeltaV - No Station Engineer time requirement
-      role: JobStationEngineer
-      time: 14400 # 4 hrs
+    # Echo Station: Remove most time requirements
+#    - !type:RoleTimeRequirement
+#      role: JobAtmosphericTechnician
+#      time: 14400 # 4 hrs
+#    - !type:RoleTimeRequirement # DeltaV - No Station Engineer time requirement
+#      role: JobStationEngineer
+#      time: 14400 # 4 hrs
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10
   startingGear: ChiefEngineerGear

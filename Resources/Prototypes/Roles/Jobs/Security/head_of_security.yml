@@ -4,15 +4,16 @@
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 36000 # 10 hours
-    - !type:RoleTimeRequirement
-      role: JobWarden
-      time: 144000 # 4 hours
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 144000 # 4 hours
+    # Echo Station: Remove most time requirements
+#    - !type:DepartmentTimeRequirement
+#      department: Security
+#      time: 36000 # 10 hours
+#    - !type:RoleTimeRequirement
+#      role: JobWarden
+#      time: 144000 # 4 hours
+#    - !type:DepartmentTimeRequirement
+#      department: Command
+#      time: 144000 # 4 hours
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   whitelisted: true # Echo Station: Also require role specific whitelist
   weight: 10

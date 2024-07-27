@@ -5,11 +5,13 @@
   description: job-description-medical-borg
   playTimeTracker: JobMedicalBorg
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 108000 #30 hrs
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 21600 #6 hrs
+    # Echo Station: Remove most time requirements
+#    - !type:OverallPlaytimeRequirement
+#      time: 108000 #30 hrs
+#    - !type:DepartmentTimeRequirement
+#      department: Medical
+#      time: 21600 #6 hrs
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   canBeAntag: false
   icon: JobIconMedicalBorg
   supervisors: job-supervisors-cmo

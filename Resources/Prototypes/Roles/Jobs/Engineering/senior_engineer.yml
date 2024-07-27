@@ -5,17 +5,18 @@
   playTimeTracker: JobSeniorEngineer
   setPreference: true # DeltaV - Readded Senior roles (removed upstream)
   canBeAntag: true # Echo Station: Yes, seniors can be antags.
-  antagAdvantage: 6 # Echo Station: 20 - 6 = 14 TC.
+  antagAdvantage: 6 # Echo Station: 14 TC.
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobAtmosphericTechnician
-      time: 43200 #12 hrs
-    - !type:RoleTimeRequirement
-      role: JobStationEngineer
-      time: 43200 #12 hrs
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 108000 # 30 hrs
+    # Echo Station: Remove most time requirements
+#    - !type:RoleTimeRequirement
+#      role: JobAtmosphericTechnician
+#      time: 43200 #12 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobStationEngineer
+#      time: 43200 #12 hrs
+#    - !type:DepartmentTimeRequirement
+#      department: Engineering
+#      time: 108000 # 30 hrs
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Senior roles
   startingGear: SeniorEngineerGear
   icon: "JobIconSeniorEngineer"

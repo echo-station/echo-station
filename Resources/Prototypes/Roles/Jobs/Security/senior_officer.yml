@@ -5,18 +5,19 @@
   playTimeTracker: JobSeniorOfficer
   setPreference: true # DeltaV - Readded Senior roles (removed upstream)
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobWarden
-      time: 21600 #6 hrs
-    - !type:RoleTimeRequirement
-      role: JobDetective
-      time: 7200 #2 hrs
-    - !type:RoleTimeRequirement
-      role: JobSecurityOfficer
-      time: 21600 #6 hrs
-    - !type:DepartmentTimeRequirement
-      department: Security
-      time: 108000 # 30 hrs
+    # Echo Station: Temporarily reduce requirements to only department hours
+#    - !type:RoleTimeRequirement
+#      role: JobWarden
+#      time: 21600 #6 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobDetective
+#      time: 7200 #2 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobSecurityOfficer
+#      time: 21600 #6 hrs
+#    - !type:DepartmentTimeRequirement
+#      department: Security
+#      time: 14400 # 4 hrs
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: SeniorOfficerGear
   icon: "JobIconSeniorOfficer"
