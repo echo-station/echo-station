@@ -5,14 +5,15 @@
   playTimeTracker: JobClerk
   antagAdvantage: 2 # DeltaV - Reduced TC: Security Radio and Access
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
-    - !type:RoleTimeRequirement
-      role: JobLawyer
-      time: 36000 # 10 hours
-    - !type:RoleTimeRequirement
-      role: JobProsecutor
-      time: 36000 # 10 hours
+    # Echo Station: Remove most time requirements
+#    - !type:OverallPlaytimeRequirement
+#      time: 36000 # 10 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobLawyer
+#      time: 36000 # 10 hours
+#    - !type:RoleTimeRequirement
+#      role: JobProsecutor
+#      time: 36000 # 10 hours
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Justice roles
   startingGear: ClerkGear
   icon: "JobIconClerk"

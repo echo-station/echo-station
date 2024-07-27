@@ -4,8 +4,8 @@
   description: job-description-janitor
   playTimeTracker: JobJanitor
   requirements:
-  - !type:OverallPlaytimeRequirement # Echo Station - to prevent griefers from taking the role.
-    time: 14400 # 4 hours
+    - !type:OverallPlaytimeRequirement # Echo Station - to prevent griefers from taking the role.
+      time: 14400 # 4 hours
   startingGear: JanitorGear
   icon: "JobIconJanitor"
   supervisors: job-supervisors-hop

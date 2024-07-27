@@ -5,9 +5,12 @@
   playTimeTracker: JobStationEngineer
   antagAdvantage: 3 # DeltaV - Reduced TC: External Access + Engineering
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Engineering
-      time: 14400 #4 hrs
+    # Echo Station: Remove most time requirements
+#    - !type:DepartmentTimeRequirement
+#      department: Engineering
+#      time: 14400 #4 hrs
+    - !type:OverallPlaytimeRequirement # Echo Station - to prevent griefers from taking the role.
+      time: 14400 # 4 hours
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce

@@ -4,11 +4,14 @@
   description: job-description-mantis
   playTimeTracker: JobForensicMantis
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 18000
-    - !type:DepartmentTimeRequirement
-      department: Epistemics # DeltaV - Epistemics Department replacing Science
-      time: 3600
+    # Echo Station: Remove most playtime requirements
+#    - !type:OverallPlaytimeRequirement
+#      time: 18000
+#    - !type:DepartmentTimeRequirement
+#      department: Epistemics # DeltaV - Epistemics Department replacing Science
+#      time: 3600
+    - !type:OverallPlaytimeRequirement # Echo Station - to prevent griefers from taking the role.
+      time: 14400 # 4 hours
   startingGear: ForensicMantisGear
   icon: "JobIconForensicMantis"
   supervisors: job-supervisors-rd
