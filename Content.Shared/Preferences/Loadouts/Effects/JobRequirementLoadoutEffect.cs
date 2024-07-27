@@ -1,7 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared.CCVar;
 using Content.Shared.Players;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Roles;
+using Robust.Shared.Configuration;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -21,10 +23,12 @@ public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
         var manager = collection.Resolve<ISharedPlaytimeManager>();
         var playtimes = manager.GetPlayTimes(session);
         var isWhitelisted = session.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
+        var roleTimersEnabled = collection.Resolve<IConfigurationManager>().GetCVar(CCVars.GameRoleTimers);
 
         return JobRequirements.TryRequirementMet(Requirement, playtimes, out reason,
             collection.Resolve<IEntityManager>(),
             collection.Resolve<IPrototypeManager>(),
+            roleTimersEnabled,
             isWhitelisted); // DeltaV
     }
 }
