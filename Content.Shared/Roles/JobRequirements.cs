@@ -77,6 +77,7 @@ namespace Content.Shared.Roles
             [NotNullWhen(false)] out FormattedMessage? reason,
             IEntityManager entManager,
             IPrototypeManager prototypes,
+            bool roleTimersEnabled,
             bool isWhitelisted)
         {
             var sys = entManager.System<SharedRoleSystem>();
@@ -87,7 +88,7 @@ namespace Content.Shared.Roles
 
             foreach (var requirement in requirements)
             {
-                if (!TryRequirementMet(requirement, playTimes, out reason, entManager, prototypes, isWhitelisted))
+                if (!TryRequirementMet(requirement, playTimes, out reason, entManager, prototypes, roleTimersEnabled, isWhitelisted))
                     return false;
             }
 
@@ -103,6 +104,7 @@ namespace Content.Shared.Roles
             [NotNullWhen(false)] out FormattedMessage? reason,
             IEntityManager entManager,
             IPrototypeManager prototypes,
+            bool roleTimersEnabled,
             bool isWhitelisted)
         {
             reason = null;
@@ -110,6 +112,10 @@ namespace Content.Shared.Roles
             switch (requirement)
             {
                 case DepartmentTimeRequirement deptRequirement:
+                    // Allow if time requirements are disabled.
+                    if (!roleTimersEnabled)
+                        return true;
+
                     var playtime = TimeSpan.Zero;
 
                     // Check all jobs' departments
@@ -157,6 +163,10 @@ namespace Content.Shared.Roles
                     }
 
                 case OverallPlaytimeRequirement overallRequirement:
+                    // Allow if time requirements are disabled.
+                    if (!roleTimersEnabled)
+                        return true;
+
                     var overallTime = playTimes.GetValueOrDefault(PlayTimeTrackingShared.TrackerOverall);
                     var overallDiff = overallRequirement.Time.TotalMinutes - overallTime.TotalMinutes;
 
@@ -182,6 +192,10 @@ namespace Content.Shared.Roles
                     }
 
                 case RoleTimeRequirement roleRequirement:
+                    // Allow if time requirements are disabled.
+                    if (!roleTimersEnabled)
+                        return true;
+
                     proto = roleRequirement.Role;
 
                     playTimes.TryGetValue(proto, out var roleTime);
