@@ -8,6 +8,11 @@ whitelist-playercount-invalid = {$min ->
        *[other] -> players and below {$max} players, so you may be able to join later.
     }
 }
+
+# Echo Station: Non-whitelisted slots error messages.
+whitelist-nonwhitelisted-slots-full = While we do allow some non-whitelisted players to join when there are admins online, all {$slots} are currently taken. You can try again later, or apply to be whitelisted on our Discord.
+whitelist-nonwhitelisted-slots-zero = While we do allow some non-whitelisted players to join when there are admins online, there are currently none online. You can try again later, or apply to be whitelisted on our Discord.
+
 whitelist-not-whitelisted-rp = You are not whitelisted. To become whitelisted, visit our Discord (which can be found at https://spacestation14.io) and check the #rp-whitelist channel.
 
 cmd-whitelistadd-desc = Adds the player with the given username to the server whitelist.

@@ -429,6 +429,7 @@
     allowMovement: true
     name: ghost-role-information-mothroach-name
     description: ghost-role-information-mothroach-description
+    rules: ghost-role-information-freeagent-rules
   - type: Fixtures
     fixtures:
       fix1:
@@ -1122,6 +1123,9 @@
     prob: 0.25
     name: ghost-role-information-kangaroo-name
     description: ghost-role-information-kangaroo-description
+    rules: ghost-role-information-nonantagonist-rules
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable
   - type: Vocal
     sounds:
@@ -1276,6 +1280,7 @@
     tags:
     - VimPilot
     - DoorBumpOpener
+  - type: CanWalk
 
 - type: entity
   name: monkey
@@ -1297,6 +1302,7 @@
     makeSentient: true
     name: ghost-role-information-monkey-name
     description: ghost-role-information-monkey-description
+    rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
   - type: Clumsy
     clumsyDamage:
@@ -1331,8 +1337,11 @@
     makeSentient: true
     name: ghost-role-information-monkey-name
     description: ghost-role-information-monkey-description
+    rules: ghost-role-information-syndicate-monkey-reinforcement-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable
   - type: Loadout
     prototypes: [SyndicateOperativeGearMonkey]
@@ -1462,6 +1471,7 @@
     makeSentient: true
     name: ghost-role-information-kobold-name
     description: ghost-role-information-kobold-description
+    rules: ghost-role-information-nonantagonist-rules
 
 - type: entity
   name: kobold
@@ -1494,6 +1504,9 @@
     - Syndicate
   - type: Loadout
     prototypes: [SyndicateOperativeGearMonkey]
+  - type: GhostRole
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
   id: MobKoboldSyndicateAgent
@@ -1535,6 +1548,7 @@
     allowMovement: true
     name: ghost-role-information-mouse-name
     description: ghost-role-information-mouse-description
+    rules: ghost-role-information-freeagent-rules
   - type: GhostTakeoverAvailable
   - type: Speech
     speechSounds: Squeak
@@ -1834,7 +1848,7 @@
       state: slug
       sprite: Mobs/Animals/slug.rsi
   - type: Carriable #DeltaV
-    freeHandsRequired: 1 
+    freeHandsRequired: 1
   - type: Physics
   - type: Fixtures
     fixtures:
@@ -2300,9 +2314,11 @@
       makeSentient: true
       name: ghost-role-information-giant-spider-name
       description: ghost-role-information-giant-spider-description
-      rules: deltav-ghost-role-information-softantag-rules #DeltaV
+      rules: ghost-role-information-giant-spider-rules
       raffle:
         settings: short
+      requirements:
+      - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
     - type: GhostTakeoverAvailable
 
 - type: entity
@@ -3090,6 +3106,7 @@
     allowMovement: true
     name: ghost-role-information-hamster-name
     description: ghost-role-information-hamster-description
+    rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
   - type: Speech
     speechVerb: SmallMob

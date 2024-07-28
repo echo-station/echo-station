@@ -4,16 +4,22 @@
   description: job-description-senior-physician
   playTimeTracker: JobSeniorPhysician
   setPreference: true # DeltaV - Readded Senior roles (removed upstream)
+  canBeAntag: true # Echo Station: Yes, seniors can be antags.
+  antagAdvantage: 6 # Echo Station: 14 TC. Medical supplies, chem access, paramedic access, ..
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 21600 #6 hrs
-    - !type:RoleTimeRequirement
-      role: JobMedicalDoctor
-      time: 21600 #6 hrs
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 216000 # 60 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobChemist
+#      time: 21600 #6 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobMedicalDoctor
+#      time: 21600 #6 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobParamedic
+#      time: 21600 #6 hrs
+#    - !type:DepartmentTimeRequirement
+#      department: Medical
+#      time: 108000 # 30 hrs
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Senior roles
   startingGear: SeniorPhysicianGear
   icon: "JobIconSeniorPhysician"
   supervisors: job-supervisors-cmo
@@ -22,6 +28,7 @@
   - Maintenance
   - Chemistry
   - Paramedic
+  - External
 
 - type: startingGear
   id: SeniorPhysicianGear

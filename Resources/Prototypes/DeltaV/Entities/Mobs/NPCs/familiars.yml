@@ -106,6 +106,7 @@
     - !type:DepartmentTimeRequirement
       department: Epistemics
       time: 14400 # DeltaV - 4 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
 
 - type: entity
   parent: WelderExperimental

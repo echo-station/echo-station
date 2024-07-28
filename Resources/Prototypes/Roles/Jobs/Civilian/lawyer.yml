@@ -5,11 +5,13 @@
   playTimeTracker: JobLawyer
   antagAdvantage: 4 # DeltaV - Reduced TC: Security Radio and Access
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
-    - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
-      department: Security
-      time: 14400 # 4 hours
+    # Echo Station: Remove most playtime requirements
+#    - !type:OverallPlaytimeRequirement
+#      time: 36000 # 10 hrs
+#    - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
+#      department: Security
+#      time: 14400 # 4 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Justice roles
   startingGear: LawyerGear
   icon: "JobIconLawyer"
   supervisors: job-supervisors-cj  # Delta V - Change supervisor to chief justice

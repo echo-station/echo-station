@@ -1,0 +1,125 @@
+﻿#
+# Core Rules
+#
+
+# Index page
+#   Actually used in the guidebook. Contents of this file are duplicated to the EchoRuleset in index.yml.
+- type: guideEntry
+  id: EchoRuleC0
+  name: guide-entry-echo-rules-c0
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC0.xml"
+  children:
+  - EchoRuleC1
+  - EchoRuleC2
+  - EchoRuleC3
+  - EchoRuleC4
+  - EchoRuleC5
+  - EchoRuleC6
+  - EchoRuleC7
+  - EchoRuleC8
+  - EchoRuleC9
+  - EchoRuleC10
+  - EchoRuleC11
+  - EchoRuleC12
+  - EchoRuleC13
+  - EchoRuleC14
+
+- type: guideEntry
+  id: EchoRuleC1
+  name: guide-entry-echo-rules-c1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC1Admins.xml"
+
+- type: guideEntry
+  id: EchoRuleC2
+  name: guide-entry-echo-rules-c2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC2DBAD.xml"
+
+- type: guideEntry
+  id: EchoRuleC3
+  name: guide-entry-echo-rules-c3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC3NoHate.xml"
+
+- type: guideEntry
+  id: EchoRuleC4
+  name: guide-entry-echo-rules-c4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC4NoERP.xml"
+
+- type: guideEntry
+  id: EchoRuleC5
+  name: guide-entry-echo-rules-c5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC5Metacomms.xml"
+
+- type: guideEntry
+  id: EchoRuleC6
+  name: guide-entry-echo-rules-c6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC6BanEvasion.xml"
+
+- type: guideEntry
+  id: EchoRuleC7
+  name: guide-entry-echo-rules-c7
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC7EnglishOnly.xml"
+
+- type: guideEntry
+  id: EchoRuleC8
+  name: guide-entry-echo-rules-c8
+  ruleEntry: true
+  priority: 8
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC8Exploits.xml"
+
+- type: guideEntry
+  id: EchoRuleC9
+  name: guide-entry-echo-rules-c9
+  ruleEntry: true
+  priority: 9
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC9Multikey.xml"
+
+- type: guideEntry
+  id: EchoRuleC10
+  name: guide-entry-echo-rules-c10
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC10AHelp.xml"
+
+- type: guideEntry
+  id: EchoRuleC11
+  name: guide-entry-echo-rules-c11
+  ruleEntry: true
+  priority: 11
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC11AhelpThreats.xml"
+
+- type: guideEntry
+  id: EchoRuleC12
+  name: guide-entry-echo-rules-c12
+  ruleEntry: true
+  priority: 12
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC12MinAge.xml"
+
+- type: guideEntry
+  id: EchoRuleC13
+  name: guide-entry-echo-rules-c13
+  ruleEntry: true
+  priority: 13
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC13CharacterNames.xml"
+
+- type: guideEntry
+  id: EchoRuleC14
+  name: guide-entry-echo-rules-c14
+  ruleEntry: true
+  priority: 14
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Core/RuleC14ICinOOC.xml"

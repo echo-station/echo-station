@@ -1,0 +1,93 @@
+﻿#
+# Silicon Rules
+#
+
+# Index page
+#   Actually used in the guidebook. Contents of this file are duplicated to the EchoRuleset in index.yml.
+- type: guideEntry
+  id: EchoRuleS0
+  name: guide-entry-echo-rules-s0
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS0.xml"
+  children:
+  - EchoRuleS1
+  - EchoRuleS2
+  - EchoRuleS3
+  - EchoRuleS4
+  - EchoRuleS5
+  - EchoRuleS6
+  - EchoRuleS7
+  - EchoRuleS8
+  - EchoRuleS9
+  - EchoRuleS10
+
+- type: guideEntry
+  id: EchoRuleS1
+  name: guide-entry-echo-rules-s1
+  ruleEntry: true
+  priority: 1
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS1Laws.xml"
+
+- type: guideEntry
+  id: EchoRuleS2
+  name: guide-entry-echo-rules-s2
+  ruleEntry: true
+  priority: 2
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS2LawPriority.xml"
+
+- type: guideEntry
+  id: EchoRuleS3
+  name: guide-entry-echo-rules-s3
+  ruleEntry: true
+  priority: 3
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS3LawRedefinition.xml"
+
+- type: guideEntry
+  id: EchoRuleS4
+  name: guide-entry-echo-rules-s4
+  ruleEntry: true
+  priority: 4
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS4RequestChanges.xml"
+
+- type: guideEntry
+  id: EchoRuleS5
+  name: guide-entry-echo-rules-s5
+  ruleEntry: true
+  priority: 5
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS5FreeSilicon.xml"
+
+- type: guideEntry
+  id: EchoRuleS6
+  name: guide-entry-echo-rules-s6
+  ruleEntry: true
+  priority: 6
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS6UnreasonableOrders.xml"
+
+- type: guideEntry
+  id: EchoRuleS7
+  name: guide-entry-echo-rules-s7
+  ruleEntry: true
+  priority: 7
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS7Consistency.xml"
+
+- type: guideEntry
+  id: EchoRuleS8
+  name: guide-entry-echo-rules-s8
+  ruleEntry: true
+  priority: 8
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS8DefaultCrewDefinition.xml"
+
+- type: guideEntry
+  id: EchoRuleS9
+  name: guide-entry-echo-rules-s9
+  ruleEntry: true
+  priority: 9
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS9DefaultHarmDefinition.xml"
+
+- type: guideEntry
+  id: EchoRuleS10
+  name: guide-entry-echo-rules-s10
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/EchoStation/Rules/Silicon/RuleS10OrderConflicts.xml"

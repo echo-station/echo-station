@@ -89,9 +89,11 @@
     makeSentient: true
     name: ghost-role-information-rat-king-name
     description: ghost-role-information-rat-king-description
-    rules: ghost-role-information-rat-king-rules
+    rules: ghost-role-information-freeagent-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: GhostTakeoverAvailable
   - type: Tag
     tags:
@@ -121,6 +123,7 @@
     attributes:
       gender: male
   - type: PotentialPsionic # Nyano
+  - type: CanWalk
 
 - type: entity
   id: MobRatKingBuff

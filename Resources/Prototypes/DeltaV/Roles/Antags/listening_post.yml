@@ -16,3 +16,4 @@
   - !type:DepartmentTimeRequirement
     department: Command
     time: 40000 # 11.1 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles

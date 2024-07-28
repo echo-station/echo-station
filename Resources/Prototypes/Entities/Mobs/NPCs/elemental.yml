@@ -232,8 +232,11 @@
   - type: GhostRole
     prob: 0
     description: ghost-role-information-angry-slimes-description
+    rules: ghost-role-information-angry-slimes-rules
     raffle:
       settings: short
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: NpcFactionMember
     factions:
     - SimpleHostile
@@ -296,6 +299,7 @@
     solution: bloodstream
   - type: DrainableSolution
     solution: bloodstream
+  - type: CanWalk
 
 - type: entity
   name: Reagent Slime Spawner

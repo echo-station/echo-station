@@ -3,11 +3,12 @@
   name: job-name-chemist
   description: job-description-chemist
   playTimeTracker: JobChemist
-  antagAdvantage: 4 # DeltaV - Synthesize any chem you want with little oversight. 
+  antagAdvantage: 4 # DeltaV - Synthesize any chem you want with little oversight.
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 28800 # DeltaV - 8 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting higher risk roles
+#    - !type:DepartmentTimeRequirement
+#      department: Medical
+#      time: 14400 # DeltaV - 4 hours
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo

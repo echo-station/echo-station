@@ -4,9 +4,14 @@
   description: job-description-detective
   playTimeTracker: JobDetective
   requirements:
-    - !type:RoleTimeRequirement # DeltaV - JobSecurityOfficer time requirement
-      role: JobSecurityOfficer
-      time: 21600 # DeltaV - 6 hrs
+    # Echo Station: Remove most time requirements
+#    - !type:DepartmentTimeRequirement
+#      department: Security
+#      time: 7200 # 2hrs
+#    - !type:RoleTimeRequirement # DeltaV - JobSecurityOfficer time requirement
+#      role: JobSecurityOfficer
+#      time: 21600 # 6 hrs
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos

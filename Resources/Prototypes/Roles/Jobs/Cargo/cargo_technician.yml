@@ -5,8 +5,9 @@
   playTimeTracker: JobCargoTechnician
   startingGear: CargoTechGear
   requirements:
-  - !type:OverallPlaytimeRequirement # DeltaV
-    time: 3600 # 1 hr
+    # Echo Station: Remove most time requirements
+#  - !type:OverallPlaytimeRequirement # DeltaV
+#    time: 3600 # 1 hr
   icon: "JobIconCargoTechnician"
   supervisors: job-supervisors-qm
   access:

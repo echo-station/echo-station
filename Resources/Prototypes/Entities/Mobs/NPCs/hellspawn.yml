@@ -12,8 +12,11 @@
     makeSentient: true
     name: ghost-role-information-hellspawn-name
     description: ghost-role-information-hellspawn-description
+    rules: ghost-role-information-antagonist-rules
     raffle:
       settings: default
+    requirements:
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
   - type: RotationVisuals
     defaultRotation: 90
     horizontalRotation: 90

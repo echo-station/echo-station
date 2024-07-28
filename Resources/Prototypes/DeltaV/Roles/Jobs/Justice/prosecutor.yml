@@ -4,11 +4,13 @@
   description: job-description-prosecutor
   playTimeTracker: JobProsecutor
   requirements:
-    - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
-    - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
-      department: Security
-      time: 21600 # 6 hours
+    # Echo Station: Remove most time requirements
+#    - !type:OverallPlaytimeRequirement
+#      time: 36000 # 10 hrs
+#    - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
+#      department: Security
+#      time: 21600 # 6 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Justice roles
   startingGear: ProsecutorGear
   icon: "JobIconProsecutor"
   supervisors: job-supervisors-cj

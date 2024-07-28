@@ -21,16 +21,10 @@ namespace Content.Shared.CCVar
             CVarDef.Create("server.id", "unknown_server_id", CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
-        ///     Name of the rules txt file in the "Resources/Server Info" dir. Include the extension.
+        ///     Guide Entry Prototype ID to be displayed as the server rules.
         /// </summary>
         public static readonly CVarDef<string> RulesFile =
-            CVarDef.Create("server.rules_file", "Rules.txt", CVar.REPLICATED | CVar.SERVER);
-
-        /// <summary>
-        ///     A loc string for what should be displayed as the title on the Rules window.
-        /// </summary>
-        public static readonly CVarDef<string> RulesHeader =
-            CVarDef.Create("server.rules_header", "ui-rules-header", CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("server.rules_file", "DefaultRuleset", CVar.REPLICATED | CVar.SERVER);
 
         /*
          * Ambience
@@ -1000,6 +994,13 @@ namespace Content.Shared.CCVar
             CVarDef.Create("atmos.space_wind", true, CVar.SERVERONLY);
 
         /// <summary>
+        ///     Whether pipes will unanchor on ANY conflicting connection. May break maps.
+        ///     If false, allows you to stack pipes as long as new directions are added (i.e. in a new pipe rotation, layer or multi-Z link), otherwise unanchoring them.
+        /// </summary>
+        public static readonly CVarDef<bool> StrictPipeStacking =
+            CVarDef.Create("atmos.strict_pipe_stacking", false, CVar.SERVERONLY);
+
+        /// <summary>
         ///     Divisor from maxForce (pressureDifference * 2.25f) to force applied on objects.
         /// </summary>
         public static readonly CVarDef<float> SpaceWindPressureForceDivisorThrow =
@@ -1237,6 +1238,30 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<int> WhitelistMaxPlayers =
             CVarDef.Create("whitelist.max_players", int.MaxValue, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Enables a configurable amount of slots for non-whitelisted players to join.
+        /// </summary>
+        public static readonly CVarDef<bool> WhitelistNonWhitelistedSlotsEnabled =
+            CVarDef.Create("whitelist.non_whitelisted_slots_enabled", false, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     The minimum amount of slots for non-whitelisted players to join. For example, if set to 1, one unwhitelisted person will always be able to join, even if there is no admin online.
+        /// </summary>
+        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMinimum =
+            CVarDef.Create("whitelist.non_whitelisted_slots_min", 0, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     The maximum amount of slots for non-whitelisted players to join.
+        /// </summary>
+        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMaximum =
+            CVarDef.Create("whitelist.non_whitelisted_slots_max", int.MaxValue, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     The amount of non-whitelisted slots to add per ACTIVE admin, capped by the configured maximum.
+        /// </summary>
+        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsPerAdmin =
+            CVarDef.Create("whitelist.non_whitelisted_slots_per_admin", 0, CVar.SERVERONLY);
 
         /*
          * VOTE
@@ -1802,7 +1827,7 @@ namespace Content.Shared.CCVar
         /// Don't show rules to localhost/loopback interface.
         /// </summary>
         public static readonly CVarDef<bool> RulesExemptLocal =
-            CVarDef.Create("rules.exempt_local", true, CVar.SERVERONLY);
+            CVarDef.Create("rules.exempt_local", false, CVar.SERVERONLY);
 
 
         /*

@@ -7,17 +7,20 @@
   playTimeTracker: JobChiefMedicalOfficer
   antagAdvantage: 6 # DeltaV - Reduced TC: Head of Staff
   requirements:
-    - !type:RoleTimeRequirement
-      role: JobChemist
-      time: 14400 #DeltaV 4 hrs
-#    - !type:RoleTimeRequirement # DeltaV - No Medical Doctor time requirement
+    # Echo Station: Remove most time requirements
+#    - !type:RoleTimeRequirement
+#      role: JobChemist
+#      time: 14400 # 4 hrs
+#    - !type:RoleTimeRequirement
 #      role: JobMedicalDoctor
-#      time: 21600 #6 hrs
-    - !type:DepartmentTimeRequirement
-      department: Medical
-      time: 43200 # DeltaV - 12 hours
-    - !type:OverallPlaytimeRequirement
-      time: 72000 # DeltaV - 20 hours
+#      time: 14400 # 4 hrs
+#    - !type:RoleTimeRequirement
+#      role: JobParamedic
+#      time: 14400 # 4 hrs
+#    - !type:DepartmentTimeRequirement
+#      department: Medical
+#      time: 36000 # 10 hrs
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
