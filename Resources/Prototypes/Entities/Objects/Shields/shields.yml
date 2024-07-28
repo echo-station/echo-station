@@ -10,21 +10,20 @@
       state: riot-icon
     - type: Item
       sprite: Objects/Weapons/Melee/shields.rsi
-      size: Ginormous
-      heldPrefix: riot
+      size: Huge
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.9
-          Slash: 0.9
-          Piercing: 0.9
-          Heat: 0.9
+          Blunt: 0.4
+          Slash: 0.4
+          Piercing: 1.2
+          Heat: 1
       activeBlockModifier:
         coefficients:
-          Blunt: 0.8
-          Slash: 0.8
-          Piercing: 0.8
-          Heat: 0.8
+          Blunt: 0.4
+          Slash: 0.4
+          Piercing: 1.2
+          Heat: 1
         flatReductions:
           Blunt: 1
           Slash: 1
@@ -36,13 +35,13 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 80
+            damage: 250
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 40 #This is probably enough damage before it breaks
+            damage: 200 #40 #This is probably enough damage before it breaks #Echo shields proven to be too fragile to justify use
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -66,16 +65,20 @@
   name: riot shield
   parent: BaseShield
   id: RiotShield
-  description: A large tower shield. Good for controlling crowds.
+  description: A large tower shield bearing security markings. An internal inscription reads 'Return with it, or on it'.
   components:
     - type: StaticPrice
       price: 90
+    - type: Item
+      size: Huge
+      shape:
+      - 0,0,4,2 #Echo 5 by 3 rectangle, consumes enough space to justify picking a dufflebag over the backpack without denying the option outright
 
 - type: entity
-  name: riot laser shield
-  parent: BaseShield
+  name: laser shield
+  parent: RiotShield
   id: RiotLaserShield
-  description: A riot shield built for withstanding lasers, but not much else.
+  description: A tall and specialized shield designed to resist energy based attacks. This one bears security markings.
   components:
     - type: Sprite
       state: riot_laser-icon
@@ -84,18 +87,18 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Heat: 0.8
+          Heat: 0.3
       activeBlockModifier:
         coefficients:
-          Heat: 0.7
+          Heat: 0.3
         flatReductions:
           Heat: 2
 
 - type: entity
-  name: riot bullet shield
-  parent: BaseShield
+  name: ballistic shield
+  parent: RiotShield
   id: RiotBulletShield
-  description: A ballistic riot shield built for withstanding bullets, but not much else.
+  description: A bulletproof shield bearing security markings. An internal inscription reads 'Return with it, or on it'.
   components:
     - type: Sprite
       state: riot_bullet-icon
@@ -104,12 +107,12 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.8
-          Piercing: 0.8
+          Blunt: 0.7
+          Piercing: 0.4
       activeBlockModifier:
         coefficients:
           Blunt: 0.7
-          Piercing: 0.7
+          Piercing: 0.4
         flatReductions:
           Blunt: 1.5
           Piercing: 1.5
@@ -129,15 +132,15 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.95
-          Slash: 0.95
-          Piercing: 0.95
+          Blunt: 0.5
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 2
       activeBlockModifier:
         coefficients:
-          Blunt: 0.85
-          Slash: 0.85
-          Piercing: 0.85
+          Blunt: 0.5
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 2
         flatReductions:
           Blunt: 1
@@ -150,13 +153,13 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 60
+            damage: 160
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 30 #Weaker shield
+            damage: 120 #Weaker shield
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -184,15 +187,15 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.95
-          Slash: 0.95
-          Piercing: 0.95
+          Blunt: 0.5
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 0.9
       activeBlockModifier:
         coefficients:
-          Blunt: 0.85
-          Slash: 0.85
-          Piercing: 0.85
+          Blunt: 0.5
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 0.8
         flatReductions:
           Blunt: 0.5
@@ -206,13 +209,13 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 40
+            damage: 140
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 20 #Very weak shield
+            damage: 100 #Very weak shield
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -229,7 +232,7 @@
   name: web shield
   parent: BaseShield
   id: WebShield
-  description: A stringy shield. It's weak, and doesn't seem to do well against heat.
+  description: A surprisingly durable shield made entirely of spider silk.
   components:
     - type: Sprite
       sprite: Objects/Weapons/Melee/web-shield.rsi
@@ -240,18 +243,18 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.95
-          Slash: 0.95
-          Piercing: 0.95
+          Blunt: 0.7
+          Slash: 0.7
+          Piercing: 0.7
       activeBlockModifier:
         coefficients:
-          Blunt: 0.85
-          Slash: 0.85
-          Piercing: 0.85
+          Blunt: 0.7
+          Slash: 0.7
+          Piercing: 0.7
         flatReductions:
-          Blunt: 0.5
-          Slash: 0.5
-          Piercing: 0.5
+          Blunt: 1
+          Slash: 1
+          Piercing: 1
     - type: Construction
       graph: WebObjects
       node: shield
@@ -259,13 +262,13 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 40
+            damage: 200
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 20
+            damage: 120
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -330,13 +333,13 @@
           Blunt: 1.2
           Slash: 1.2
           Piercing: 1.2
-          Heat: .7
+          Heat: 0.7
       activeBlockModifier:
         coefficients:
           Blunt: 1.2
           Slash: 1.2
           Piercing: 1.2
-          Heat: .6
+          Heat: 0.7
         flatReductions:
           Heat: 1
       blockSound: !type:SoundPathSpecifier
@@ -416,14 +419,14 @@
       passiveBlockModifier:
         coefficients:
           Blunt: 1.0
-          Slash: 0.9
-          Piercing: 0.85
+          Slash: 0.8
+          Piercing: 0.8
           Heat: 0.6
       activeBlockModifier:
         coefficients:
-          Blunt: 1.2
-          Slash: 0.85
-          Piercing: 0.5
+          Blunt: 1.0
+          Slash: 0.8
+          Piercing: 0.8
           Heat: 0.4
         flatReductions:
           Heat: 1
@@ -441,7 +444,7 @@
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 100
+            damage: 160
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -514,13 +517,13 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 100
+            damage: 200
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 70
+            damage: 150
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
