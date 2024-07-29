@@ -215,8 +215,6 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
     public HashSet<ProtoId<JobPrototype>> GetDisallowedJobs(ICommonSession player)
     {
         var roles = new HashSet<ProtoId<JobPrototype>>();
-        // if (!_cfg.GetCVar(CCVars.GameRoleTimers))
-        //     return roles;
 
         if (!_tracking.TryGetTrackerTimes(player, out var playTimes))
         {
@@ -226,8 +224,6 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
         var isWhitelisted = player.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
         var roleTimersEnabled = _cfg.GetCVar(CCVars.GameRoleTimers);
-        // if (!_cfg.GetCVar(CCVars.GameRoleTimers))
-        //     return roles;
 
         foreach (var job in _prototypes.EnumeratePrototypes<JobPrototype>())
         {
