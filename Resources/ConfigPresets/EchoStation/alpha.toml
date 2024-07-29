@@ -3,13 +3,13 @@ hostname = "[EN][MRP/HRP] 🔷 Echo Station: Alpha | Public tryout slots! [US Ea
 
 # For the time being, disable role timers:
 role_timers = false
-role_whitelist = false
+role_whitelist = true
 
 [hub]
 # Don't appear in public listings just yet.
 advertise = false
 # English, America > North America > East, High RP, don't guess tags based on server name.
-tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
+tags = "lang:en-US,region:am_n_e,rp:med,no_tag_infer"
 
 
 # Individual instance configs should set the following settings:
