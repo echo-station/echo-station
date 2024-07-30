@@ -6,10 +6,10 @@
   requirements:
   - !type:OverallPlaytimeRequirement
     time: 21600 # DeltaV - 6 hours
-  #    - !type:DepartmentTimeRequirement # DeltaV - Removes time limit
-  #      department: Security
-  #      time: 54000 #15 hrs
-  #      inverted: true # stop playing intern if you're good at security!
+    #    - !type:DepartmentTimeRequirement # DeltaV - Removes time limit
+    #      department: Security
+    #      time: 54000 #15 hrs
+    #      inverted: true # stop playing intern if you're good at security!
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"

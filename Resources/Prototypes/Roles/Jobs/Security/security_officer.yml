@@ -6,7 +6,7 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: Security
-    time: 7200 # 2 hours
+    time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"

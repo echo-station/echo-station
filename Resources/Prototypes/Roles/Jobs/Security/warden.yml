@@ -6,10 +6,10 @@
   requirements:
   - !type:RoleTimeRequirement # DeltaV - JobSecurityOfficer time requirement. Make them experienced in proper officer work.
     role: JobSecurityOfficer
-    time: 14400 # 4 hrs
+    time: 36000 # DeltaV - 10 hrs
   - !type:RoleTimeRequirement # DeltaV - JobDetective time requirement. Give them an understanding of basic forensics.
     role: JobDetective
-    time: 7200 # 2 hrs
+    time: 21600 # DeltaV - 6 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   whitelisted: true # Echo Station: Require explicit role whitelisting
   startingGear: WardenGear
