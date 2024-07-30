@@ -1,8 +1,9 @@
 ﻿[game]
 hostname = "[EN][MRP/HRP] 🔷 Echo Station: Alpha | Public tryout slots! [US East]"
 
-# For the time being, disable role timers:
-role_timers = false
+# Role timers are now ON, but all time requirements are multiplied by the multiplier below.
+role_timers = true
+role_timers_multiplier = 0.2 # Increment this over time as people get more playtime in
 role_whitelist = true
 
 [hub]
@@ -10,7 +11,6 @@ role_whitelist = true
 advertise = false
 # English, America > North America > East, High RP, don't guess tags based on server name.
 tags = "lang:en-US,region:am_n_e,rp:med,no_tag_infer"
-
 
 # Individual instance configs should set the following settings:
 #
