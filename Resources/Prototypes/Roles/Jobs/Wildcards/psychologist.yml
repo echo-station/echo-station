@@ -4,9 +4,11 @@
   description: job-description-psychologist
   playTimeTracker: JobPsychologist
   requirements:
-#    - !type:OverallPlaytimeRequirement # Echo Station - to prevent griefers from taking the role.
-#      time: 14400 # 4 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting
+  - !type:OverallPlaytimeRequirement
+    time: 36000 #DeltaV 10 hours
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 14400 #DeltaV 4 hrs
   startingGear: PsychologistGear
   icon: "JobIconPsychologist"
   supervisors: job-supervisors-cmo

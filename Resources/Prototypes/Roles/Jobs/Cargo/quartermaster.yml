@@ -5,20 +5,19 @@
   playTimeTracker: JobQuartermaster
   antagAdvantage: 6 # DeltaV - Reduced TC: Head of Staff
   requirements:
-    # Echo Station: Remove most time requirements
-#    - !type:RoleTimeRequirement
-#      role: JobCargoTechnician
-#      time: 21600 #6 hrs
-#    - !type:RoleTimeRequirement
-#      role: JobSalvageSpecialist
-#      time: 10800 #3 hrs
-#    - !type:RoleTimeRequirement # DeltaV - Courier role time requirement
-#      role: JobCourier
-#      time: 7200 # 2 hours
-#    - !type:DepartmentTimeRequirement
-#      department: Logistics # DeltaV - Logistics Department replacing Cargo
-#      time: 43200 #DeltaV 12 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+  - !type:RoleTimeRequirement
+    role: JobCargoTechnician
+    time: 21600 #6 hrs
+  - !type:RoleTimeRequirement
+    role: JobSalvageSpecialist
+    time: 10800 #3 hrs
+  - !type:RoleTimeRequirement # DeltaV - Courier role time requirement
+    role: JobCourier
+    time: 7200 # 2 hours
+  - !type:DepartmentTimeRequirement
+    department: Logistics # DeltaV - Logistics Department replacing Cargo
+    time: 43200 #DeltaV 12 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
@@ -39,7 +38,7 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-      - type: CommandStaff
+    - type: CommandStaff
 
 - type: startingGear
   id: QuartermasterGear

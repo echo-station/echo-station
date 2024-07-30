@@ -6,14 +6,13 @@
   startingGear: PrisonerGear
   alwaysUseSpawner: true
   canBeAntag: false
-#  whitelistRequired: true
+  #  whitelistRequired: true
   icon: "JobIconPrisoner"
   supervisors: job-supervisors-security
   requirements:
-    # Echo Station: Remove most playtime requirements
-#    - !type:DepartmentTimeRequirement
-#      department: Security
-#      time: 21600
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 21600
 
 - type: startingGear
   id: PrisonerGear

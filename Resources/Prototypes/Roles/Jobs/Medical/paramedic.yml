@@ -5,11 +5,9 @@
   playTimeTracker: JobParamedic
   antagAdvantage: 2 # DeltaV - Reduced TC: External Access
   requirements:
-#    - !type:RoleTimeRequirement
-#     role: JobMedicalDoctor
-#     time: 14400 #4 hrs
-    - !type:OverallPlaytimeRequirement # Echo Station - to prevent griefers from taking the role.
-      time: 14400 # 4 hours
+    - !type:RoleTimeRequirement
+     role: JobMedicalDoctor
+     time: 14400 #4 hrs
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-cmo

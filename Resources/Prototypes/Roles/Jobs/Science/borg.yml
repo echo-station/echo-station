@@ -4,10 +4,9 @@
   description: job-description-borg
   playTimeTracker: JobBorg
   requirements:
-    # Echo Station: Remove most time requirements
-#    - !type:OverallPlaytimeRequirement
-#      time: 36000 #10 hrs
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for higher risk roles
+  - !type:OverallPlaytimeRequirement
+    time: 36000 #10 hrs
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for higher risk roles
   canBeAntag: false
   icon: JobIconBorg
   supervisors: job-supervisors-rd

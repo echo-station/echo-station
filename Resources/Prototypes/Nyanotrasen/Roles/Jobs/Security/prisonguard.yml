@@ -4,20 +4,19 @@
   description: job-description-guard
   playTimeTracker: JobPrisonGuard
   requirements:
-    # Echo Station: Remove most playtime requirements
-#    - !type:OverallPlaytimeRequirement
-#      time: 18000
-#    - !type:DepartmentTimeRequirement
-#      department: Security
-#      time: 14400
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
+  - !type:OverallPlaytimeRequirement
+    time: 18000
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 14400
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: PrisonGuardGear
   alwaysUseSpawner: true
   canBeAntag: false
   icon: "JobIconPrisonGuard"
   supervisors: job-supervisors-warden
   setPreference: true
-#  whitelistRequired: true
+  #  whitelistRequired: true
   access:
   - Security
   #- Brig #Delta V: Removed brig access

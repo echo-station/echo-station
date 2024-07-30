@@ -4,17 +4,16 @@
   description: job-description-hos
   playTimeTracker: JobHeadOfSecurity
   requirements:
-    # Echo Station: Remove most time requirements
-#    - !type:DepartmentTimeRequirement
-#      department: Security
-#      time: 36000 # 10 hours
-#    - !type:RoleTimeRequirement
-#      role: JobWarden
-#      time: 144000 # 4 hours
-#    - !type:DepartmentTimeRequirement
-#      department: Command
-#      time: 144000 # 4 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 36000 # 10 hours
+  - !type:RoleTimeRequirement
+    role: JobWarden
+    time: 144000 # 4 hours
+  - !type:DepartmentTimeRequirement
+    department: Command
+    time: 144000 # 4 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   whitelisted: true # Echo Station: Also require role specific whitelist
   weight: 10
   startingGear: HoSGear
@@ -39,7 +38,7 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-      - type: CommandStaff
+    - type: CommandStaff
   - !type:AddComponentSpecial
     components:
     - type: PsionicBonusChance #Nyano - Summary: makes it more likely to become psionic.
@@ -48,7 +47,7 @@
 - type: startingGear
   id: HoSGear
   equipment:
-#    eyes: ClothingEyesGlassesSecurity # DeltaV
+    #    eyes: ClothingEyesGlassesSecurity # DeltaV
     id: HoSPDA
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
