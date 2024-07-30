@@ -77,7 +77,7 @@ namespace Content.Shared.Roles
             [NotNullWhen(false)] out FormattedMessage? reason,
             IEntityManager entManager,
             IPrototypeManager prototypes,
-            bool roleTimersEnabled,
+            float roleTimersMultiplier,
             bool isWhitelisted)
         {
             var sys = entManager.System<SharedRoleSystem>();
@@ -88,7 +88,7 @@ namespace Content.Shared.Roles
 
             foreach (var requirement in requirements)
             {
-                if (!TryRequirementMet(requirement, playTimes, out reason, entManager, prototypes, roleTimersEnabled, isWhitelisted))
+                if (!TryRequirementMet(requirement, playTimes, out reason, entManager, prototypes, roleTimersMultiplier, isWhitelisted))
                     return false;
             }
 
@@ -104,7 +104,7 @@ namespace Content.Shared.Roles
             [NotNullWhen(false)] out FormattedMessage? reason,
             IEntityManager entManager,
             IPrototypeManager prototypes,
-            bool roleTimersEnabled,
+            float roleTimersMultiplier,
             bool isWhitelisted)
         {
             reason = null;
@@ -113,7 +113,7 @@ namespace Content.Shared.Roles
             {
                 case DepartmentTimeRequirement deptRequirement:
                     // Allow if time requirements are disabled.
-                    if (!roleTimersEnabled)
+                    if (roleTimersMultiplier <= 0f)
                         return true;
 
                     var playtime = TimeSpan.Zero;
@@ -133,7 +133,7 @@ namespace Content.Shared.Roles
                         playtime += otherTime;
                     }
 
-                    var deptDiff = deptRequirement.Time.TotalMinutes - playtime.TotalMinutes;
+                    var deptDiff = (deptRequirement.Time.TotalMinutes * roleTimersMultiplier) - playtime.TotalMinutes;
 
                     if (!deptRequirement.Inverted)
                     {
@@ -164,7 +164,7 @@ namespace Content.Shared.Roles
 
                 case OverallPlaytimeRequirement overallRequirement:
                     // Allow if time requirements are disabled.
-                    if (!roleTimersEnabled)
+                    if (roleTimersMultiplier <= 0f)
                         return true;
 
                     var overallTime = playTimes.GetValueOrDefault(PlayTimeTrackingShared.TrackerOverall);
@@ -193,13 +193,13 @@ namespace Content.Shared.Roles
 
                 case RoleTimeRequirement roleRequirement:
                     // Allow if time requirements are disabled.
-                    if (!roleTimersEnabled)
+                    if (roleTimersMultiplier <= 0f)
                         return true;
 
                     proto = roleRequirement.Role;
 
                     playTimes.TryGetValue(proto, out var roleTime);
-                    var roleDiff = roleRequirement.Time.TotalMinutes - roleTime.TotalMinutes;
+                    var roleDiff = (roleRequirement.Time.TotalMinutes * roleTimersMultiplier) - roleTime.TotalMinutes;
                     var departmentColor = Color.Yellow;
 
                     if (entManager.EntitySysManager.TryGetEntitySystem(out SharedJobSystem? jobSystem))

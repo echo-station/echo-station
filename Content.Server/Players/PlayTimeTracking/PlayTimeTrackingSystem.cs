@@ -209,7 +209,13 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
 
         var isWhitelisted = player.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
 
-        return JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, _cfg.GetCVar(CCVars.GameRoleTimers), isWhitelisted);
+        return JobRequirements.TryRequirementsMet(job,
+            playTimes,
+            out _,
+            EntityManager,
+            _prototypes,
+            _cfg.GetCVar(CCVars.GameRoleTimers) ? _cfg.GetCVar(CCVars.GameRoleTimersMultiplier) : 0f,
+            isWhitelisted);
     }
 
     public HashSet<ProtoId<JobPrototype>> GetDisallowedJobs(ICommonSession player)
@@ -223,11 +229,17 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         }
 
         var isWhitelisted = player.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
-        var roleTimersEnabled = _cfg.GetCVar(CCVars.GameRoleTimers);
+        var roleTimersMultiplier = _cfg.GetCVar(CCVars.GameRoleTimers) ? _cfg.GetCVar(CCVars.GameRoleTimersMultiplier) : 0f;
 
         foreach (var job in _prototypes.EnumeratePrototypes<JobPrototype>())
         {
-            if (JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, roleTimersEnabled, isWhitelisted))
+            if (JobRequirements.TryRequirementsMet(job,
+                    playTimes,
+                    out _,
+                    EntityManager,
+                    _prototypes,
+                    roleTimersMultiplier,
+                    isWhitelisted))
                 roles.Add(job.ID);
         }
 
@@ -248,12 +260,18 @@ public sealed class PlayTimeTrackingSystem : EntitySystem
         }
 
         var isWhitelisted = player.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
-        var roleTimersEnabled = _cfg.GetCVar(CCVars.GameRoleTimers);
+        var roleTimersMultiplier = _cfg.GetCVar(CCVars.GameRoleTimers) ? _cfg.GetCVar(CCVars.GameRoleTimersMultiplier) : 0f;
 
         for (var i = 0; i < jobs.Count; i++)
         {
             if (_prototypes.TryIndex(jobs[i], out var job)
-                && JobRequirements.TryRequirementsMet(job, playTimes, out _, EntityManager, _prototypes, roleTimersEnabled, isWhitelisted))
+                && JobRequirements.TryRequirementsMet(job,
+                    playTimes,
+                    out _,
+                    EntityManager,
+                    _prototypes,
+                    roleTimersMultiplier,
+                    isWhitelisted))
             {
                 continue;
             }
