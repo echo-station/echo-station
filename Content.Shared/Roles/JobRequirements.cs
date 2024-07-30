@@ -168,7 +168,9 @@ namespace Content.Shared.Roles
                         return true;
 
                     var overallTime = playTimes.GetValueOrDefault(PlayTimeTrackingShared.TrackerOverall);
-                    var overallDiff = overallRequirement.Time.TotalMinutes - overallTime.TotalMinutes;
+                    // Apply multiplier to overall time requirements, but with a minimum for 2 hrs.
+                    // Reason being we rely on this specifically to protect against raiders.
+                    var overallDiff = Math.Min(7200, overallRequirement.Time.TotalMinutes * roleTimersMultiplier) - overallTime.TotalMinutes;
 
                     if (!overallRequirement.Inverted)
                     {
