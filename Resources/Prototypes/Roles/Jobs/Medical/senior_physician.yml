@@ -18,7 +18,7 @@
     time: 21600 #6 hrs
   - !type:DepartmentTimeRequirement
     department: Medical
-    time: 108000 # 30 hrs
+    time: 216000 # 60 hrs
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Senior roles
   startingGear: SeniorPhysicianGear
   icon: "JobIconSeniorPhysician"
