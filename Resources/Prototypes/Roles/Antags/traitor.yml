@@ -6,7 +6,6 @@
   objective: roles-antag-syndicate-agent-objective
   guides: [ Traitors ]
   requirements:
-    # Echo Station: Remove most playtime requirements
-#  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
-#    time: 86400 # DeltaV - 24 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
+    time: 86400 # DeltaV - 24 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
