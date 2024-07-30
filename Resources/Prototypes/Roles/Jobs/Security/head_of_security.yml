@@ -14,7 +14,7 @@
     department: Command
     time: 36000 # 10 hours
   - !type:OverallPlaytimeRequirement
-    time: 90000 # 25 hours
+    time: 90000 # DeltaV - 25 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   whitelisted: true # Echo Station: Also require role specific whitelist
   weight: 10
