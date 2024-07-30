@@ -5,7 +5,7 @@
   playTimeTracker: JobMusician
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 7200 # DeltaV - 2 hours
+      time: 3600 # Echo Station - 1 hour
   startingGear: MusicianGear
   icon: "JobIconMusician"
   supervisors: job-supervisors-hire

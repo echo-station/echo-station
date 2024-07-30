@@ -6,6 +6,9 @@
   startingGear: BotanistGear
   icon: "JobIconBotanist"
   supervisors: job-supervisors-hop
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 7200 # Echo Station - 2 hrs to protect against raiders
   access:
   - Service
   - Maintenance
