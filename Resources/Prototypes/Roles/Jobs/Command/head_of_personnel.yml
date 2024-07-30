@@ -5,20 +5,19 @@
   playTimeTracker: JobHeadOfPersonnel
   antagAdvantage: 6 # DeltaV - Reduced TC: Head of Staff
   requirements:
-    # Echo Station: Remove most time requirements
-#    - !type:RoleTimeRequirement
-#      role: JobChef
-#      time: 14400 # DeltaV - 4 hours
-#    - !type:RoleTimeRequirement
-#      role: JobBartender
-#      time: 14400 # DeltaV - 4 hours
-#    - !type:RoleTimeRequirement
-#      role: JobJanitor
-#      time: 14400 # DeltaV - 4 hours
-#    - !type:DepartmentTimeRequirement # DeltaV - Civilian dept time requirement
-#      department: Civilian
-#      time: 72000 # 20 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+  - !type:RoleTimeRequirement
+    role: JobChef
+    time: 14400 # DeltaV - 4 hours
+  - !type:RoleTimeRequirement
+    role: JobBartender
+    time: 14400 # DeltaV - 4 hours
+  - !type:RoleTimeRequirement
+    role: JobJanitor
+    time: 14400 # DeltaV - 4 hours
+  - !type:DepartmentTimeRequirement # DeltaV - Civilian dept time requirement
+    department: Civilian
+    time: 72000 # 20 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10 # DeltaV - Changed HoP weight from 20 to 10 due to them not being more important than other Heads
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"
@@ -34,7 +33,7 @@
   - Janitor
   - Theatre
   - Kitchen
-#  - Chapel
+  #  - Chapel
   - Hydroponics
   - External
   - Cryogenics
@@ -42,17 +41,17 @@
   # As of 15/03/23 they can't do that so here's MOST of the rest of the access levels.
   # Head level access that isn't their own was deliberately left out, get AA from the captain instead.
   # Delta V - fuck all of this HoP is a service role
-#  - Chemistry
-#  - Engineering
-#  - Research
-#  - Detective
-#  - Salvage
-#  - Security # NoooOoOo!! My HoPcurity!1
-#  - Brig
-#  - Lawyer # Lawyer is now part of the justice dept
-#  - Cargo
-#  - Atmospherics
-#  - Medical
+  #  - Chemistry
+  #  - Engineering
+  #  - Research
+  #  - Detective
+  #  - Salvage
+  #  - Security # NoooOoOo!! My HoPcurity!1
+  #  - Brig
+  #  - Lawyer # Lawyer is now part of the justice dept
+  #  - Cargo
+  #  - Atmospherics
+  #  - Medical
   - Boxer # DeltaV - Add Boxer access
   - Clown # DeltaV - Add Clown access
   - Library # DeltaV - Add Library access
@@ -65,7 +64,7 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-      - type: CommandStaff
+    - type: CommandStaff
   - !type:AddComponentSpecial
     components:
     - type: PsionicBonusChance #Nyano - Summary: makes it more likely to become psionic.

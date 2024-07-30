@@ -4,14 +4,13 @@
   description: job-description-cadet
   playTimeTracker: JobSecurityCadet
   requirements:
-    # Echo Station: Remove most time requirements
-#    - !type:OverallPlaytimeRequirement
-#      time: 21600 # DeltaV - 6 hours
-#    - !type:DepartmentTimeRequirement # DeltaV - Removes time limit
-#      department: Security
-#      time: 54000 #15 hrs
-#      inverted: true # stop playing intern if you're good at security!
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
+  - !type:OverallPlaytimeRequirement
+    time: 21600 # DeltaV - 6 hours
+  #    - !type:DepartmentTimeRequirement # DeltaV - Removes time limit
+  #      department: Security
+  #      time: 54000 #15 hrs
+  #      inverted: true # stop playing intern if you're good at security!
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: SecurityCadetGear
   icon: "JobIconSecurityCadet"
   supervisors: job-supervisors-security
@@ -31,10 +30,10 @@
   id: SecurityCadetGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitCadet # DeltaV - precious uniform budget has been allocated to real security uniforms for cadets. not good ones though.
-#    shoes: ClothingShoesBootsCombatFilled # DeltaV
-#    outerClothing: ClothingOuterArmorDuraVest # DeltaV
+    #    shoes: ClothingShoesBootsCombatFilled # DeltaV
+    #    outerClothing: ClothingOuterArmorDuraVest # DeltaV
     id: SecurityCadetPDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltSecurityFilled
-#    pocket1: WeaponPistolMk58Nonlethal # DeltaV - Security Cadet doesn't spawn with a gun
+    #    pocket1: WeaponPistolMk58Nonlethal # DeltaV - Security Cadet doesn't spawn with a gun
     pocket2: BookSecurity

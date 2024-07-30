@@ -4,14 +4,13 @@
   description: job-description-brigmedic
   playTimeTracker: JobBrigmedic
   requirements:
-    # Echo Station: Remove most time requirements
-#    - !type:DepartmentTimeRequirement
-#      department: Medical
-#      time: 21600 # 6 hrs
-#    - !type:RoleTimeRequirement # DeltaV - JobSecurityOfficer time requirement
-#      role: JobSecurityOfficer
-#      time: 21600 # DeltaV - 6 hrs
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Security roles
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 21600 # 6 hrs
+  - !type:RoleTimeRequirement # DeltaV - JobSecurityOfficer time requirement
+    role: JobSecurityOfficer
+    time: 21600 # DeltaV - 6 hrs
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Security roles
   startingGear: CorpsmanGear
   icon: "JobIconBrigmedic"
   supervisors: job-supervisors-hos
@@ -34,7 +33,7 @@
 - type: startingGear
   id: CorpsmanGear # see Prototypes/Roles/Jobs/Fun/misc_startinggear.yml for "BrigmedicGear"
   equipment:
-#    eyes: ClothingEyesHudMedical
+    #    eyes: ClothingEyesHudMedical
     outerClothing: ClothingOuterCoatLabCorpsman
     id: CorpsmanPDA
     ears: ClothingHeadsetBrigmedic

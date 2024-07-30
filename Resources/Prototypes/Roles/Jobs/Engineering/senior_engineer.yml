@@ -7,17 +7,16 @@
   canBeAntag: true # Echo Station: Yes, seniors can be antags.
   antagAdvantage: 6 # Echo Station: 14 TC.
   requirements:
-    # Echo Station: Remove most time requirements
-#    - !type:RoleTimeRequirement
-#      role: JobAtmosphericTechnician
-#      time: 43200 #12 hrs
-#    - !type:RoleTimeRequirement
-#      role: JobStationEngineer
-#      time: 43200 #12 hrs
-#    - !type:DepartmentTimeRequirement
-#      department: Engineering
-#      time: 108000 # 30 hrs
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Senior roles
+  - !type:RoleTimeRequirement
+    role: JobAtmosphericTechnician
+    time: 43200 #12 hrs
+  - !type:RoleTimeRequirement
+    role: JobStationEngineer
+    time: 43200 #12 hrs
+  - !type:DepartmentTimeRequirement
+    department: Engineering
+    time: 108000 # 30 hrs
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Senior roles
   startingGear: SeniorEngineerGear
   icon: "JobIconSeniorEngineer"
   supervisors: job-supervisors-ce

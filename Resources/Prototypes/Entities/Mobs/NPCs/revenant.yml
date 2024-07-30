@@ -19,7 +19,7 @@
     - state: active
   - type: Reactive # Nyanotrasen - Holy Water affects Revenants
     groups:
-      Acidic: [Touch]
+      Acidic: [ Touch ]
   - type: Clickable
   - type: StatusEffects
     allowed:
@@ -47,8 +47,8 @@
   - type: Eye
     drawFov: false
     visMask:
-      - Normal
-      - Ghost
+    - Normal
+    - Ghost
   - type: ContentEye
     maxZoom: 1.2, 1.2
   - type: DoAfter

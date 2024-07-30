@@ -7,11 +7,10 @@
   canBeAntag: true # Echo Station: Yes, seniors can be antags. No penalty for senior here.
   antagAdvantage: 2 # Echo Station: Same penalty as scientist.
   requirements:
-    # Echo Station: Remove most playtime requirements
-#    - !type:DepartmentTimeRequirement
-#      department: Epistemics # DeltaV - Epistemics Department replacing Science
-#      time: 108000 # 10 hrs
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Senior roles
+  - !type:DepartmentTimeRequirement
+    department: Epistemics # DeltaV - Epistemics Department replacing Science
+    time: 108000 # 30 hrs
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Senior roles
   startingGear: SeniorResearcherGear
   icon: "JobIconSeniorResearcher"
   supervisors: job-supervisors-rd
