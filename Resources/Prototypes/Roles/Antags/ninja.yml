@@ -5,8 +5,7 @@
   setPreference: false
   objective: roles-antag-space-ninja-objective
   requirements:
-    # Echo Station: Remove most playtime requirements
-#  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
-#    time: 259200 # DeltaV - 72 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
+    time: 259200 # DeltaV - 72 hours
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   guides: [ SpaceNinja ]

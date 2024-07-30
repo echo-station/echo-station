@@ -5,12 +5,11 @@
   setPreference: true
   objective: roles-antag-rev-head-objective
   requirements:
-    # Echo Station: Remove most playtime requirements
-#  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
-#    time: 172800 # DeltaV - 48 hours
-#  - !type:DepartmentTimeRequirement # DeltaV - Command dept time requirement
-#    department: Command
-#    time: 36000 # DeltaV - 10 hours
+  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
+    time: 172800 # DeltaV - 48 hours
+  - !type:DepartmentTimeRequirement # DeltaV - Command dept time requirement
+    department: Command
+    time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
   guides: [ Revolutionaries ]
 
