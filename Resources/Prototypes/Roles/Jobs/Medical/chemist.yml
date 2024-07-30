@@ -7,7 +7,7 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: Medical
-    time: 14400 # DeltaV - 4 hours
+    time: 28800 # DeltaV - 8 hours
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-cmo
