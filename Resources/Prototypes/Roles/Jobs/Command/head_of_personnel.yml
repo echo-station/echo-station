@@ -17,8 +17,6 @@
   - !type:DepartmentTimeRequirement # DeltaV - Civilian dept time requirement
     department: Civilian
     time: 72000 # 20 hours
-  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
-    time: 108000 # 30 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10 # DeltaV - Changed HoP weight from 20 to 10 due to them not being more important than other Heads
   startingGear: HoPGear
