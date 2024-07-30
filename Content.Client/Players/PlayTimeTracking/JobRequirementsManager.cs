@@ -120,12 +120,12 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         if (requirements == null)
             return true;
 
-        var roleTimersEnabled = _cfg.GetCVar(CCVars.GameRoleTimers);
+        var roleTimersMultiplier = _cfg.GetCVar(CCVars.GameRoleTimers) ? _cfg.GetCVar(CCVars.GameRoleTimersMultiplier) : 0f;
 
         var reasons = new List<string>();
         foreach (var requirement in requirements)
         {
-            if (JobRequirements.TryRequirementMet(requirement, _roles, out var jobReason, _entManager, _prototypes, roleTimersEnabled, _whitelisted))
+            if (JobRequirements.TryRequirementMet(requirement, _roles, out var jobReason, _entManager, _prototypes, roleTimersMultiplier, _whitelisted))
                 continue;
 
             reasons.Add(jobReason.ToMarkup());

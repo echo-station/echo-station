@@ -221,6 +221,12 @@ namespace Content.Shared.CCVar
             GameRoleTimers = CVarDef.Create("game.role_timers", true, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
+        /// Multiplier to apply to role time requirements. Only applicable when game.role_timers is also set.
+        /// </summary>
+        public static readonly CVarDef<float>
+            GameRoleTimersMultiplier = CVarDef.Create("game.role_timers_multiplier", 1.0f, CVar.SERVER | CVar.REPLICATED);
+
+        /// <summary>
         /// Override default role requirements using a <see cref="JobRequirementOverridePrototype"/>
         /// </summary>
         public static readonly CVarDef<string>

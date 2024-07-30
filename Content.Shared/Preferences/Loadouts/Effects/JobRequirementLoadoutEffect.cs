@@ -24,11 +24,14 @@ public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
         var playtimes = manager.GetPlayTimes(session);
         var isWhitelisted = session.ContentData()?.Whitelisted ?? false; // DeltaV - Whitelist requirement
         var roleTimersEnabled = collection.Resolve<IConfigurationManager>().GetCVar(CCVars.GameRoleTimers);
+        var roleTimersMultiplier = roleTimersEnabled
+            ? collection.Resolve<IConfigurationManager>().GetCVar(CCVars.GameRoleTimersMultiplier)
+            : 0f;
 
         return JobRequirements.TryRequirementMet(Requirement, playtimes, out reason,
             collection.Resolve<IEntityManager>(),
             collection.Resolve<IPrototypeManager>(),
-            roleTimersEnabled,
+            roleTimersMultiplier,
             isWhitelisted); // DeltaV
     }
 }
