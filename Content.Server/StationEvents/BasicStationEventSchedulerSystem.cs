@@ -22,7 +22,7 @@ namespace Content.Server.StationEvents
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly EventManagerSystem _event = default!;
 
-        public const float MinEventTime = 60 * 5; // DeltaV - Was 3 minutes
+        public const float MinEventTime = 60 * 10; // DeltaV - Was 3 minutes // Echo - Was 5 minutes
         public const float MaxEventTime = 60 * 25; // DeltaV - Was 10 minutes
 
         protected override void Ended(EntityUid uid, BasicStationEventSchedulerComponent component, GameRuleComponent gameRule,
