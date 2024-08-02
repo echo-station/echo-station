@@ -8,11 +8,16 @@ role_whitelist = true
 
 [hub]
 # Don't appear in public listings just yet.
-advertise = false
-# English, America > North America > East, High RP, don't guess tags based on server name.
+advertise = true
+# English, America > North America > East, Medium RP, don't guess tags based on server name.
 tags = "lang:en-US,region:am_n_e,rp:med,no_tag_infer"
 
 # Individual instance configs should set the following settings:
+#
+# [discord]
+# ahelp_webhook = your-webhook-url-here
+# ahelp_footer_icon = url-to-footer-icon-here https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure
+# ahelp_avatar =
 #
 # [database]
 # engine = "postgres"
