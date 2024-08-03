@@ -72,7 +72,8 @@
         acts: [ "Destruction" ]
   - type: Airtight
   - type: IconSmooth
-    key: walls
+    key: walls # Delta V - Make windows iconsmooth with walls
+    # key: walls
     base: window
   - type: InteractionPopup
     interactSuccessString: comp-window-knock
@@ -92,7 +93,7 @@
   - type: StaticPrice
     price: 100
   - type: BlockWeather
-  
+
 - type: entity
   id: WindowRCDResistant
   parent: Window
@@ -198,7 +199,7 @@
     price: 10
 
 - type: entity
-  id: WindowDirectionalRCDResistant  
+  id: WindowDirectionalRCDResistant
   parent: WindowDirectional
   abstract: true
   components:

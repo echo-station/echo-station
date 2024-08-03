@@ -4,10 +4,10 @@
   description: job-description-security
   playTimeTracker: JobSecurityOfficer
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 36000 # DeltaV - 10 hours
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # DeltaV - 10 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos
@@ -26,7 +26,7 @@
 - type: startingGear
   id: SecurityOfficerGear
   equipment:
-    #    eyes: ClothingEyesGlassesSecurity # DeltaV
+    eyes: ClothingEyesGlassesSecurity
     ears: ClothingHeadsetSecurity
     pocket1: WeaponPistolMk58Nonlethal
     id: SecurityPDA # Echo Station - Separate senior roles

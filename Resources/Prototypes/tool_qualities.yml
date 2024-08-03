@@ -68,6 +68,15 @@
   spawn: RollingPin
   icon: { sprite: Objects/Tools/rolling_pin.rsi, state: icon }
 
+# do not give this to normal tools, its for nuke deconstruction
+- type: tool
+  id: FineScrewing
+  name: tool-quality-fine-screwing
+  toolName: tool-quality-fine-screwing-tool-name
+  spawn: ThinTippedScrewdriver
+  icon: { sprite: Objects/Tools/screwdriver.rsi, state: screwdriver-map }
+
+# Echo Station - Readd fireaxe ability to remove tiles and subfloor
 - type: tool
   id: Axing
   name: tool-quality-axing-name

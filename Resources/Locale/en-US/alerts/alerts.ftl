@@ -110,6 +110,3 @@ alerts-revenant-corporeal-desc = You have manifested physically. People around y
 
 alerts-walking-name = Walking
 alerts-walking-desc = Indicates how fast you're moving.
-
-alerts-deflecting-name = Deflecting
-alerts-deflecting-desc = You have a chance to deflect incoming projectiles. Standing still or moving slowly will increase this chance.

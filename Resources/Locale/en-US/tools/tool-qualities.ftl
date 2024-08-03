@@ -34,5 +34,9 @@ tool-quality-rolling-tool-name = Rolling Pin
 tool-quality-digging-name = Digging
 tool-quality-digging-tool-name = Shovel
 
+tool-quality-fine-screwing-name = Fine Screwing
+tool-quality-fine-screwing-tool-name = Thin-Tipped Screwdriver
+
+# Echo Station: Readd fireaxe ability to remove tiles and subtiles
 tool-quality-axing-name = Axing
 tool-quality-axing-tool-name = Fireaxe
