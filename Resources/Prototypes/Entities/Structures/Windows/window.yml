@@ -72,8 +72,7 @@
         acts: [ "Destruction" ]
   - type: Airtight
   - type: IconSmooth
-    key: walls # Delta V - Make windows iconsmooth with walls
-    # key: walls
+    key: windows
     base: window
   - type: InteractionPopup
     interactSuccessString: comp-window-knock

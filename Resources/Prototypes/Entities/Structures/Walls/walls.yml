@@ -577,9 +577,9 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: DeltaV/Structures/Walls/solid_rust.rsi # Delta V - Resprite Walls
+    sprite: Structures/Walls/solid_rust.rsi
   - type: Icon
-    sprite: DeltaV/Structures/Walls/solid_rust.rsi # Delta V - Resprite Walls
+    sprite: Structures/Walls/solid_rust.rsi
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -930,9 +930,9 @@
   suffix: rusted
   components:
   - type: Sprite
-    sprite: DeltaV/Structures/Walls/solid_rust.rsi # Delta V - Resprite Walls
+    sprite: Structures/Walls/solid_rust.rsi
   - type: Icon
-    sprite: DeltaV/Structures/Walls/solid_rust.rsi # Delta V - Resprite Walls
+    sprite: Structures/Walls/solid_rust.rsi
     state: full
   - type: Construction
     graph: Girder
