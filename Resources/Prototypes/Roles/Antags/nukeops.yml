@@ -18,7 +18,6 @@
     department: Security
     time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
-  guides: [ NuclearOperatives ]
 
 - type: antag
   id: NukeopsMedic
@@ -34,7 +33,6 @@
     department: Medical
     time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
-  guides: [ NuclearOperatives ]
 
 - type: antag
   id: NukeopsCommander
@@ -53,4 +51,3 @@
     department: Command
     time: 36000 # DeltaV - 10 hours
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
-  guides: [ NuclearOperatives ]
