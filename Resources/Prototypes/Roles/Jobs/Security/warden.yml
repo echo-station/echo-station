@@ -10,7 +10,7 @@
     - !type:RoleTimeRequirement # DeltaV - JobDetective time requirement. Give them an understanding of basic forensics.
       role: JobDetective
       time: 21600 # DeltaV - 6 hours
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
   whitelisted: true # Echo Station: Require explicit role whitelisting
   startingGear: WardenGear
   icon: "JobIconWarden"
