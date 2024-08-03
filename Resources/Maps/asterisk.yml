@@ -61620,48 +61620,48 @@ entities:
       parent: 2
 - proto: SpawnPointSeniorEngineer
   entities:
-  - uid: 11692
+  - uid: 12692
     components:
     - type: Transform
       pos: 34.5,8.5
       parent: 2
-  - uid: 11693
+  - uid: 12693
     components:
     - type: Transform
       pos: 33.5,8.5
       parent: 2
 - proto: SpawnPointSeniorOfficer
   entities:
-  - uid: 11694
+  - uid: 12694
     components:
     - type: Transform
       pos: -30.5,6.5
       parent: 2
-  - uid: 11695
+  - uid: 12695
     components:
     - type: Transform
       pos: -30.5,8.5
       parent: 2
 - proto: SpawnPointSeniorPhysician
   entities:
-  - uid: 11698
+  - uid: 12698
     components:
     - type: Transform
       pos: 30.5,-19.5
       parent: 2
-  - uid: 11699
+  - uid: 12699
     components:
     - type: Transform
       pos: 28.5,-19.5
       parent: 2
 - proto: SpawnPointSeniorResearcher
   entities:
-  - uid: 11696
+  - uid: 12696
     components:
     - type: Transform
       pos: -28.5,-23.5
       parent: 2
-  - uid: 11697
+  - uid: 12697
     components:
     - type: Transform
       pos: -27.5,-19.5
