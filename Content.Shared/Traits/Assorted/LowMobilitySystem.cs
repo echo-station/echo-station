@@ -1,4 +1,3 @@
-using Content.Shared.Body.Systems;
 using Content.Shared.Movement.Systems;
 
 namespace Content.Shared.Traits.Assorted
@@ -9,11 +8,6 @@ namespace Content.Shared.Traits.Assorted
     public sealed class LowMobilitySystem : EntitySystem
     {
         [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifierSystem = default!;
-        [Dependency] private readonly SharedBodySystem _bodySystem = default!;
-        [Dependency] private readonly IEntityManager _entMan = default!;
-
-        private EntityQuery<LegsParalyzedComponent> _legsParalyzedQuery;
-        private EntityQuery<LowMobilityComponent> _lowMobilityQuery;
 
         /// <summary>
         /// Initializes any necessary functionalities and registers for necessary events.
@@ -21,53 +15,43 @@ namespace Content.Shared.Traits.Assorted
         /// </summary>
         public override void Initialize()
         {
-            _legsParalyzedQuery = _entMan.GetEntityQuery<LegsParalyzedComponent>();
-            _lowMobilityQuery = _entMan.GetEntityQuery<LowMobilityComponent>();
-
             // We need to adjust the base move speed when the low mobility component is added or removed
             SubscribeLocalEvent<LowMobilityComponent, ComponentStartup>(OnStartup);
             SubscribeLocalEvent<LowMobilityComponent, ComponentShutdown>(OnShutdown);
+            SubscribeLocalEvent<LowMobilityComponent, RefreshMovementSpeedModifiersEvent>(OnRefreshMovementSpeedModifiers);
         }
 
         #region Event Wrappers
-        private void OnStartup(EntityUid uid, LowMobilityComponent comp, ComponentStartup args) => SetMoveSpeed(uid, comp);
-        private void OnShutdown(EntityUid uid, LowMobilityComponent comp, ComponentShutdown args) => SurrenderMoveSpeed(uid);
-        #endregion
-
-        #region Public Update Functions
-        public void UpdateMoveSpeed(EntityUid uid, bool ignoreLegsParalyzed = false)
-        {
-            if (_lowMobilityQuery.TryGetComponent(uid, out var comp))
-                SetMoveSpeed(uid, comp, ignoreLegsParalyzed);
-        }
+        private void OnStartup(EntityUid uid, LowMobilityComponent comp, ComponentStartup args) => RefreshMovementSpeed(uid, comp);
+        private void OnShutdown(EntityUid uid, LowMobilityComponent comp, ComponentShutdown args) => RefreshMovementSpeed(uid, comp, true);
+        private void OnRefreshMovementSpeedModifiers(EntityUid uid, LowMobilityComponent component, RefreshMovementSpeedModifiersEvent args) => RefreshMovementSpeedModifiers(component, args);
         #endregion
 
         #region Private Update Functions
         /// <summary>
-        /// Modify the base move speed of the player to that which is defined in the component.
+        /// Indicates that movement speed should be refreshed for this entity.
         /// </summary>
-        /// <param name="uid">Unique identifier of the entity to modify the base move speed of.</param>
-        /// <param name="component">Component containing the adjusted base walk speed and sprint speed.</param>
-        /// <param name="ignoreLegsParalyzed">Whether the LegsParalyzed component of an entity should be ignored (assuming it has one).</param>
-        private void SetMoveSpeed(EntityUid uid, LowMobilityComponent component, bool ignoreLegsParalyzed = false)
+        /// <param name="uid">ID of the entity to refresh the movement speed of.</param>
+        /// <param name="comp">Low mobility component associated with entity.</param>
+        /// <param name="isShutdown">Whether the component is shutting down. If so, ignore the component's multipliers in the final event call.</param>
+        private void RefreshMovementSpeed(EntityUid uid, LowMobilityComponent comp, bool isShutdown = false)
         {
-            if (component is null) return;
+            // If we're shutting down, we need to ignore the component's modifiers (achieved by setting them to 100%).
+            if (isShutdown)
+                (comp.WalkSpeedMultiplier, comp.SprintSpeedMultiplier) = (1.0f, 1.0f);
 
-            // If legs should be paralyzed and isn't being explicitly ignored, do not set move speed.
-            if (!ignoreLegsParalyzed && _legsParalyzedQuery.HasComponent(uid)) return;
-
-            _movementSpeedModifierSystem.ChangeBaseSpeed(uid, component.LowMobilityBaseWalkSpeed, component.LowMobilityBaseSprintSpeed, 20);
+            _movementSpeedModifierSystem.RefreshMovementSpeedModifiers(uid);
         }
 
         /// <summary>
-        /// Reset the base move speed of the player based on the body system.
+        /// Refreshes the movement speed associated with an entity.
         /// </summary>
-        /// <param name="uid">Unique identifier of the entity to recalculate the base move speed of.</param>
-        private void SurrenderMoveSpeed(EntityUid uid)
+        /// <param name="uid">ID of the entity to refresh the movement speed of.</param>
+        /// <param name="component">Low mobility component associated with entity.</param>
+        /// <param name="args">Arguments needed for speed modification.</param>
+        private static void RefreshMovementSpeedModifiers(LowMobilityComponent component, RefreshMovementSpeedModifiersEvent args)
         {
-            // If legs should be paralyzed, do not refresh move speed.
-            if (_legsParalyzedQuery.HasComponent(uid)) return;
-            _bodySystem.UpdateMovementSpeed(uid);
+            args.ModifySpeed(component.WalkSpeedMultiplier, component.SprintSpeedMultiplier);
         }
         #endregion
     }
