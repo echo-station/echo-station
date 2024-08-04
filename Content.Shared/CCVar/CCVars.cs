@@ -1336,26 +1336,26 @@ namespace Content.Shared.CCVar
         /// <summary>
         ///     Enables a configurable amount of slots for non-whitelisted players to join.
         /// </summary>
-        public static readonly CVarDef<bool> WhitelistNonWhitelistedSlotsEnabled =
-            CVarDef.Create("whitelist.non_whitelisted_slots_enabled", false, CVar.SERVERONLY);
+        public static readonly CVarDef<bool> WhitelistTryoutEnabled =
+            CVarDef.Create("whitelist_tryout.enabled", false, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         ///     The minimum amount of slots for non-whitelisted players to join. For example, if set to 1, one unwhitelisted person will always be able to join, even if there is no admin online.
         /// </summary>
-        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMinimum =
-            CVarDef.Create("whitelist.non_whitelisted_slots_min", 0, CVar.SERVERONLY);
+        public static readonly CVarDef<int> WhitelistTryoutSlotsMinimum =
+            CVarDef.Create("whitelist_tryout.slots_min", 0, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         ///     The maximum amount of slots for non-whitelisted players to join.
         /// </summary>
-        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsMaximum =
-            CVarDef.Create("whitelist.non_whitelisted_slots_max", int.MaxValue, CVar.SERVERONLY);
+        public static readonly CVarDef<int> WhitelistTryoutSlotsMaximum =
+            CVarDef.Create("whitelist_tryout.slots_max", int.MaxValue, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         ///     The amount of non-whitelisted slots to add per ACTIVE admin, capped by the configured maximum.
         /// </summary>
-        public static readonly CVarDef<int> WhitelistNonWhitelistedSlotsPerAdmin =
-            CVarDef.Create("whitelist.non_whitelisted_slots_per_admin", 0, CVar.SERVERONLY);
+        public static readonly CVarDef<int> WhitelistTryoutSlotsPerAdmin =
+            CVarDef.Create("whitelist_tryout.slots_per_admin", 0, CVar.SERVER | CVar.REPLICATED);
 
         /*
          * VOTE

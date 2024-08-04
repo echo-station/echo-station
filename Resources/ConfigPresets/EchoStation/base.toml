@@ -13,14 +13,17 @@ role_whitelist = true
 [whitelist]
 # Whether joining requires being server whitelisted (but also read the next few settings!)
 enabled = true
-# Echo Station custom feature. This enables non-whitelisted to join based on *on-duty* (not de-admined) admins.
-non_whitelisted_slots_enabled = true
+
+# Echo Station: Tryout slots. This enables non-whitelisted players to join based on active (not de-admined) admins.
+[whitelist_tryout]
+# Whether tryout slots are enabled. Requires whitelist to also be enabled to do anything.
+enabled = true
 # Minimum amount of slots for non-whitelisted players. Any non-zero value will mean people can join even if there is no admin on duty.
-non_whitelisted_slots_min = 0
+slots_min = 0
 # Hard maximum amount of non-whitelisted players that can join the server.
-non_whitelisted_slots_max = 5
+slots_max = 5
 # Amount of non-whitelisted slots to add per *on-duty* admin connected.
-non_whitelisted_slots_per_admin = 3
+slots_per_admin = 3
 
 [server]
 rules_file   = "EchoRuleset"

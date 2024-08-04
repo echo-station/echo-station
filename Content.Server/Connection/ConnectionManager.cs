@@ -281,30 +281,30 @@ namespace Content.Server.Connection
                 var max = _cfg.GetCVar(CCVars.WhitelistMaxPlayers);
                 var playerCountValid = _plyMgr.PlayerCount >= min && _plyMgr.PlayerCount < max;
 
-                // Echo Station: BEGIN Non-whitelisted slots
+                // Echo Station: BEGIN Tryout slots
                 // Fetch configuration.
-                var nonWhitelistedSlotsEnabled = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsEnabled);
-                var nonWhitelistedSlotsMin = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsMinimum);
-                var nonWhitelistedSlotsMax = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsMaximum);
-                var nonWhitelistedSlotsPerAdmin = _cfg.GetCVar(CCVars.WhitelistNonWhitelistedSlotsPerAdmin);
+                var tryoutSlotsEnabled = _cfg.GetCVar(CCVars.WhitelistTryoutEnabled);
+                var tryoutSlotsMin = _cfg.GetCVar(CCVars.WhitelistTryoutSlotsMinimum);
+                var tryoutSlotsMax = _cfg.GetCVar(CCVars.WhitelistTryoutSlotsMaximum);
+                var tryoutSlotsPerAdmin = _cfg.GetCVar(CCVars.WhitelistTryoutSlotsPerAdmin);
 
                 // Determine how many slots are theoretically available and used.
-                var currentSlotsFromAdmins = nonWhitelistedSlotsPerAdmin * _adminManager.ActiveAdmins.Count();
-                var theoreticalSlots = Math.Min(nonWhitelistedSlotsMax, Math.Max(nonWhitelistedSlotsMin, currentSlotsFromAdmins));
+                var currentSlotsFromAdmins = tryoutSlotsPerAdmin * _adminManager.ActiveAdmins.Count();
+                var theoreticalSlots = Math.Min(tryoutSlotsMax, Math.Max(tryoutSlotsMin, currentSlotsFromAdmins));
                 var usedSlots = connectedPlayers - connectedWhitelist;
 
-                // Determine if there is a non-whitelisted slot available.
-                var nonWhitelistedSlotAvailable = nonWhitelistedSlotsEnabled && theoreticalSlots - usedSlots > 0;
+                // Determine if there is a tryout slot available.
+                var tryoutSlotAvailable = tryoutSlotsEnabled && theoreticalSlots - usedSlots > 0;
                 // Echo Station: END Non-whitelisted slots
 
                 if (playerCountValid && await _db.GetWhitelistStatusAsync(userId) == false
                                      && adminData is null
-                                     && !nonWhitelistedSlotAvailable) // Echo Station: Allow entry if non-whitelist slot available
+                                     && !tryoutSlotAvailable) // Echo Station: Allow entry if tryout slot is available
                 {
                     var msg = Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason));
 
-                    // Echo Station: If the non-whitelisted slot count is nonzero, return "slots are full" error
-                    if (nonWhitelistedSlotsEnabled)
+                    // Echo Station: If the tryout slot count is nonzero, return "slots are full" error
+                    if (tryoutSlotsEnabled)
                     {
                         msg += " " + Loc.GetString(theoreticalSlots > 0
                                        ? "whitelist-nonwhitelisted-slots-full"
