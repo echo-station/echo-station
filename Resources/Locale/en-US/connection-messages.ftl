@@ -9,9 +9,9 @@ whitelist-playercount-invalid = {$min ->
     }
 }
 
-# Echo Station: Non-whitelisted slots error messages.
-whitelist-nonwhitelisted-slots-full = While we do allow some non-whitelisted players to join when there are admins online, all {$slots} are currently taken. You can try again later, or apply to be whitelisted on our Discord.
-whitelist-nonwhitelisted-slots-zero = While we do allow some non-whitelisted players to join when there are admins online, there are currently none online. You can try again later, or apply to be whitelisted on our Discord.
+# Echo Station: Trout slots error messages.
+whitelist-tryout-slots-full = We do have tryout slots, but all {$slots} are currently taken. Apply to be whitelisted on our Discord or try again later!
+whitelist-tryout-slots-zero = We do have tryout slots when admins are online, but there are none currently online. Apply to be whitelisted on our Discord or try again later!
 
 whitelist-not-whitelisted-rp = You are not whitelisted. To become whitelisted, visit our Discord (which can be found at https://spacestation14.io) and check the #rp-whitelist channel.
 
