@@ -1,4 +1,4 @@
-﻿using Content.Shared.Body.Systems;
+using Content.Shared.Body.Systems;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Systems;
@@ -12,6 +12,7 @@ public sealed class LegsParalyzedSystem : EntitySystem
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifierSystem = default!;
     [Dependency] private readonly StandingStateSystem _standingSystem = default!;
     [Dependency] private readonly SharedBodySystem _bodySystem = default!;
+    [Dependency] private readonly LowMobilitySystem _lowMobility = default!;
 
     public override void Initialize()
     {
@@ -33,6 +34,9 @@ public sealed class LegsParalyzedSystem : EntitySystem
     {
         _standingSystem.Stand(uid);
         _bodySystem.UpdateMovementSpeed(uid);
+
+        // Give control to the low mobility system for entities with paralyzed legs and low mobility (unlikely)
+        _lowMobility.UpdateMoveSpeed(uid, true);
     }
 
     private void OnBuckled(EntityUid uid, LegsParalyzedComponent component, ref BuckledEvent args)
