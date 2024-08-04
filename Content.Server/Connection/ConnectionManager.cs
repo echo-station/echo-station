@@ -295,7 +295,7 @@ namespace Content.Server.Connection
 
                 // Determine if there is a tryout slot available.
                 var tryoutSlotAvailable = tryoutSlotsEnabled && theoreticalSlots - usedSlots > 0;
-                // Echo Station: END Non-whitelisted slots
+                // Echo Station: END Tryout slots
 
                 if (playerCountValid && await _db.GetWhitelistStatusAsync(userId) == false
                                      && adminData is null
@@ -307,8 +307,8 @@ namespace Content.Server.Connection
                     if (tryoutSlotsEnabled)
                     {
                         msg += " " + Loc.GetString(theoreticalSlots > 0
-                                       ? "whitelist-nonwhitelisted-slots-full"
-                                       : "whitelist-nonwhitelisted-slots-zero",
+                                       ? "whitelist-tryout-slots-full"
+                                       : "whitelist-tryout-slots-zero",
                             ("slots", theoreticalSlots));
                     }
                     else if (min > 0 || max < int.MaxValue)
