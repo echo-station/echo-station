@@ -1,13 +1,29 @@
 ﻿[game]
 hostname = "[EN] 🔶 Echo Station: Bravo | Testing server [US East]"
-# Testing server, limit player cap
+# Testing server, limit player cap:
 soft_max_players = 10
 
 # No role requirements for testing server.
 role_timers = false
 role_whitelist = false
 
+# Force map Pebble with Extended gamemode.
+map = "Pebble"
+default_preset = "Extended"
+
+# Disable map/gamemode votes.
+[vote]
+preset_enabled = false
+map_enabled = false
+
+# Enable OOC, even during round.
+[ooc]
+enabled = true
+enable_during_round = true
+
 # Whitelist is enabled from base.toml.
+#[whitelist]
+#enabled = true
 
 [whitelist_tryout]
 enabled = false # Disable tryout slots to stop randoms from joining.
