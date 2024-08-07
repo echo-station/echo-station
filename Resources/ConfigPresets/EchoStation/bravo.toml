@@ -1,5 +1,5 @@
 ﻿[game]
-hostname = "[EN] 🔷 Echo Station: Bravo | Testing server | Whitelist only [US East]"
+hostname = "[EN] 🔶 Echo Station: Bravo | Testing server | Whitelist only [US East]"
 
 # No role requirements for testing server.
 role_timers = false
@@ -17,7 +17,7 @@ port = 1213 # Default is 1212, we add +1 since it's hosted on the same physical 
 bind = "*:1213" # Must match net.port
 
 [hub]
-# Don't appear in public listings just yet.
+# Appear in public listings just yet.
 advertise = true
 # English, America > North America > East, High RP, don't guess tags based on server name.
 tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
