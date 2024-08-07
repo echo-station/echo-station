@@ -1,5 +1,5 @@
 ﻿[game]
-hostname = "[EN][MRP] 🔷 Echo Station: Alpha | Public tryout slots! [US East]"
+hostname = "[EN] 🔷 Echo Station: Alpha | Quality RP | Whitelist with Tryout slots [US East]"
 
 # Role timers are now ON, but all time requirements are multiplied by the multiplier below.
 role_timers = true
@@ -9,8 +9,8 @@ role_whitelist = true
 [hub]
 # Don't appear in public listings just yet.
 advertise = true
-# English, America > North America > East, Medium RP, don't guess tags based on server name.
-tags = "lang:en-US,region:am_n_e,rp:med,no_tag_infer"
+# English, America > North America > East, High RP, don't guess tags based on server name.
+tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
 
 # Individual instance configs should set the following settings:
 #
