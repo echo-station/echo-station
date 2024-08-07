@@ -1,5 +1,7 @@
 ﻿[game]
-hostname = "[EN] 🔶 Echo Station: Bravo | Testing server | Whitelist only [US East]"
+hostname = "[EN] 🔶 Echo Station: Bravo | Testing server [US East]"
+# Testing server, limit player cap
+soft_max_players = 10
 
 # No role requirements for testing server.
 role_timers = false
