@@ -9,7 +9,7 @@ role_whitelist = false
 
 # Force map Pebble with Extended gamemode.
 map = "Pebble"
-default_preset = "Extended"
+defaultpreset = "Extended"
 
 # Disable map/gamemode votes.
 [vote]
