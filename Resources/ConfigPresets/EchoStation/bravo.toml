@@ -1,0 +1,32 @@
+﻿[game]
+hostname = "[EN] 🔷 Echo Station: Bravo | Testing server | Whitelist only [US East]"
+
+# No role requirements for testing server.
+role_timers = false
+role_whitelist = false
+
+# Whitelist is enabled from base.toml.
+
+[whitelist_tryout]
+enabled = false # Disable tryout slots to stop randoms from joining.
+
+[hub]
+# Don't appear in public listings just yet.
+advertise = true
+# English, America > North America > East, High RP, don't guess tags based on server name.
+tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
+
+# Individual instance configs should set the following settings:
+#
+# [discord]
+# ahelp_webhook = your-webhook-url-here
+# ahelp_footer_icon = url-to-footer-icon-here https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure
+# ahelp_avatar =
+#
+# [database]
+# engine = "postgres"
+# pg_host = "...
+# pg_port = 5432
+# pg_database = ss14
+# pg_user = "...
+# pg_password = "..."
