@@ -10,11 +10,19 @@ role_whitelist = false
 [whitelist_tryout]
 enabled = false # Disable tryout slots to stop randoms from joining.
 
+[net]
+port = 1213 # Default is 1212, we add +1 since it's hosted on the same physical server as Alpha.
+
+[status]
+bind = "*:1213" # Must match net.port
+
 [hub]
 # Don't appear in public listings just yet.
 advertise = true
 # English, America > North America > East, High RP, don't guess tags based on server name.
 tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
+# URL of this server to advertise. Port must match net.port, status.bind
+server_url = "ss14://bravo.echo-station.org:1213"
 
 # Individual instance configs should set the following settings:
 #

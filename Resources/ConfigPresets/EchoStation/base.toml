@@ -23,7 +23,7 @@ slots_min = 0
 # Hard maximum amount of non-whitelisted players that can join the server.
 slots_max = 5
 # Amount of non-whitelisted slots to add per *on-duty* admin connected.
-slots_per_admin = 3
+slots_per_admin = 2
 
 [server]
 rules_file   = "EchoRuleset"

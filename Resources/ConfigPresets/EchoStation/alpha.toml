@@ -11,6 +11,8 @@ role_whitelist = true
 advertise = true
 # English, America > North America > East, High RP, don't guess tags based on server name.
 tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
+# URL of this server to advertise.
+server_url = "ss14://alpha.echo-station.org:1212"
 
 # Individual instance configs should set the following settings:
 #
