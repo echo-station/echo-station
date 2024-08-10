@@ -2,7 +2,7 @@
   id: LowMobility
   name: trait-lowmobility-name
   description: trait-lowmobility-desc
-  #traitGear: Wheelchair (Not Yet Implemented)
+  traitGear: BaseWheelchair
   category: Disabilities
   components:
     - type: LowMobility
