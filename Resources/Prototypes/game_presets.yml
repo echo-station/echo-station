@@ -6,7 +6,8 @@
   showInVote: true # secret # DeltaV - Me when the survival. Used for periapsis.
   description: survival-description
   rules:
-    - RampingStationEventScheduler
+    #- RampingStationEventScheduler # Echo Station: Replace Ramping with our custom Linear
+    - LinearStationEventScheduler
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -19,7 +20,8 @@
     - Traitor
     - Revolutionary
     - Zombie
-    - RampingStationEventScheduler
+    #- RampingStationEventScheduler # Echo Station: Replace Ramping with our custom Linear
+    - LinearStationEventScheduler
 
 - type: gamePreset
   id: Extended

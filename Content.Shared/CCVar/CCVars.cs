@@ -118,6 +118,44 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float>
             EventsRampingAverageChaos = CVarDef.Create("events.ramping_average_chaos", 6f, CVar.ARCHIVE | CVar.SERVERONLY);
 
+        /// <summary>
+        ///     Echo Station: Linear scaling scheduler, what time to start scaling event frequency (in minutes).
+        /// </summary>
+        public static readonly CVarDef<float>
+            EventsLinearStartTime = CVarDef.Create("events.linear_start_time", 0f, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Echo Station: Linear scaling scheduler, what time to finish scaling event frequency (in minutes).
+        /// </summary>
+        public static readonly CVarDef<float>
+            EventsLinearEndTime = CVarDef.Create("events.linear_end_time", 150f, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Echo Station: Linear scaling scheduler, the starting multiplier. Should be 1x.
+        /// </summary>
+        public static readonly CVarDef<float>
+            EventsLinearStartMultiplier = CVarDef.Create("events.linear_start_multiplier", 1.0f, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Echo Station: Linear scaling scheduler, the end multiplier. Should be a reasonable minimum value, e.g. 0.25x.
+        /// </summary>
+        public static readonly CVarDef<float>
+            EventsLinearEndMultiplier = CVarDef.Create("events.linear_end_multiplier", 0.25f, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Echo Station: Linear scaling scheduler, the baseline minimum time between events.
+        ///     Will be multiplied by the current multiplier.
+        /// </summary>
+        public static readonly CVarDef<float>
+            EventsLinearBaselineMinTime = CVarDef.Create("events.linear_baseline_min_time", 900f, CVar.SERVERONLY);
+
+        /// <summary>
+        ///     Echo Station: Linear scaling scheduler, the baseline maximum time between events.
+        ///     Will be multiplied by the current multiplier.
+        /// </summary>
+        public static readonly CVarDef<float>
+            EventsLinearBaselineMaxTime = CVarDef.Create("events.linear_baseline_max_time", 1500f, CVar.SERVERONLY);
+
         /*
          * Game
          */
