@@ -1017,6 +1017,9 @@
       - ClothingUniformJumpskirtCaptain
       - ClothingUniformJumpsuitCapFormal
       - ClothingUniformJumpskirtCapFormalDress
+      - ClothingHeadHatBeretXO # Echo: Add basic XO drip
+      - ClothingHeadHatCapXO # Echo: Add basic XO drip
+      - ClothingNeckCloakXO # Echo: Add basic XO drip
       - ClothingUniformJumpsuitCargo
       - ClothingUniformJumpskirtCargo
       - ClothingUniformJumpsuitSalvageSpecialist

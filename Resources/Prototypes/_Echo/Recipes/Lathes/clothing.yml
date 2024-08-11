@@ -1,0 +1,31 @@
+﻿# Cloaks
+
+# XO Cloak -- Copied from Chief Justice cloak
+- type: latheRecipe
+  id: ClothingNeckCloakXO
+  result: ClothingNeckCloakXO
+  completetime: 2.8
+  materials:
+    Cloth: 200
+    Durathread: 150
+
+# Hats
+
+# XO Beret -- Copied from Captains beret
+- type: latheRecipe
+  id: ClothingHeadHatBeretXO
+  result: ClothingHeadHatBeretXO
+  completetime: 2
+  materials:
+    Cloth: 100
+    Durathread: 50
+
+# XO Cap -- Copied from Captains cap
+- type: latheRecipe
+  id: ClothingHeadHatCapXO
+  result: ClothingHeadHatCapXO
+  completetime: 2
+  materials:
+    Cloth: 100
+    Durathread: 50
+
