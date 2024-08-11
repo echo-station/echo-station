@@ -7,7 +7,7 @@ role_timers_multiplier = 0.2 # Increment this over time as people get more playt
 role_whitelist = true
 
 [hub]
-# Don't appear in public listings just yet.
+# Appear in public listings.
 advertise = true
 # English, America > North America > East, High RP, don't guess tags based on server name.
 tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
