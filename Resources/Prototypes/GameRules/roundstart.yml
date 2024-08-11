@@ -276,6 +276,14 @@
   components:
   - type: RampingStationEventScheduler
 
+# Echo Station: Added Linear event scheduler
+- type: entity
+  id: LinearStationEventScheduler
+  parent: BaseGameRule
+  noSpawn: true
+  components:
+  - type: LinearStationEventScheduler
+
 # variation passes
 - type: entity
   id: BasicRoundstartVariation
