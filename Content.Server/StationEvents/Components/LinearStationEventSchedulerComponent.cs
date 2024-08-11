@@ -1,5 +1,8 @@
 ﻿namespace Content.Server.StationEvents.Components;
 
+/// <summary>
+///     Echo Station: Introduce Linear event scheduler. See LinearStationEventSchedulerSystem for more info.
+/// </summary>
 [RegisterComponent, Access(typeof(LinearStationEventSchedulerSystem))]
 public sealed partial class LinearStationEventSchedulerComponent : Component
 {
