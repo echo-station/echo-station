@@ -1,0 +1,26 @@
+﻿- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapXO
+  name: executive officer cap
+  description: A grand, stylish executive officer cap.
+  components:
+  - type: Sprite
+    sprite: _Echo/Clothing/Head/Hats/xocap.rsi
+  - type: Clothing
+    sprite: _Echo/Clothing/Head/Hats/xocap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    - HamsterWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretXO
+  name: executive officer's beret
+  description: A blue beret with an executive officer's rank emblem. For XO's that are more inclined towards style than safety.
+  components:
+  - type: Sprite
+    sprite: _Echo/Clothing/Head/Hats/beret_xo.rsi
+  - type: Clothing
+    sprite: _Echo/Clothing/Head/Hats/beret_xo.rsi
