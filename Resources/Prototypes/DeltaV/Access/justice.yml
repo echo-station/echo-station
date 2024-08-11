@@ -1,15 +1,15 @@
 - type: accessLevel
   id: ChiefJustice
-  name: id-card-access-level-cj
+  name: id-card-access-level-chief-justice
 
 - type: accessLevel
   id: Justice
   name: id-card-access-level-justice
-  
+
 - type: accessLevel
   id: Prosecutor
   name: id-card-access-level-prosecutor
-  
+
 - type: accessLevel
   id: Clerk
   name: id-card-access-level-clerk
@@ -22,4 +22,4 @@
   - Clerk
   - ChiefJustice
   - Lawyer
-  
+
