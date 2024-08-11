@@ -47,14 +47,12 @@
   - type: IntrinsicRadioTransmitter
     channels: # Echo: Overridden by IntrinsicRadioFromKeys
     - Binary
-    - Common
   - type: IntrinsicRadioFromKeys # Echo: Added this to set keys based on permanent channels plus internal key container.
     permanentChannels:
     - Binary
   - type: ActiveRadio
     channels: # Echo: Overridden by IntrinsicRadioFromKeys
       - Binary
-      - Common
   - type: DoAfter
   - type: Actions
   - type: TypingIndicator
