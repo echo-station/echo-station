@@ -1,0 +1,10 @@
+﻿- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakXO
+  name: executive officer's cloak
+  description: A pompous and comfy blue cloak with a single silver trim, while not particularly valuable as your other possessions, it sure is fancy.
+  components:
+  - type: Sprite
+    sprite: _Echo/Clothing/Neck/Cloaks/xo.rsi
+  - type: StealTarget
+    stealGroup: HeadCloak
