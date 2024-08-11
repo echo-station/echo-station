@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
@@ -38,6 +39,24 @@ public sealed class RadioSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<IntrinsicRadioReceiverComponent, RadioReceiveEvent>(OnIntrinsicReceive);
         SubscribeLocalEvent<IntrinsicRadioTransmitterComponent, EntitySpokeEvent>(OnIntrinsicSpeak);
+
+        SubscribeLocalEvent<IntrinsicRadioFromKeysComponent, EncryptionChannelsChangedEvent>(UpdateRadioKeys); // Echo
+    }
+
+    /// <summary>
+    ///     Echo: Added IntrinsicRadioFromKeys component to set the channels based on contained encryption keys.
+    /// </summary>
+    private void UpdateRadioKeys(EntityUid uid, IntrinsicRadioFromKeysComponent comp, EncryptionChannelsChangedEvent args)
+    {
+        if (TryComp(uid, out IntrinsicRadioTransmitterComponent? transmitter))
+        {
+            transmitter.Channels = comp.PermanentChannels.Union(args.Component.Channels).ToHashSet();
+        }
+
+        if (TryComp(uid, out ActiveRadioComponent? radio))
+        {
+            radio.Channels = comp.PermanentChannels.Union(args.Component.Channels).ToHashSet();
+        }
     }
 
     private void OnIntrinsicSpeak(EntityUid uid, IntrinsicRadioTransmitterComponent component, EntitySpokeEvent args)
