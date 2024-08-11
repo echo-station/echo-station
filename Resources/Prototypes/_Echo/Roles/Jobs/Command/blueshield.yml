@@ -1,0 +1,17 @@
+﻿- type: job
+  id: Blueshield
+  name: job-name-blueshield
+  description: job-description-blueshield
+  playTimeTracker: JobBlueshield
+  setPreference: false # Not shown in lobby
+  overrideConsoleVisibility: true # but it IS shown in the ID card computer
+  icon: "JobIconBlueshield"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  access:
+  - Command
+  - Security
+  #- Brig # Delta V: Removed
+  - Maintenance
+  - Service
+  - External

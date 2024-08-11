@@ -1,0 +1,12 @@
+﻿- type: job
+  id: ExecutiveOfficer
+  name: job-name-executive-officer
+  description: job-description-executive-officer
+  playTimeTracker: JobExecutiveOfficer
+  setPreference: false # Not shown in lobby
+  overrideConsoleVisibility: true # but it IS shown in the ID card computer
+  icon: "JobIconExecutiveOfficer"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
