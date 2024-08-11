@@ -104,7 +104,7 @@
     roleName: pai-system-role-name-syndicate
     roleDescription: pai-system-role-description-syndicate
     roleRules: ghost-role-information-familiar-rules
-  - type: IntrinsicRadioTransmitter # Echo: Disable these overrides as they are useless/misleading
+  - type: IntrinsicRadioTransmitter
     channels: # Echo: Overridden by IntrinsicRadioFromKeys
     - Syndicate
   - type: ActiveRadio
