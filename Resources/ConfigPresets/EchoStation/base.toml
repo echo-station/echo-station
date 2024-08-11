@@ -5,8 +5,8 @@ desc = "A Delta-V fork focusing on high levels of roleplay. Senior roles, pionic
 lobbyenabled = true
 # The maximum number of players. Admins can join even when the cap is reached.
 soft_max_players = 30
-#
-role_timers = false
+# Role timers are enabled by default.
+role_timers = true
 # Some roles require players to be explicitly whitelisted for that individual role. Currently irrel
 role_whitelist = true
 

@@ -1,5 +1,6 @@
 ﻿[game]
 hostname = "[EN] 🔶 Echo Station: Bravo | Testing server [US East]"
+desc = "Echo Station testing server with no role timers and role whitelist enabled."
 # Testing server, limit player cap:
 soft_max_players = 10
 
@@ -21,9 +22,9 @@ map_enabled = false
 enabled = true
 enable_during_round = true
 
-# Whitelist is enabled from base.toml.
-#[whitelist]
-#enabled = true
+# Whitelist is enabled.
+[whitelist]
+enabled = true
 
 [whitelist_tryout]
 enabled = false # Disable tryout slots to stop randoms from joining.
