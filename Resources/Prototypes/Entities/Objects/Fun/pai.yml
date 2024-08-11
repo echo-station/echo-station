@@ -46,7 +46,7 @@
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
     channels: [] # Echo: Overridden by IntrinsicRadioFromKeys
-  - type: IntrinsicRadioFromKeys # Echo: Added this to set keys based on internal key container.
+  - type: IntrinsicRadioFromKeys # Echo: Added this to set keys based on permanent channels plus internal key container.
     permanentChannels:
     - Binary
   - type: ActiveRadio
@@ -73,13 +73,13 @@
           Searching: { state: pai-searching-overlay }
           On: { state: pai-on-overlay }
   - type: StationMap
-  - type: ContainerContainer # Echo: Added internal key container
+  - type: ContainerContainer # Echo: Added internal key container (in addition to permanent channels)
     containers:
-      key_slots: !type:Container # Echo: Added internal key container filling
-  - type: ContainerFill
+      key_slots: !type:Container
+  - type: ContainerFill # Echo: Default pAI starts with one removable key: Common channel
     containers:
       key_slots:
-      - EncryptionKeyCommon # This is the only key this pAI gets by default!
+      - EncryptionKeyCommon
   - type: EncryptionKeyHolder
     keySlots: 10
 
@@ -106,10 +106,10 @@
 #  - type: ActiveRadio
 #    channels:
 #    - Syndicate
-  - type: IntrinsicRadioFromKeys # Echo: Added this to set keys based on internal key container.
+  - type: IntrinsicRadioFromKeys # Echo: Added this to set keys based on permanent channels plus internal key container.
     permanentChannels:
     - Syndicate
-  - type: ContainerFill # Echo: THIS actually determines what keys this pAI has.
+  - type: ContainerFill # Echo: No additional non-permanent keys are installed.
     containers:
       key_slots: []
   - type: Appearance
