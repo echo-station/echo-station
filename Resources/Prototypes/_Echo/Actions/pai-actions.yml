@@ -1,0 +1,10 @@
+﻿
+- type: entity
+  id: ActionPAIRename
+  name: Rename yourself
+  description: Rename yourself. Usable once every 5 minutes.
+  components:
+  - type: InstantAction
+    icon: Interface/AdminActions/rename.png
+    checkCanInteract: false
+    event: !type:PAIRenameActionEvent {}

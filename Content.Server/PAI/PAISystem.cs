@@ -8,6 +8,8 @@ using Content.Shared.PAI;
 using Content.Shared.Popups;
 using Robust.Shared.Random;
 using System.Text;
+using Content.Server.Actions;
+using Content.Server.Administration;
 using Robust.Shared.Player;
 
 namespace Content.Server.PAI;
@@ -19,6 +21,9 @@ public sealed class PAISystem : SharedPAISystem
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly ToggleableGhostRoleSystem _toggleableGhostRole = default!;
+    [Dependency] private readonly MetaDataSystem _metaSystem = default!; // Echo
+    [Dependency] private readonly QuickDialogSystem _quickDialog = default!; // Echo
+    [Dependency] private readonly ActionsSystem _actionsSystem = default!; // Echo
 
     /// <summary>
     /// Possible symbols that can be part of a scrambled pai's name.
@@ -33,6 +38,27 @@ public sealed class PAISystem : SharedPAISystem
         SubscribeLocalEvent<PAIComponent, MindAddedMessage>(OnMindAdded);
         SubscribeLocalEvent<PAIComponent, MindRemovedMessage>(OnMindRemoved);
         SubscribeLocalEvent<PAIComponent, BeingMicrowavedEvent>(OnMicrowaved);
+        SubscribeLocalEvent<PAIComponent, PAIRenameActionEvent>(OnRenameAction); // Echo
+    }
+
+    /// <summary>
+    /// Echo: Add ability for pAI to rename themselves, once per 5 minutes.
+    ///
+    /// </summary>
+    /// <param name="uid"></param>
+    /// <param name="component"></param>
+    /// <param name="args"></param>
+    private void OnRenameAction(EntityUid uid, PAIComponent component, PAIRenameActionEvent args)
+    {
+        // We need the actor to open a dialog.
+        if (!EntityManager.TryGetComponent(uid, out ActorComponent? actor))
+            return;
+
+        _quickDialog.OpenDialog(actor.PlayerSession, "Rename", "Name", (string newName) =>
+        {
+            _metaSystem.SetEntityName(args.Performer, $"pAI {newName}");
+            _actionsSystem.SetCooldown(args.Action, TimeSpan.FromSeconds(300));
+        });
     }
 
     private void OnUseInHand(EntityUid uid, PAIComponent component, UseInHandEvent args)
