@@ -11,3 +11,11 @@ Entries:
       message: All pAI now support encryption keys
   id: 2
   time: '2024-08-11T18:42:57.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: >-
+        Re-added Captain's ID to Captain's locker, removed biscuits and id card
+        cabinets
+  id: 3
+  time: '2024-08-12T18:25:49.0000000+00:00'
