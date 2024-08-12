@@ -1,6 +1,6 @@
+using Content.Shared.Actions;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.PAI;
 
@@ -33,6 +33,12 @@ public sealed partial class PAIComponent : Component
     [DataField]
     public ProtoId<EntityPrototype> MapActionId = "ActionPAIOpenMap";
 
+    [DataField(serverOnly: true)] // server only, as it uses a server-BUI event !type
+    public EntityUid? RenameAction;
+
+    [DataField]
+    public ProtoId<EntityPrototype> RenameActionID = "ActionPAIRename";
+
     [DataField, AutoNetworkedField]
     public EntityUid? MapAction;
 
@@ -54,3 +60,11 @@ public sealed partial class PAIComponent : Component
     [DataField]
     public string ScramblePopup = "pai-system-scramble-popup";
 }
+
+/// <summary>
+/// Echo: Fired when a pAI player presses the Rename button.
+/// </summary>
+public sealed partial class PAIRenameActionEvent : InstantActionEvent
+{
+}
+
