@@ -37,7 +37,7 @@
       - id: ClothingOuterArmorCaptainCarapace
       - id: NukeDisk
       - id: PinpointerNuclear
-#     - id: CaptainIDCard # DeltaV - Replaced by the spare ID system
+      - id: CaptainIDCard # DeltaV - Replaced by the spare ID system # Echo: Just kidding, re-add them.
       - id: ClothingOuterHardsuitCap
       - id: ClothingMaskGasCaptain
       - id: WeaponDisabler
@@ -71,7 +71,7 @@
       - id: ClothingOuterArmorCaptainCarapace
       - id: NukeDisk
       - id: PinpointerNuclear
-#     - id: CaptainIDCard # DeltaV - Replaced by the spare ID system
+      - id: CaptainIDCard # DeltaV - Replaced by the spare ID system # Echo: Just kidding, re-add them.
       - id: WeaponDisabler
       - id: CommsComputerCircuitboard
       - id: ClothingHeadsetAltCommand
@@ -103,7 +103,7 @@
       - id: ClothingOuterArmorCaptainCarapace
       - id: NukeDisk
       - id: PinpointerNuclear
-#      - id: CaptainIDCard # Delta V - Replaced by spare ID system. The funny biscuit that I cant even eat.
+      - id: CaptainIDCard # Delta V - Replaced by spare ID system. The funny biscuit that I cant even eat. # Echo: Just kidding, re-add them.
       - id: WeaponDisabler
       - id: CommsComputerCircuitboard
       - id: ClothingHeadsetAltCommand
