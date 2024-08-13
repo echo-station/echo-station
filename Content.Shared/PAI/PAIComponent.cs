@@ -37,7 +37,7 @@ public sealed partial class PAIComponent : Component
     public EntityUid? RenameAction;
 
     [DataField]
-    public ProtoId<EntityPrototype> RenameActionID = "ActionPAIRename";
+    public EntProtoId RenameActionID = "ActionPAIRename";
 
     [DataField, AutoNetworkedField]
     public EntityUid? MapAction;

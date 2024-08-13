@@ -293,12 +293,11 @@ namespace Content.Shared.Movement.Systems
             PhysicsSystem.SetAngularVelocity(physicsUid, 0, body: physicsComponent);
         }
 
-        public void ShowWalkingAlert(EntityUid player, bool walking)
+        public void ShowWalkingAlert(EntityUid uid, bool walking)
         {
-            if (HasComp<CanWalkComponent>(player))
+            if (HasComp<CanWalkComponent>(uid))
             {
-
-                _alerts.ShowAlert(player, WalkingAlert, walking ? (short) 0 : (short) 1);
+                _alerts.ShowAlert(uid, WalkingAlert, walking ? (short) 0 : (short) 1);
             }
         }
 

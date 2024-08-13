@@ -19,7 +19,7 @@
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 43200 # DeltaV - 12 hours
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"

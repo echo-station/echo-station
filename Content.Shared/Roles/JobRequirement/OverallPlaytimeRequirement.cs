@@ -21,6 +21,7 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
         [NotNullWhen(false)] out FormattedMessage? reason,
+        float roleTimersMultiplier, // Echo
         bool isWhitelisted) // DeltaV
     {
         reason = new FormattedMessage();

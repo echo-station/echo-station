@@ -17,6 +17,7 @@ public sealed partial class WhitelistRequirement : JobRequirement
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
         [NotNullWhen(false)] out FormattedMessage? reason,
+        float roleTimersMultiplier, // Echo
         bool isWhitelisted)
     {
         reason = null;
