@@ -279,8 +279,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.01
+      linearDamping: 0.01
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -4935,8 +4935,8 @@ entities:
       id: PebbleStation
     - type: OccluderTree
     - type: Shuttle
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.03
+      linearDamping: 0.03
     - type: GridPathfinding
     - type: RadiationGridResistance
     - type: GasTileOverlay

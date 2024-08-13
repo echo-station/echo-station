@@ -251,8 +251,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.01
+      linearDamping: 0.01
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -260,8 +260,8 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.01
+      linearDamping: 0.01
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -57087,7 +57087,7 @@ entities:
         Average station required power in kilowatts: 200?
 
 
-        subtracted by 
+        subtracted by
 
         60 kW (2 plasma generators at 30 kW each)
 

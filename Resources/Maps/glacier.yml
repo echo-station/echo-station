@@ -417,8 +417,8 @@ entities:
     - type: Broadphase
     - type: Physics
       bodyStatus: InAir
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.01
+      linearDamping: 0.01
       fixedRotation: False
       bodyType: Dynamic
     - type: Fixtures
@@ -11517,8 +11517,8 @@ entities:
     - type: RadiationGridResistance
     - type: OccluderTree
     - type: Shuttle
-      angularDamping: 10000
-      linearDamping: 10000
+      angularDamping: 0.01
+      linearDamping: 0.01
     - type: GridPathfinding
     - type: GasTileOverlay
     - type: SpreaderGrid
