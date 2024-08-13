@@ -35,3 +35,9 @@ Entries:
       message: Added salvage pinpointers to salvage specialist equipment lockers
   id: 5
   time: '2024-08-13T14:40:10.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: Merged upstream 2024-08-13
+  id: 6
+  time: '2024-08-13T18:39:19.0000000+00:00'
