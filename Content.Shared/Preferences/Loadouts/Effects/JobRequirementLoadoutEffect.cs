@@ -34,9 +34,11 @@ public sealed partial class JobRequirementLoadoutEffect : LoadoutEffect
             ? collection.Resolve<IConfigurationManager>().GetCVar(CCVars.GameRoleTimersMultiplier)
             : 0f;
 
-        return JobRequirements.TryRequirementMet(Requirement, playtimes, out reason,
-            collection.Resolve<IEntityManager>(),
+        return Requirement.Check(collection.Resolve<IEntityManager>(),
             collection.Resolve<IPrototypeManager>(),
+            profile,
+            playtimes,
+            out reason,
             roleTimersMultiplier,
             isWhitelisted); // DeltaV
     }

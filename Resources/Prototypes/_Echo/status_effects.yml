@@ -1,13 +1,15 @@
-﻿- type: statusIcon
+﻿- type: jobIcon
   parent: JobIcon
   id: JobIconBlueshield
   icon:
     sprite: /Textures/_Echo/Interface/Misc/job_icons.rsi
     state: Blueshield
+  jobName: job-name-blueshield
 
-- type: statusIcon
+- type: jobIcon
   parent: JobIcon
   id: JobIconExecutiveOfficer
   icon:
     sprite: /Textures/_Echo/Interface/Misc/job_icons.rsi
     state: ExecutiveOfficer
+  jobName: job-name-executive-officer

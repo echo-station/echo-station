@@ -6,3 +6,11 @@
   objective: roles-antag-thief-objective
   requirements:
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+
+- type: startingGear
+  id: ThiefGear
+  storage:
+    back:
+    - ToolboxThief
+    - ClothingHandsChameleonThief
+    - ThiefBeacon

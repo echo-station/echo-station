@@ -7,19 +7,19 @@
   playTimeTracker: JobChiefMedicalOfficer
   antagAdvantage: 6 # DeltaV - Reduced TC: Head of Staff
   requirements:
-  - !type:RoleTimeRequirement
-    role: JobChemist
-    time: 21600 # 6 hrs
-  - !type:RoleTimeRequirement
-    role: JobMedicalDoctor
-    time: 21600 # 6 hrs
-  - !type:RoleTimeRequirement
-    role: JobParamedic
-    time: 21600 # 4 hrs
-  - !type:DepartmentTimeRequirement
-    department: Medical
-    time: 54000 # Echo Station: 15 hrs
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 21600 # 6 hrs
+    - !type:RoleTimeRequirement
+      role: JobMedicalDoctor
+      time: 21600 # 6 hrs
+    - !type:RoleTimeRequirement
+      role: JobParamedic
+      time: 21600 # 4 hrs
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 43200 # DeltaV - 12 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
@@ -41,7 +41,7 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-    - type: CommandStaff
+      - type: CommandStaff
   - !type:AddComponentSpecial
     components:
     - type: PsionicBonusChance #Nyano - Summary: makes it more likely to become psionic.
@@ -53,3 +53,6 @@
     id: CMOPDA
     ears: ClothingHeadsetCMO
     belt: ClothingBeltMedicalFilled
+  storage:
+    back:
+    - Flash

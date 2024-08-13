@@ -77,7 +77,7 @@
         state: narsian
 
 - type: entity
-  noSpawn: true
+  categories: [ HideSpawnMenu, Spawner ]
   id: SpawnPointGhostNukeOperative
   name: ghost role spawn point
   suffix: nukeops
@@ -99,7 +99,7 @@
         state: radiation
 
 - type: entity
-  noSpawn: true
+  categories: [ HideSpawnMenu, Spawner ]
   parent: BaseAntagSpawner
   id: SpawnPointLoneNukeOperative
   components:
@@ -123,7 +123,7 @@
         state: radiation
 
 - type: entity
-  noSpawn: true
+  categories: [ HideSpawnMenu, Spawner ]
   parent: SpawnPointLoneNukeOperative
   id: SpawnPointNukeopsCommander
   components:
@@ -134,7 +134,7 @@
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
-  noSpawn: true
+  categories: [ HideSpawnMenu, Spawner ]
   parent: SpawnPointLoneNukeOperative
   id: SpawnPointNukeopsMedic
   components:
@@ -145,7 +145,7 @@
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
 - type: entity
-  noSpawn: true
+  categories: [ HideSpawnMenu, Spawner ]
   parent: SpawnPointLoneNukeOperative
   id: SpawnPointNukeopsOperative
   components:
@@ -154,7 +154,7 @@
     description: roles-antag-nuclear-operative-objective
 
 - type: entity
-  noSpawn: true
+  categories: [ HideSpawnMenu, Spawner ]
   parent: BaseAntagSpawner
   id: SpawnPointGhostDragon
   components:
@@ -169,10 +169,9 @@
       state: alive
 
 - type: entity
+  categories: [ HideSpawnMenu, Spawner ]
+  parent: BaseAntagSpawner
   id: SpawnPointGhostSpaceNinja
-  name: ghost role spawn point
-  suffix: space ninja
-  parent: MarkerBase
   components:
   - type: GhostRole
     name: ghost-role-information-space-ninja-name
@@ -183,8 +182,6 @@
     requirements:
     - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
       time: 259200 # DeltaV - 72 hours
-  - type: GhostRoleMobSpawner
-    prototype: MobHumanSpaceNinja
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
