@@ -4,16 +4,18 @@
   description: job-description-ce
   playTimeTracker: JobChiefEngineer
   requirements:
-  - !type:RoleTimeRequirement
-    role: JobAtmosphericTechnician
-    time: 36000 # DeltaV - 10 hours
-  #    - !type:RoleTimeRequirement # DeltaV - No Station Engineer time requirement
-  #      role: JobStationEngineer
-  #      time: 21600 #6 hrs
-  - !type:DepartmentTimeRequirement
-    department: Engineering
-    time: 90000 # DeltaV - 25 hours
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+    - !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 36000 # DeltaV - 10 hours
+#    - !type:RoleTimeRequirement # DeltaV - No Station Engineer time requirement
+#      role: JobStationEngineer
+#      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 90000 # DeltaV - 25 hours, was 10
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 # DeltaV - was 40 hours upstream
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   weight: 10
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"
@@ -33,7 +35,7 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-    - type: CommandStaff
+      - type: CommandStaff
   - !type:AddComponentSpecial
     components:
     - type: PsionicBonusChance #Nyano - Summary: makes it more likely to become psionic.
@@ -46,3 +48,6 @@
     eyes: ClothingEyesGlassesMeson
     ears: ClothingHeadsetCE
     belt: ClothingBeltUtilityEngineering
+  storage:
+    back:
+    - Flash

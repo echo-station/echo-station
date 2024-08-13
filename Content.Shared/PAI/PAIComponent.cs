@@ -31,7 +31,7 @@ public sealed partial class PAIComponent : Component
     public EntityUid? MidiAction;
 
     [DataField]
-    public ProtoId<EntityPrototype> MapActionId = "ActionPAIOpenMap";
+    public EntProtoId MapActionId = "ActionPAIOpenMap";
 
     [DataField(serverOnly: true)] // server only, as it uses a server-BUI event !type
     public EntityUid? RenameAction;

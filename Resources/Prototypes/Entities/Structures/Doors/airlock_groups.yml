@@ -71,6 +71,7 @@
     command: Command
     engineering: Engineering
     freezer: Civilian
+    glass: Civilian
     maintenance: Civilian
     medical: Medical
     science: Epistemics

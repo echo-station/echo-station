@@ -4,27 +4,27 @@
   description: job-description-captain
   playTimeTracker: JobCaptain
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Logistics # DeltaV - Logistics Department replacing Cargo
-    time: 18000 # DeltaV - 5 hours
-  - !type:DepartmentTimeRequirement
-    department: Engineering
-    time: 18000 # DeltaV - 5 hours
-  - !type:DepartmentTimeRequirement
-    department: Medical
-    time: 18000 # DeltaV - 5 hours
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 18000 # DeltaV - 5 hours
-  - !type:DepartmentTimeRequirement # DeltaV - Epistemics dept time requirement
-    department: Epistemics # DeltaV - Epistemics Department replacing Science
-    time: 18000 # 5 hours
-  - !type:DepartmentTimeRequirement
-    department: Command
-    time: 108000 # DeltaV - 30 hours
-  - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
-    time: 108000 # 30 hours
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+    - !type:DepartmentTimeRequirement
+      department: Logistics # DeltaV - Logistics Department replacing Cargo
+      time: 18000 # DeltaV - 5 hours
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 18000 # DeltaV - 5 hours
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000 # DeltaV - 5 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 18000 # DeltaV - 5 hours
+    - !type:DepartmentTimeRequirement # DeltaV - Epistemics dept time requirement
+      department: Epistemics # DeltaV - Epistemics Department replacing Science
+      time: 18000 # 5 hours
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 108000 # DeltaV - 30 hours, was 15
+    - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
+      time: 108000 # 30 hours
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
   whitelisted: true # Echo Station: Require explicit role whitelisting
   weight: 20
   startingGear: CaptainGear
@@ -33,7 +33,6 @@
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
   canBeAntag: false
-
   accessGroups:
   - AllAccess
   special:
@@ -41,7 +40,7 @@
     implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
-    - type: CommandStaff
+      - type: CommandStaff
   - !type:AddComponentSpecial
     components:
     - type: PsionicBonusChance #Nyano - Summary: makes it more likely to become psionic.
@@ -55,3 +54,7 @@
     #gloves: ClothingHandsGlovesCaptain - DeltaV - Commented out for loadout options
     id: CaptainPDA
     ears: ClothingHeadsetAltCommand
+  storage:
+    back:
+    - Flash
+    # - StationCharter

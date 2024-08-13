@@ -4,9 +4,9 @@
   description: job-description-doctor
   playTimeTracker: JobMedicalDoctor
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Medical
-    time: 14400 #4 hrs
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 14400 #4 hrs
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-cmo
@@ -22,4 +22,6 @@
   equipment:
     ears: ClothingHeadsetMedical
     belt: ClothingBeltMedicalFilled
-    id: MedicalPDA # Echo Station - Separate senior roles
+  #storage:
+    #back:
+    #- Stuff

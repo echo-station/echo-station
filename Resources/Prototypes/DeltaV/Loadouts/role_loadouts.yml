@@ -9,7 +9,9 @@
   - CourierPDA
   - CargoTechnicianBackpack
   - CourierShoes
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
 
 # Security
 ## Brig medic
@@ -23,7 +25,9 @@
   - SecurityShoes
   - SecurityOuterClothing
   - MedicalGloves
+  - SurvivalCorpsman
   - Trinkets
+  - GroupSpeciesBreathToolCorpsman
 
 # Justice
 - type: roleLoadout
@@ -36,7 +40,9 @@
   - CommonBackpack
   - ChiefJusticeShoes
   - Glasses
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
 
 - type: roleLoadout
   id: JobClerk
@@ -47,16 +53,21 @@
   - CommonBackpack
   - ClerkShoes
   - Glasses
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
 
 - type: roleLoadout
   id: JobProsecutor
   groups:
+  - GroupTankHarness
   - ProsecutorJumpsuit
   - ProsecutorNeck
-  - LawyerBackpack
+  - CommonBackpack
   - Glasses
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
 
 ## Senior Officer
 - type: roleLoadout
@@ -68,7 +79,9 @@
   - SecurityOuterClothing
   - SecurityShoes
   - SecurityBelt
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
 
 # Engineering
 ## Senior Engineer
@@ -80,7 +93,9 @@
   - StationEngineerBackpack
   - StationEngineerOuterClothing
   - StationEngineerShoes
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
 
 # Epistemics
 ## Senior Scientist
@@ -95,7 +110,9 @@
   - ScientistGloves
   - ScientistShoes
   - Glasses
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
 
 # Medical
 ## Senior Physician
@@ -111,4 +128,6 @@
   - SeniorPhysicianOuterClothing
   - MedicalShoes
   - Glasses
+  - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
