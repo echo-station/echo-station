@@ -41,3 +41,9 @@ Entries:
       message: Merged upstream 2024-08-13
   id: 6
   time: '2024-08-13T18:39:19.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Fix
+      message: Fixed CentCom naming
+  id: 7
+  time: '2024-08-13T19:18:34.0000000+00:00'
