@@ -1,0 +1,26 @@
+
+# Echo: Adds a new "salvage pinpointer" that points to the salvage magnet. Intended for salvages to find their way back station-side.
+- type: entity
+  name: salvage pinpointer
+  description: Making sure our miners can find their way back station-side.
+  id: PinpointerSalvage
+  parent: PinpointerBase
+  components:
+  - type: Sprite
+    noRot: True
+    sprite: _Echo/Objects/Devices/pinpointer.rsi # Exists only for Salvage pinpointer
+    layers:
+    - state: pinpointer-salvage
+      map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull
+      map: ["enum.PinpointerLayers.Screen"]
+      shader: unshaded
+      visible: false
+  - type: Icon
+    sprite: _Echo/Objects/Devices/pinpointer.rsi
+    state: pinpointer-salvage
+  - type: Item
+    sprite: _Echo/Objects/Devices/pinpointer.rsi
+  - type: Pinpointer
+    component: SalvageMagnet
+    targetName: salvage magnet

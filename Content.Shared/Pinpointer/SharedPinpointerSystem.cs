@@ -4,12 +4,14 @@ using Content.Shared.Emag.Systems;
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
+using Content.Shared.Popups;
 
 namespace Content.Shared.Pinpointer;
 
 public abstract class SharedPinpointerSystem : EntitySystem
 {
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!; // Echo: Add retarget popup
 
     public override void Initialize()
     {
@@ -33,6 +35,7 @@ public abstract class SharedPinpointerSystem : EntitySystem
         // TODO add doafter once the freeze is lifted
         args.Handled = true;
         component.Target = args.Target;
+        _popup.PopupClient(Loc.GetString("pinpointer-now-targeting", ("target", args.Target)), args.User); // Echo: Added retarget popup
         _adminLogger.Add(LogType.Action, LogImpact.Low, $"{ToPrettyString(args.User):player} set target of {ToPrettyString(uid):pinpointer} to {ToPrettyString(component.Target.Value):target}");
         if (component.UpdateTargetName)
             component.TargetName = component.Target == null ? null : Identity.Name(component.Target.Value, EntityManager);
