@@ -27,3 +27,11 @@ Entries:
         singularities
   id: 4
   time: '2024-08-13T07:51:44.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Add
+      message: Added "salvage pinpointer", pointing to the salvage magnet
+    - type: Tweak
+      message: Added salvage pinpointers to salvage specialist equipment lockers
+  id: 5
+  time: '2024-08-13T14:40:10.0000000+00:00'
