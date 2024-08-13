@@ -2,7 +2,7 @@
   id: TegCenter
   name: thermo-electric generator
   description: A high efficiency generator that uses energy transfer between hot and cold gases to produce electricity.
-  parent: BaseMachinePowered
+  parent: BaseMachine # ECHO: TEG does not require power (was: BaseMachinePowered)
   placement:
     mode: SnapgridCenter
   components:
@@ -80,8 +80,8 @@
       supplyRampTolerance: 10000000000
 
     - type: Appearance
-    - type: ApcPowerReceiver
-      powerLoad: 1000
+#    - type: ApcPowerReceiver # Echo: TEG does not require power
+#      powerLoad: 1000 # Echo: TEG does not require power
 
     - type: LitOnPowered
     - type: PointLight
