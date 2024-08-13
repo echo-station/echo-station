@@ -11,6 +11,7 @@
       - id: ClothingBeltUtilityFilled
       - id: SurvivalKnife
       - id: HandheldGPSBasic
+      - id: PinpointerSalvage # Echo: Add salvage pinpointer
       - id: RadioHandheld
       - id: SeismicCharge
         amount: 2
@@ -41,6 +42,7 @@
       - id: ClothingBeltUtilityFilled
       - id: SurvivalKnife
       - id: HandheldGPSBasic
+      - id: PinpointerSalvage # Echo: Add station pinpointer
       - id: RadioHandheld
       - id: SeismicCharge
         amount: 2
