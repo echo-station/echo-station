@@ -19,3 +19,11 @@ Entries:
         cabinets
   id: 3
   time: '2024-08-12T18:25:49.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Fix
+      message: >-
+        Portable particle decelerator now does substantial damage against
+        singularities
+  id: 4
+  time: '2024-08-13T07:51:44.0000000+00:00'
