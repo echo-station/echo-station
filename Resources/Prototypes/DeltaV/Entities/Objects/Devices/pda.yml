@@ -9,7 +9,7 @@
   description: Red and Sterile. Has a built-in health analyzer.
   components:
   - type: Sprite
-    sprite: DeltaV/Objects/Devices/pda.rsi # - aPDA Sprite Rework
+    sprite: DeltaV/Objects/Devices/pda.rsi
     layers:
     - map: [ "enum.PdaVisualLayers.Base" ]
     - state: "light_overlay"
@@ -212,7 +212,6 @@
   components:
   - type: Pda
     id: VisitorIDCard
-    state: pda-visitor # - aPDA Sprite Rework
 
 - type: entity
   parent: PassengerPDA
@@ -222,7 +221,6 @@
   components:
   - type: Pda
     id: TouristIDCard
-    state: pda-tourist # - aPDA Sprite Rework
 
 - type: entity
   parent: PassengerPDA
@@ -232,7 +230,6 @@
   components:
   - type: Pda
     id: OffDutyCrewIDCard
-    state: pda-offduty # - aPDA Sprite Rework
 
 - type: entity
   parent: PassengerPDA
@@ -242,7 +239,6 @@
   components:
   - type: Pda
     id: StudentIDCard
-    state: pda-student # - aPDA Sprite Rework
 
 # Bartender
 
@@ -254,7 +250,6 @@
   components:
   - type: Pda
     id: MixologistIDCard
-    state: pda-mixologist # - aPDA Sprite Rework
 
 # Chef
 
@@ -266,7 +261,6 @@
   components:
   - type: Pda
     id: BakerIDCard
-    state: pda-baker # - aPDA Sprite Rework
 
 - type: entity
   parent: ChefPDA
@@ -276,7 +270,6 @@
   components:
   - type: Pda
     id: ButcherIDCard
-    state: pda-butcher # - aPDA Sprite Rework
 
 - type: entity
   parent: ChefPDA
@@ -286,7 +279,6 @@
   components:
   - type: Pda
     id: PizzaioloIDCard
-    state: pda-pizzaiolo # - aPDA Sprite Rework
 
 # Medical Intern
 
@@ -298,7 +290,6 @@
   components:
   - type: Pda
     id: PracticalNurseIDCard
-    state: pda-practicingnurse # - aPDA Sprite Rework
 
 - type: entity
   parent: MedicalInternPDA
@@ -308,7 +299,6 @@
   components:
   - type: Pda
     id: ResidentIDCard
-    state: pda-resident # - aPDA Sprite Rework
 
 # Medical Doctor
 
@@ -320,7 +310,6 @@
   components:
   - type: Pda
     id: ClinicianIDCard
-    state: pda-phys # - aPDA Sprite Rework
 
 # Atmospherics Technician
 
@@ -331,7 +320,6 @@
   components:
   - type: Pda
     id: LifeSupportTechIDCard
-    state: pda-lifesupporttech # - aPDA Sprite Rework
 
 - type: entity
   parent: AtmosPDA
@@ -340,7 +328,6 @@
   components:
   - type: Pda
     id: PlasmaScientistIDCard
-    state: pda-plasmatech # - aPDA Sprite Rework
 
 # Station Engineer
 
@@ -352,7 +339,6 @@
   components:
   - type: Pda
     id: ElectricianIDCard
-    state: pda-electrician # - aPDA Sprite Rework
 
 - type: entity
   parent: EngineerPDA
@@ -362,7 +348,6 @@
   components:
   - type: Pda
     id: MechanicIDCard
-    state: pda-mechanic # - aPDA Sprite Rework
 
 # Cargo Technician
 
@@ -374,7 +359,6 @@
   components:
   - type: Pda
     id: DeckWorkerIDCard
-    state: pda-deckworker # - aPDA Sprite Rework
 
 - type: entity
   parent: CargoPDA
@@ -383,7 +367,6 @@
   components:
   - type: Pda
     id: InventoryAssociateIDCard
-    state: pda-inventoryassociate # - aPDA Sprite Rework
 
 # Salvage Technician
 
@@ -394,7 +377,6 @@
   components:
   - type: Pda
     id: ProspectorIDCard
-    state: pda-prospector # - aPDA Sprite Rework
 
 - type: entity
   parent: SalvagePDA
@@ -403,7 +385,6 @@
   components:
   - type: Pda
     id: ExcavatorIDCard
-    state: pda-excavator # - aPDA Sprite Rework
 
 # Scientist
 
@@ -415,7 +396,6 @@
   components:
   - type: Pda
     id: LabTechIDCard
-    state: pda-labsci # - aPDA Sprite Rework
 
 - type: entity
   parent: SciencePDA
@@ -424,7 +404,6 @@
   components:
   - type: Pda
     id: XenoarchIDCard
-    state: pda-xenobio # - aPDA Sprite Rework
 
 - type: entity
   parent: SciencePDA
@@ -434,7 +413,7 @@
   components:
   - type: Pda
     id: RoboticistIDCard
-    state: pda-roboticist # - aPDA Sprite Rework
+    state: pda-roboticist
 
 # Clown
 
@@ -446,7 +425,6 @@
   components:
   - type: Pda
     id: JesterIDCard
-    state: pda-jester # - aPDA Sprite Rework
 
 - type: entity
   parent: ClownPDA
@@ -456,4 +434,3 @@
   components:
   - type: Pda
     id: FoolIDCard
-    state: pda-fool # - aPDA Sprite Rework
