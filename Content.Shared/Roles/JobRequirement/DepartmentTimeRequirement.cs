@@ -49,7 +49,7 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
             playtime += otherTime;
         }
 
-        var deptDiff = Time.TotalMinutes - playtime.TotalMinutes;
+        var deptDiff = Time.TotalMinutes * roleTimersMultiplier - playtime.TotalMinutes;
         var nameDepartment = "role-timer-department-unknown";
 
         if (protoManager.TryIndex(Department, out var departmentIndexed))

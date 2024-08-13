@@ -27,7 +27,7 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
         reason = new FormattedMessage();
 
         var overallTime = playTimes.GetValueOrDefault(PlayTimeTrackingShared.TrackerOverall);
-        var overallDiff = Time.TotalMinutes - overallTime.TotalMinutes;
+        var overallDiff = Time.TotalMinutes * roleTimersMultiplier - overallTime.TotalMinutes;
 
         if (!Inverted)
         {

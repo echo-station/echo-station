@@ -36,7 +36,7 @@ public sealed partial class RoleTimeRequirement : JobRequirement
         string proto = Role;
 
         playTimes.TryGetValue(proto, out var roleTime);
-        var roleDiff = Time.TotalMinutes - roleTime.TotalMinutes;
+        var roleDiff = Time.TotalMinutes * roleTimersMultiplier - roleTime.TotalMinutes;
         var departmentColor = Color.Yellow;
 
         if (entManager.EntitySysManager.TryGetEntitySystem(out SharedJobSystem? jobSystem))
