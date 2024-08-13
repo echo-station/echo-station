@@ -106,12 +106,12 @@ public sealed class TegSystem : EntitySystem
             return;
 
         var supplier = Comp<PowerSupplierComponent>(uid);
-        var powerReceiver = Comp<ApcPowerReceiverComponent>(uid);
-        if (!powerReceiver.Powered)
-        {
-            supplier.MaxSupply = 0;
-            return;
-        }
+        // var powerReceiver = Comp<ApcPowerReceiverComponent>(uid); // ECHO: TEG does not require power
+        // if (!powerReceiver.Powered)
+        // {
+        //     supplier.MaxSupply = 0;
+        //     return;
+        // }
 
         var circA = tegGroup.CirculatorA!.Owner;
         var circB = tegGroup.CirculatorB!.Owner;
@@ -194,27 +194,28 @@ public sealed class TegSystem : EntitySystem
         _atmosphere.Merge(outletA.Air, airA);
         _atmosphere.Merge(outletB.Air, airB);
 
-        UpdateAppearance(uid, component, powerReceiver, tegGroup);
+        // UpdateAppearance(uid, component, powerReceiver, tegGroup); // ECHO: TEG does not require power
+        UpdateAppearance(uid, component, tegGroup); // ECHO: TEG does not require power
     }
 
     private void UpdateAppearance(
         EntityUid uid,
         TegGeneratorComponent component,
-        ApcPowerReceiverComponent powerReceiver,
+        // ApcPowerReceiverComponent powerReceiver, // ECHO: TEG does not require power
         TegNodeGroup nodeGroup)
     {
         int powerLevel;
-        if (powerReceiver.Powered)
-        {
+        // if (powerReceiver.Powered) // ECHO: TEG does not require power
+        // {
             powerLevel = ContentHelpers.RoundToLevels(
                 component.RampPosition - component.RampMinimum,
                 component.MaxVisualPower - component.RampMinimum,
                 12);
-        }
-        else
-        {
-            powerLevel = 0;
-        }
+        // }
+        // else // ECHO: TEG does not require power
+        // {
+        //     powerLevel = 0;
+        // }
 
         _ambientSound.SetAmbience(uid, powerLevel >= 1);
         // TODO: Ok so this introduces popping which is a major shame big rip.
@@ -224,8 +225,10 @@ public sealed class TegSystem : EntitySystem
 
         if (nodeGroup.IsFullyBuilt)
         {
-            UpdateCirculatorAppearance(nodeGroup.CirculatorA!.Owner, powerReceiver.Powered);
-            UpdateCirculatorAppearance(nodeGroup.CirculatorB!.Owner, powerReceiver.Powered);
+            // UpdateCirculatorAppearance(nodeGroup.CirculatorA!.Owner, powerReceiver.Powered); // ECHO: TEG does not require power
+            // UpdateCirculatorAppearance(nodeGroup.CirculatorB!.Owner, powerReceiver.Powered); // ECHO: TEG does not require power
+            UpdateCirculatorAppearance(nodeGroup.CirculatorA!.Owner, true); // ECHO: TEG does not require power
+            UpdateCirculatorAppearance(nodeGroup.CirculatorB!.Owner, true); // ECHO: TEG does not require power
         }
     }
 
@@ -238,11 +241,13 @@ public sealed class TegSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
-        var powerReceiver = Comp<ApcPowerReceiverComponent>(uid);
-
-        powerReceiver.PowerDisabled = !group.IsFullyBuilt;
-
-        UpdateAppearance(uid, component, powerReceiver, group);
+        // ECHO: TEG does not require power
+        // var powerReceiver = Comp<ApcPowerReceiverComponent>(uid);
+        //
+        // powerReceiver.PowerDisabled = !group.IsFullyBuilt;
+        //
+        // UpdateAppearance(uid, component, powerReceiver, group);
+        UpdateAppearance(uid, component, group); // Echo: TEG does not require power
     }
 
     [Access(typeof(TegNodeGroup))]
@@ -299,7 +304,8 @@ public sealed class TegSystem : EntitySystem
         if (nodeGroup == null)
             return;
 
-        UpdateAppearance(uid, component, Comp<ApcPowerReceiverComponent>(uid), nodeGroup);
+        // UpdateAppearance(uid, component, Comp<ApcPowerReceiverComponent>(uid), nodeGroup); // ECHO: TEG does not require power
+        UpdateAppearance(uid, component, nodeGroup); // ECHO: TEG does not require power
     }
 
     /// <returns>Null if the node group is not yet available. This can happen during initialization.</returns>
