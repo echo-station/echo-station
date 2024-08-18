@@ -11,7 +11,7 @@ public static class JobRequirements
     public static bool TryRequirementsMet(
         JobPrototype job,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason,
+        out List<FormattedMessage> requirementDetails,
         IEntityManager entManager,
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
@@ -20,17 +20,26 @@ public static class JobRequirements
     {
         var sys = entManager.System<SharedRoleSystem>();
         var requirements = sys.GetJobRequirement(job);
-        reason = null;
+        requirementDetails = new List<FormattedMessage>();
         if (requirements == null)
             return true;
 
+        var success = true;
         foreach (var requirement in requirements)
         {
-            if (!requirement.Check(entManager, protoManager, profile, playTimes, out reason, roleTimersMultiplier, isWhitelisted))
-                return false;
+            success = requirement.Check(entManager,
+                          protoManager,
+                          profile,
+                          playTimes,
+                          out var reason,
+                          roleTimersMultiplier,
+                          isWhitelisted)
+                      && success;
+
+            requirementDetails.Add(reason);
         }
 
-        return true;
+        return success;
     }
 }
 
@@ -49,7 +58,7 @@ public abstract partial class JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason,
+        out FormattedMessage reason,
         float roleTimersMultiplier, // Echo
         bool isWhitelisted); // DeltaV
 }

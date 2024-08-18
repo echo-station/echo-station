@@ -16,15 +16,16 @@ public sealed partial class WhitelistRequirement : JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason,
+        out FormattedMessage reason,
         float roleTimersMultiplier, // Echo
         bool isWhitelisted)
     {
-        reason = null;
+        reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-server-whitelisted")); // Echo
+
         if (isWhitelisted)
             return true;
 
-        reason = FormattedMessage.FromMarkup(Loc.GetString("playtime-deny-reason-not-whitelisted"));
+        reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-not-server-whitelisted")); // Echo
         return false;
     }
 }

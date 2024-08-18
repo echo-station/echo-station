@@ -47,3 +47,11 @@ Entries:
       message: Fixed CentCom naming
   id: 7
   time: '2024-08-13T19:18:34.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: >-
+        You can now always see role requirements by hovering job titles, even if
+        you've met them!
+  id: 8
+  time: '2024-08-18T16:58:35.0000000+00:00'
