@@ -29,8 +29,8 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
 
         details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
             Inverted ? "role-timer-overall-not-too-high" : "role-timer-overall-sufficient",
-            ("current", overallTime.TotalMinutes * roleTimersMultiplier), // Echo
-            ("required", Time.TotalMinutes)));
+            ("current", overallTime.TotalMinutes), // Echo
+            ("required", Time.TotalMinutes * roleTimersMultiplier))); // Echo
 
         if (!Inverted)
         {
@@ -39,8 +39,8 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
 
             details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-overall-insufficient",
-                ("current", overallTime.TotalMinutes * roleTimersMultiplier), // Echo
-                ("required", Time.TotalMinutes)));
+                ("current", overallTime.TotalMinutes),
+                ("required", Time.TotalMinutes * roleTimersMultiplier))); // Echo
             return false;
         }
 
@@ -48,8 +48,8 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
         {
             details = FormattedMessage.FromMarkupPermissive(
                 Loc.GetString("role-timer-overall-too-high",
-                ("current", overallTime.TotalMinutes * roleTimersMultiplier), // Echo
-                ("required", Time.TotalMinutes)));
+                ("current", overallTime.TotalMinutes),
+                ("required", Time.TotalMinutes * roleTimersMultiplier))); // Echo
             return false;
         }
 
