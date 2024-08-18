@@ -3,7 +3,7 @@
 lobbyenabled = true
 # Dev map for faster loading & convenience
 map = "Dev"
-role_timers = false
+role_timers = true
 role_whitelist = false
 
 [server]
