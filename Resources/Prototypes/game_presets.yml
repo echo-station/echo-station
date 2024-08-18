@@ -8,6 +8,7 @@
   rules:
     #- RampingStationEventScheduler # Echo Station: Replace Ramping with our custom Linear
     - LinearStationEventScheduler
+    #- GameRuleMeteorScheduler # DeltaV: old meteor event
     - BasicRoundstartVariation
 
 - type: gamePreset
@@ -22,6 +23,7 @@
     - Zombie
     #- RampingStationEventScheduler # Echo Station: Replace Ramping with our custom Linear
     - LinearStationEventScheduler
+    #- GameRuleMeteorScheduler # DeltaV: old meteor event
 
 - type: gamePreset
   id: Extended
@@ -45,6 +47,7 @@
   description: greenshift-description
   rules:
   - BasicRoundstartVariation
+  #- GameRuleMeteorScheduler # DeltaV: old meteor event
 
 - type: gamePreset
   id: Secret
