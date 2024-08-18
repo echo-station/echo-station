@@ -49,7 +49,7 @@ public sealed partial class RoleTimeRequirement : JobRequirement
 
         details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
             Inverted ? "role-timer-not-too-high" : "role-timer-role-sufficient",
-            ("current", roleTime.TotalMinutes),
+            ("current", roleTime.TotalMinutes * roleTimersMultiplier), // Echo
             ("required", Time.TotalMinutes),
             ("job", Loc.GetString(proto)),
             ("departmentColor", departmentColor.ToHex())));
@@ -61,7 +61,7 @@ public sealed partial class RoleTimeRequirement : JobRequirement
 
             details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-role-insufficient",
-                ("current", roleTime.TotalMinutes),
+                ("current", roleTime.TotalMinutes * roleTimersMultiplier), // Echo
                 ("required", Time.TotalMinutes),
                 ("job", Loc.GetString(proto)),
                 ("departmentColor", departmentColor.ToHex())));
@@ -72,7 +72,7 @@ public sealed partial class RoleTimeRequirement : JobRequirement
         {
             details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-role-too-high",
-                ("current", roleTime.TotalMinutes),
+                ("current", roleTime.TotalMinutes * roleTimersMultiplier), // Echo
                 ("required", Time.TotalMinutes),
                 ("job", Loc.GetString(proto)),
                 ("departmentColor", departmentColor.ToHex())));

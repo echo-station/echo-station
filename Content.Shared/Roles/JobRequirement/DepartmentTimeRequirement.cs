@@ -60,7 +60,7 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
         details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
             Inverted ? "role-timer-department-not-too-high" : "role-timer-department-sufficient",
             ("current", playtime.TotalMinutes),
-            ("required", Time.TotalMinutes),
+            ("required", Time.TotalMinutes * roleTimersMultiplier), // Echo
             ("department", Loc.GetString(nameDepartment)),
             ("departmentColor", department.Color.ToHex())));
 
@@ -72,7 +72,7 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
             details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-department-insufficient",
                 ("current", playtime.TotalMinutes),
-                ("required", Time.TotalMinutes),
+                ("required", Time.TotalMinutes * roleTimersMultiplier), // Echo
                 ("department", Loc.GetString(nameDepartment)),
                 ("departmentColor", department.Color.ToHex())));
             return false;
@@ -83,7 +83,7 @@ public sealed partial class DepartmentTimeRequirement : JobRequirement
             details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-department-too-high",
                 ("current", playtime.TotalMinutes),
-                ("required", Time.TotalMinutes),
+                ("required", Time.TotalMinutes * roleTimersMultiplier), // Echo
                 ("department", Loc.GetString(nameDepartment)),
                 ("departmentColor", department.Color.ToHex())));
             return false;
