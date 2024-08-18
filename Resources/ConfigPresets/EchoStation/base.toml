@@ -1,6 +1,6 @@
 ﻿[game]
 # Description of the game server in the launcher.
-desc = "A Delta-V fork focusing on high levels of roleplay. Senior roles, pionics, alternative spritework, and various other balances/reworks. Tryout slots are available when admins are online! Feel free to join."
+desc = "A Delta-V fork focusing on higher levels of roleplay. Senior roles, psionics, alternative spritework, engineering buffs and various other balances/reworks. Feel free to join!"
 # Controls if the lobby is enabled. If it is not, and there are no available jobs, you may get stuck on a black screen.
 lobbyenabled = true
 # The maximum number of players. Admins can join even when the cap is reached.
