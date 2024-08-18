@@ -20,30 +20,36 @@ public sealed partial class OverallPlaytimeRequirement : JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason,
+        out FormattedMessage details,
         float roleTimersMultiplier, // Echo
         bool isWhitelisted) // DeltaV
     {
-        reason = new FormattedMessage();
-
         var overallTime = playTimes.GetValueOrDefault(PlayTimeTrackingShared.TrackerOverall);
         var overallDiff = Time.TotalMinutes * roleTimersMultiplier - overallTime.TotalMinutes;
+
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            Inverted ? "role-timer-overall-not-too-high" : "role-timer-overall-sufficient",
+            ("current", overallTime.TotalMinutes), // Echo
+            ("required", Time.TotalMinutes * roleTimersMultiplier))); // Echo
 
         if (!Inverted)
         {
             if (overallDiff <= 0 || overallTime >= Time)
                 return true;
 
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
                 "role-timer-overall-insufficient",
-                ("time", Math.Ceiling(overallDiff))));
+                ("current", overallTime.TotalMinutes),
+                ("required", Time.TotalMinutes * roleTimersMultiplier))); // Echo
             return false;
         }
 
         if (overallDiff <= 0 || overallTime >= Time)
         {
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-overall-too-high",
-                ("time", -overallDiff)));
+            details = FormattedMessage.FromMarkupPermissive(
+                Loc.GetString("role-timer-overall-too-high",
+                ("current", overallTime.TotalMinutes),
+                ("required", Time.TotalMinutes * roleTimersMultiplier))); // Echo
             return false;
         }
 

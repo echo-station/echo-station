@@ -21,32 +21,34 @@ public sealed partial class AgeRequirement : JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason,
+        out FormattedMessage details,
         float roleTimersMultiplier, // Echo
         bool isWhitelisted) // DeltaV
     {
-        reason = new FormattedMessage();
+        details = new FormattedMessage();
 
         if (profile is null) //the profile could be null if the player is a ghost. In this case we don't need to block the role selection for ghostrole
             return true;
 
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString(
+            Inverted ? "role-timer-age-young-enough" : "role-timer-age-old-enough",
+            ("age", RequiredAge)));
+
         if (!Inverted)
         {
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-age-to-young",
-                ("age", RequiredAge)));
-
-            if (profile.Age <= RequiredAge)
-                return false;
-        }
-        else
-        {
-            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-age-to-old",
-                ("age", RequiredAge)));
-
             if (profile.Age >= RequiredAge)
-                return false;
+                return true;
+
+            details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-age-not-old-enough",
+                ("age", RequiredAge)));
+            return false;
         }
 
-        return true;
+        if (profile.Age <= RequiredAge)
+            return true;
+
+        details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-age-not-young-enough",
+            ("age", RequiredAge)));
+        return false;
     }
 }
