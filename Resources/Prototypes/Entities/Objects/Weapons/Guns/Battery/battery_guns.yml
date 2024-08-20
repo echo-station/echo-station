@@ -464,7 +464,7 @@
   - type: Item
     size: Large
     shape:
-    -0,0,3,1 #Echo 4x2, standard SMG shape
+    - 0,0,3,1 #Echo 4x2, standard SMG shape
   - type: Tag
     tags:
       - Taser
