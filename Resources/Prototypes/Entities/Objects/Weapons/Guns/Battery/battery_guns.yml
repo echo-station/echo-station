@@ -7,7 +7,7 @@
   - type: Item
     size: Huge
     shape:
-    -0,0,4,1 #Echo 5x2, Long rifle size
+    - 0,0,4,1 #Echo 5x2, Long rifle size
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
     quickEquip: false
@@ -42,7 +42,7 @@
   - type: Item
     size: Huge
     shape:
-    -0,0,4,1 #Echo 5x2, long rifle size
+    - 0,0,4,1 #Echo 5x2, long rifle size
   - type: AmmoCounter
   - type: Gun
     fireRate: 2
