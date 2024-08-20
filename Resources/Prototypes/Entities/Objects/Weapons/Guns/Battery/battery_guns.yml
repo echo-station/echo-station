@@ -6,6 +6,8 @@
   - type: Sprite
   - type: Item
     size: Huge
+    shape:
+    -0,0,4,1 #Echo 5x2, Long rifle size
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
     quickEquip: false
@@ -39,6 +41,8 @@
   - type: Sprite
   - type: Item
     size: Huge
+    shape:
+    -0,0,4,1 #Echo 5x2, long rifle size
   - type: AmmoCounter
   - type: Gun
     fireRate: 2
@@ -93,6 +97,9 @@
   components:
   - type: Item
     size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1 #Echo standardizing shape
   - type: Tag
     tags:
     - Sidearm
@@ -101,6 +108,7 @@
     quickEquip: false
     slots:
     - Belt
+    - suitStorage #Echo standardizing slots
 
 - type: entity
   name: svalinn laser pistol
@@ -455,6 +463,8 @@
   components:
   - type: Item
     size: Large
+    shape:
+    -0,0,3,1 #Echo 4x2, standard SMG shape
   - type: Tag
     tags:
       - Taser

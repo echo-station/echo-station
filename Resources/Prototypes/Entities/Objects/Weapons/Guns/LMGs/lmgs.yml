@@ -8,11 +8,14 @@
   - type: Sprite
   - type: Item
     size: Huge
+    shape:
+    -0,0,4,2 #Echo 5x3, big gun
   - type: Clothing
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
     quickEquip: false
     slots:
     - Back
+    - suitStorage #Echo Added, possible oversight
   - type: Wieldable
     unwieldOnUse: false
   - type: GunWieldBonus

@@ -11,8 +11,11 @@
     quickEquip: false
     slots:
     - Back
+    - suitStorage #Echo Added, possible oversight
   - type: Item
     size: Huge
+    shape:
+    -0,0,4,2 #Echo 5x3, big gun
   - type: StaticPrice
     price: 500
   - type: ContainerContainer
