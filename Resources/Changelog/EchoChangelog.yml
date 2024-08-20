@@ -55,3 +55,9 @@ Entries:
         you've met them!
   id: 8
   time: '2024-08-18T16:58:35.0000000+00:00'
+- author: ProphetCrow
+  changes:
+    - type: Tweak
+      message: Recombined the EMAG
+  id: 9
+  time: '2024-08-20T18:11:01.0000000+00:00'
