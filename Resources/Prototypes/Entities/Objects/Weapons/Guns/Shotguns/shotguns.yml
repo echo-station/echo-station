@@ -229,11 +229,17 @@
   components:
   - type: Item
     size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
     storedRotation: 90
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
+    slots: #Echo, adjusting equip regions to match pistols
+    - suitStorage
+    - Belt
   - type: Gun
     fireRate: 4
   - type: BallisticAmmoProvider

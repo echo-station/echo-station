@@ -354,6 +354,10 @@
   - type: HitscanBatteryAmmoProvider
     proto: RedHeavyLaser
     fireCost: 100
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,2
 
 - type: entity
   name: portable particle decelerator
@@ -413,6 +417,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,2
 
 - type: entity
   name: disabler
@@ -595,6 +603,10 @@
     price: 750
   - type: StealTarget
     stealGroup: WeaponAntiqueLaser
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
 
 - type: entity
   name: advanced laser pistol
@@ -603,7 +615,9 @@
   description: An experimental high-energy laser pistol with a self-charging nuclear battery.
   components:
   - type: Item
-    size: Normal  # Intentionally larger than other pistols
+    size: Normal
+    shape:
+    - 0,0,2,1  # Intentionally larger than other pistols
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
     layers:
