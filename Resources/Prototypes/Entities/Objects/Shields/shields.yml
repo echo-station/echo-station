@@ -300,7 +300,6 @@
       heldPrefix: mirror
     - type: Reflect
       reflectProb: 0.95
-      innate: true
       reflects:
         - Energy
     - type: Blocking #Mirror shield reflects heat/laser, but is relatively weak to everything else.
@@ -388,9 +387,7 @@
       energy: 2
       color: blue
     - type: Reflect
-      enabled: false
       reflectProb: 0.95
-      innate: true
       reflects:
         - Energy
     - type: Blocking
