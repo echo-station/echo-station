@@ -1,4 +1,4 @@
-#- type: entity
+#- type: entity # Echo: No Justice department
 #  parent: LockerClerk
 #  id: LockerClerkFilled
 #  suffix: Filled
@@ -11,4 +11,4 @@
 #    - id: BoxEncryptionKeyJustice
 #    - id: ClerkIDCard
 #    - id: RubberStampNotary
-#
+
