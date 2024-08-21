@@ -5,9 +5,14 @@ lobbyenabled = true
 map = "Dev"
 role_timers = true
 role_whitelist = false
+contraband_examine = false # DeltaV
 
 [server]
 rules_file = "EchoRuleset"
+
+[ghost]
+role_time = 0.5
+quick_lottery = true
 
 [gateway]
 generator_enabled = false

@@ -16,8 +16,12 @@
       time: 7200 # 2 hours
     - !type:DepartmentTimeRequirement
       department: Logistics # DeltaV - Logistics Department replacing Cargo
-      time: 54000 # Echo Station: 15 hrs
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+      time: 54000 # Echo: 15 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 144000 #40 hrs
+    - !type:AgeRequirement
+      requiredAge: 21
+    - !type:WhitelistRequirement # Echo: Require server whitelisting for all Command roles
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"
