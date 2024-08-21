@@ -145,25 +145,25 @@
 
 # Justice
 
-- type: quickPhrase
-  parent: BaseJusticeJobPhrase
-  id: ChiefJusticePhrase
-  text: job-name-chief-justice
+#- type: quickPhrase
+#  parent: BaseJusticeJobPhrase
+#  id: ChiefJusticePhrase
+#  text: job-name-chief-justice
 
 - type: quickPhrase
-  parent: BaseJusticeJobPhrase
+  parent: BaseCivilianPhrase # Echo: No justice, Lawyer is Civ
   id: LawyerPhrase
   text: job-name-lawyer
 
 - type: quickPhrase
-  parent: BaseJusticeJobPhrase
+  parent: BaseSecurityPhrase # Echo: No justice, Prosecutor is Sec
   id: ProsecutorPhrase
   text: job-name-prosecutor
 
-- type: quickPhrase
-  parent: BaseJusticeJobPhrase
-  id: ClerkPhrase
-  text: job-name-clerk
+#- type: quickPhrase
+#  parent: BaseJusticeJobPhrase
+#  id: ClerkPhrase
+#  text: job-name-clerk
 
 # Medical
 
