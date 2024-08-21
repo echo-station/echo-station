@@ -57,7 +57,7 @@
 
 - type: entity
   name: riot shield
-  parent: BaseShield
+  parent: [ BaseShield, BaseRestrictedContraband ]
   id: RiotShield
   description: A large tower shield bearing security markings. An internal inscription reads 'Return with it, or on it'.
   components:
@@ -338,7 +338,7 @@
 
 - type: entity
   name: energy shield
-  parent: BaseItem
+  parent: [BaseItem, BaseSyndicateContraband]
   id: EnergyShield
   description: Exotic energy shield, when folded, can even fit in your pocket.
   components:

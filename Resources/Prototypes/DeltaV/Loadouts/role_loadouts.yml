@@ -2,6 +2,7 @@
 - type: roleLoadout
   id: JobCourier
   groups:
+  - GroupTankHarness
   - CourierHead
   - CourierNeck
   - CourierJumpsuit
@@ -33,6 +34,7 @@
 - type: roleLoadout
   id: JobChiefJustice
   groups:
+  - GroupTankHarness
   - ChiefJusticeHead
   - ChiefJusticeJumpsuit
   - ChiefJusticeNeck
@@ -47,6 +49,7 @@
 - type: roleLoadout
   id: JobClerk
   groups:
+  - GroupTankHarness
   - ClerkJumpsuit
   - ClerkNeck
   - ClerkOuterClothing

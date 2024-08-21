@@ -28,12 +28,12 @@ slots_per_admin = 2
 [events]
 # When to start scaling, in minutes.
 linear_start_time = 0
-# When to finish scaling, in minutes. (2.5hrs)
-linear_end_time = 150
+# When to finish scaling, in minutes. (1.5hrs)
+linear_end_time = 90
 # Initial multiplier up to and including at StartTime.
 linear_start_multiplier = 1
 # Final multiplier, including after exceeding the EndTime.
-linear_end_multiplier = 0.25
+linear_end_multiplier = 0.2
 # Baseline minimum time between events. Multiplier by current modifier.
 linear_baseline_min_time = 900
 # Baseline maximum time between events. Multiplied by current modifier.
