@@ -50,6 +50,7 @@ RubberStampNotary: null
 RubberStampChiefJustice: null
 SignDirectionalJustice: null
 #SignDirectionaCourt: null # Lives on without Justice colors
+SpawnMobJusticePet: null
 SpawnPointChiefJustice: null
 SpawnPointClerk: null
 WindoorSecureChiefJusticeLocked: WindoorSecureSecurityLawyerLocked
