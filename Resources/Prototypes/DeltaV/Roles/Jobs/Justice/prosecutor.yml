@@ -12,12 +12,15 @@
   - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Security roles
   startingGear: ProsecutorGear
   icon: "JobIconProsecutor"
-  supervisors: job-supervisors-hos # Echo: No justice
+  supervisors: job-supervisors-hos # Echo: No Justice
   canBeAntag: false
   access:
   - Prosecutor
   - Security # Echo: No justice
   - Maintenance
+  special: # Echo: Since Prosecutor is now Security, they get a mindshield
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
 
 - type: startingGear
   id: ProsecutorGear
