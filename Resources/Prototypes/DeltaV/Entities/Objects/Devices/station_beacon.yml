@@ -136,7 +136,7 @@
     defaultText: station-beacon-corpsman
 
 #Justice
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: DefaultStationBeacon
 #  id: DefaultStationBeaconJustice
 #  suffix: Justice

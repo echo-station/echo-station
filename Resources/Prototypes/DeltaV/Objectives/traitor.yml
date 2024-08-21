@@ -30,7 +30,7 @@
     stealGroup: WeaponEnergyGunMultiphase
     owner: job-name-hos
 
-#- type: entity # Clerk steal objective. # Echo: No justice
+#- type: entity # Clerk steal objective. # Echo: No Justice department
 #  parent: BaseTraitorStealObjective
 #  id: ClerkNotaryStealObjective
 #  components:

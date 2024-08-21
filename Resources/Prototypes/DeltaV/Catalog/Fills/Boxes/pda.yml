@@ -10,7 +10,7 @@
       - id: DetectivePDA
       - id: WardenPDA
       - id: SeniorOfficerPDA
-      #- id: ProsecutorPDA # Echo: No justice, Prosecutor is sec.. but this won't fit.
+      #- id: ProsecutorPDA # Echo: No Justice department, Prosecutor is sec.. but this won't fit.
 
 - type: entity
   name: prisoner PDA box
@@ -76,7 +76,7 @@
       - id: MailCarrierPDA
         amount: 1
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  name: justice PDA box
 #  parent: BoxPDA
 #  id: BoxPDAJustice

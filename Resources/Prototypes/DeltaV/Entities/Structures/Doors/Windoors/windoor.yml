@@ -25,7 +25,7 @@
     containers:
       board: [ DoorElectronicsParamedic ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: WindoorSecure
 #  id: WindoorSecureChiefJusticeLocked
 #  suffix: Chief Justice, Locked

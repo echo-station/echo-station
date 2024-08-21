@@ -17,7 +17,7 @@
     containers:
       board: [ DoorElectronicsMantis ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockCommand
 #  id: AirlockChiefJusticeLocked
 #  suffix: Chief Justice, Locked
@@ -26,7 +26,7 @@
 #    containers:
 #      board: [ DoorElectronicsChiefJustice ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockCommandGlass
 #  id: AirlockChiefJusticeGlassLocked
 #  suffix: Chief Justice, Locked
@@ -35,7 +35,7 @@
 #    containers:
 #      board: [ DoorElectronicsChiefJustice ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockJustice
 #  id: AirlockJusticeLocked
 #  suffix: Justice, Locked
@@ -44,7 +44,7 @@
 #    containers:
 #      board: [ DoorElectronicsJustice ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockJusticeGlass
 #  id: AirlockJusticeGlassLocked
 #  suffix: Justice, Locked
@@ -54,7 +54,7 @@
 #      board: [ DoorElectronicsJustice ]
 
 - type: entity
-  parent: AirlockSecurity # Echo: No justice, Prosecutor is sec
+  parent: AirlockSecurity # Echo: No Justice department, Prosecutor is sec
   id: AirlockProsecutorLocked
   suffix: Prosecutor, Locked
   components:
@@ -63,7 +63,7 @@
       board: [ DoorElectronicsProsecutor ]
 
 - type: entity
-  parent: AirlockSecurityGlass # Echo: No justice, Prosecutor is sec
+  parent: AirlockSecurityGlass # Echo: No Justice department, Prosecutor is sec
   id: AirlockProsecutorGlassLocked
   suffix: Prosecutor, Locked
   components:
@@ -71,7 +71,7 @@
     containers:
       board: [ DoorElectronicsProsecutor ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockJustice
 #  id: AirlockClerkLocked
 #  suffix: Clerk, Locked
@@ -80,7 +80,7 @@
 #    containers:
 #      board: [ DoorElectronicsClerk ]
 
-#- type: entity  # Echo: No justice
+#- type: entity  # Echo: No Justice department
 #  parent: AirlockJusticeGlass
 #  id: AirlockClerkGlassLocked
 #  suffix: Clerk, Locked
@@ -90,7 +90,7 @@
 #      board: [ DoorElectronicsClerk ]
 
 # Maintenance
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockMaint
 #  id: AirlockMaintChiefJusticeLocked
 #  suffix: ChiefJustice, Locked
@@ -99,7 +99,7 @@
 #    containers:
 #      board: [ DoorElectronicsChiefJustice ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockMaint
 #  id: AirlockMaintJusticeLocked
 #  suffix: Justice, Locked
@@ -117,7 +117,7 @@
     containers:
       board: [ DoorElectronicsProsecutor ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockMaint
 #  id: AirlockMaintClerkLocked
 #  suffix: Clerk, Locked

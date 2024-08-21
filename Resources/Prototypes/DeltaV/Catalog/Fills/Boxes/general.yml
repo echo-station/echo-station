@@ -17,7 +17,7 @@
       components:
       - EncryptionKey
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  name: justice encryption key box
 #  parent: BoxEncryptionKeyPassenger
 #  id: BoxEncryptionKeyJustice

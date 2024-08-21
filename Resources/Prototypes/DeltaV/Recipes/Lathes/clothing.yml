@@ -84,7 +84,7 @@
 
 # Chief Justice Wardrobe
 
-#- type: latheRecipe # Echo: No justice
+#- type: latheRecipe # Echo: No Justice department
 #  id: ClothingHeadHatCJToque
 #  result: ClothingHeadHatCJToque
 #  completetime: 2
@@ -92,7 +92,7 @@
 #    Cloth: 100
 #    Durathread: 50
 
-#- type: latheRecipe # Echo: No justice
+#- type: latheRecipe # Echo: No Justice department
 #  id: ClothingUniformJumpsuitChiefJustice
 #  result: ClothingUniformJumpsuitChiefJustice
 #  completetime: 4
@@ -100,7 +100,7 @@
 #    Cloth: 300
 #    Durathread: 100
 
-#- type: latheRecipe # Echo: No justice
+#- type: latheRecipe # Echo: No Justice department
 #  id: ClothingUniformJumpskirtChiefJustice
 #  result: ClothingUniformJumpskirtChiefJustice
 #  completetime: 4
@@ -108,7 +108,7 @@
 #    Cloth: 300
 #    Durathread: 100
 
-#- type: latheRecipe # Echo: No justice
+#- type: latheRecipe # Echo: No Justice department
 #  id: ClothingUniformJumpsuitChiefJusticeFormal
 #  result: ClothingUniformJumpsuitChiefJusticeFormal
 #  completetime: 4
@@ -116,7 +116,7 @@
 #    Cloth: 300
 #    Durathread: 100
 
-#- type: latheRecipe # Echo: No justice
+#- type: latheRecipe # Echo: No Justice department
 #  id: ClothingUniformJumpsuitChiefJusticeWhite
 #  result: ClothingUniformJumpsuitChiefJusticeWhite
 #  completetime: 5
@@ -124,7 +124,7 @@
 #    Cloth: 300
 #    Durathread: 100
 
-#- type: latheRecipe # Echo: No justice
+#- type: latheRecipe # Echo: No Justice department
 #  id: ClothingNeckCloakCJ
 #  result: ClothingNeckCloakCJ
 #  completetime: 2.8
@@ -132,7 +132,7 @@
 #    Cloth: 200
 #    Durathread: 150
 
-#- type: latheRecipe # Echo: No justice
+#- type: latheRecipe # Echo: No Justice department
 #  id: ClothingOuterChiefJustice
 #  result: ClothingOuterChiefJustice
 #  completetime: 3.2

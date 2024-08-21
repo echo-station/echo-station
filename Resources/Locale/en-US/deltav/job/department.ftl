@@ -1,3 +1,3 @@
 department-Epistemics = Epistemics
 department-Logistics = Logistics
-# department-Justice = Justice # Echo: No justice
+# department-Justice = Justice # Echo: No Justice department

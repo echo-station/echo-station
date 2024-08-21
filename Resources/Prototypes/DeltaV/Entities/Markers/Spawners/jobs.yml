@@ -13,7 +13,7 @@
     - sprite: Mobs/Silicon/chassis.rsi
       state: medical_e
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  id: SpawnPointChiefJustice
 #  parent: SpawnPointJobBase
 #  name: chiefjustice
@@ -26,7 +26,7 @@
 #    - sprite: DeltaV/Markers/jobs.rsi
 #      state: chiefjustice
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  id: SpawnPointClerk
 #  parent: SpawnPointJobBase
 #  name: clerk

@@ -18,7 +18,7 @@
     sprite: DeltaV/Structures/Wallmounts/signs.rsi
     state: direction_mail
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: BaseSignDirectional
 #  id: SignDirectionalJustice
 #  name: justice department sign
@@ -35,5 +35,5 @@
   description:  A direction sign, pointing out which way the court room is.
   components:
   - type: Sprite
-    sprite: _Echo/Structures/Wallmounts/signs.rsi # Echo: No justice
+    sprite: _Echo/Structures/Wallmounts/signs.rsi # Echo: No Justice department
     state: direction_court

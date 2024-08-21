@@ -31,7 +31,7 @@ station-beacon-park = Park
 
 station-beacon-corpsman = Corpsman
 
-# station-beacon-justice = Justice # Echo: No justice
-# station-beacon-chiefjustice = Chief Justice # Echo: No justice
+# station-beacon-justice = Justice # Echo: No Justice department
+# station-beacon-chiefjustice = Chief Justice # Echo: No Justice department
 station-beacon-prosecutor = Prosecutor
-# station-beacon-clerk = Clerk # Echo: No justice
+# station-beacon-clerk = Clerk # Echo: No Justice department

@@ -1,4 +1,4 @@
-#- type: radioChannel # Echo: No justice
+#- type: radioChannel # Echo: No Justice department
 #  id: Justice
 #  name: chat-radio-justice
 #  keycode: "j"

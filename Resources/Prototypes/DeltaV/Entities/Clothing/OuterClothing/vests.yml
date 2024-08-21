@@ -38,7 +38,7 @@
   - type: ExplosionResistance
     damageCoefficient: 0.9
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: ClothingOuterStorageBase
 #  id: ClothingOuterClerkVest
 #  name: clerk's vest

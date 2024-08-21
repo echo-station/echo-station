@@ -32,7 +32,7 @@
   - type: Clothing
     sprite: DeltaV/Clothing/Neck/Cloaks/salvage.rsi
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: ClothingNeckBase
 #  id: ClothingNeckCloakCJ
 #  name: chief justice's cloak

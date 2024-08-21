@@ -42,7 +42,7 @@
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: BasePDA
 #  id: ChiefJusticePDA
 #  name: chief justice PDA
@@ -81,7 +81,7 @@
 #      - NewsReaderCartridge
 #      - CrimeAssistCartridge
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: BasePDA
 #  id: ClerkPDA
 #  name: clerk PDA

@@ -52,7 +52,7 @@
   - HeadOfSecurity
   - ResearchDirector
   - Quartermaster
-#  - ChiefJustice # DeltaV - chief justice is in command staff # Echo: No justice
+#  - ChiefJustice # DeltaV - chief justice is in command staff # Echo: No Justice department
   primary: false
   weight: 100
 

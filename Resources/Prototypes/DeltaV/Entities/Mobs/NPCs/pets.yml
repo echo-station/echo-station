@@ -57,7 +57,7 @@
   - type: StealTarget
     stealGroup: AnimalSecurity #DeltaV - Adjusts because we have multiple possible sec animals
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: MobCarp
 #  id: MobCarpLegal
 #  name: Carpy the Legal Carp

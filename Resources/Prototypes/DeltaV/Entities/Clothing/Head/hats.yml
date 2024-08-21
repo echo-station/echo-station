@@ -193,7 +193,7 @@
   - type: Clothing
     sprite: DeltaV/Clothing/Head/Hats/beret_corpsman.rsi
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: ClothingHeadBase
 #  id: ClothingHeadHatCJToque
 #  name: chief justice's toque

@@ -43,7 +43,7 @@
   - type: Clothing
     sprite: DeltaV/Clothing/Ears/Headsets/syndicate_listening.rsi
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: ClothingHeadset
 #  id: ClothingHeadsetJustice
 #  name: justice headset
@@ -61,7 +61,7 @@
 #  - type: Clothing
 #    sprite: DeltaV/Clothing/Ears/Headsets/justice.rsi
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: ClothingHeadset
 #  id: ClothingHeadsetAltJustice
 #  name: chief justice's headset

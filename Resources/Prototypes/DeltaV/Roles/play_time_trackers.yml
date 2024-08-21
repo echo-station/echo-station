@@ -4,10 +4,10 @@
 - type: playTimeTracker
   id: JobMedicalBorg
 
-#- type: playTimeTracker # Echo: No justice
+#- type: playTimeTracker # Echo: No Justice department
 #  id: JobChiefJustice
 #
-#- type: playTimeTracker # Echo: No justice
+#- type: playTimeTracker # Echo: No Justice department
 #  id: JobClerk
 
 - type: playTimeTracker

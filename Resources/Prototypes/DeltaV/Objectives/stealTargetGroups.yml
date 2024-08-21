@@ -19,7 +19,7 @@
     sprite: DeltaV/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
     state: base
 
-#- type: stealTargetGroup # Echo: No justice
+#- type: stealTargetGroup # Echo: No Justice department
 #  id: RubberStampNotary
 #  name: notary stamp
 #  sprite:

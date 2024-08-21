@@ -12,7 +12,7 @@
     sprite: DeltaV/Objects/Misc/stamps.rsi
     state: stamp-psychologist
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  name: notary stamp
 #  parent: RubberStampBase
 #  id: RubberStampNotary
@@ -29,7 +29,7 @@
 #  - type: StealTarget
 #    stealGroup: RubberStampNotary
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  name: chief justice stamp
 #  parent: RubberStampBase
 #  id: RubberStampChiefJustice

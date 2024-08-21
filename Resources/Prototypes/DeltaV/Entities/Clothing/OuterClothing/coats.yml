@@ -127,7 +127,7 @@
   - type: TemperatureProtection
     coefficient: 0.1
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: ClothingOuterStorageBase
 #  id: ClothingOuterChiefJustice
 #  name: chief justice's robes

@@ -355,7 +355,7 @@
 - type: entity
   parent: IDCardStandard
   id: LawyerIDCard
-  name: lawyer ID card # DeltaV - Changed Lawyer to Attorney # Echo: No justice
+  name: lawyer ID card # DeltaV - Changed Lawyer to Attorney # Echo: No Justice department
   components:
     - type: Sprite
       layers:
