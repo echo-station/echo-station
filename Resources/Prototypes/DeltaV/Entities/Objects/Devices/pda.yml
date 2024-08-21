@@ -148,9 +148,9 @@
         tags:
         - Write
   - type: PdaBorderColor
-    borderColor: "#A32D26" # Echo: Prosecutor is Security
+    borderColor: "#A32D26" # Echo: Prosecutor is Security (reskin)
   - type: Icon
-    sprite: _Echo/Objects/Devices/pda.rsi
+    sprite: _Echo/Objects/Devices/pda.rsi # Echo: Prosecutor is Security (reskin)
     state: pda-prosecutor
   - type: CartridgeLoader # DeltaV - Crime Assist
     preinstalled:
