@@ -15,7 +15,7 @@ job-name-senior-officer = Senior Officer
 # Role timers
 JobMedicalBorg = Medical Cyborg
 JobCourier = Courier
-JobChiefJustice = Chief Justice
-JobClerk = Clerk
+# JobChiefJustice = Chief Justice # Echo: No justice
+# JobClerk = Clerk # Echo: No justice
 JobProsecutor = Prosecutor
 JobSecurityBorg = Security Cyborg
