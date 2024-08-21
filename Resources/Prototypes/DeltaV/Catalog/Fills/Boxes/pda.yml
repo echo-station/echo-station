@@ -8,9 +8,8 @@
     contents:
       - id: SecurityPDA
       - id: DetectivePDA
-      - id: WardenPDA
+      - id: ProsecutorPDA # Echo: I imagine a second Prosecutor is more likely than a second Warden
       - id: SeniorOfficerPDA
-      #- id: ProsecutorPDA # Echo: No Justice department, Prosecutor is sec.. but this won't fit.
 
 - type: entity
   name: prisoner PDA box
