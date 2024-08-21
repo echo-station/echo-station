@@ -18,6 +18,7 @@ AirlockJusticeLocked: AirlockSecurityLawyerLocked
 AirlockJusticeGlassLocked: AirlockSecurityLawyerGlassLocked
 AirlockMaintChiefJusticeLocked: AirlockMaintSecurityLawyerLocked
 AirlockMaintClerkLocked: AirlockMaintSecurityLawyerLocked
+AirlockMaintJusticeLocked: AirlockMaintSecurityLawyerLocked
 BoxEncryptionKeyJustice: null
 ChiefJusticeIDCard: null
 ChiefJusticePDA: null
