@@ -132,14 +132,14 @@
 
 # Justice
 ## Chief Justice
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ChiefJusticeHead
 #  name: loadout-group-chiefjustice-head
 #  minLimit: 0
 #  loadouts:
 #  - CJToque
 
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ChiefJusticeJumpsuit
 #  name: loadout-group-chiefjustice-jumpsuit
 #  loadouts:
@@ -148,21 +148,21 @@
 #  - ChiefJusticeFormalJumpsuit
 #  - ChiefJusticeWhiteJumpsuit
 
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ChiefJusticeNeck
 #  name: loadout-group-chiefjustice-neck
 #  minLimit: 0
 #  loadouts:
 #  - ChiefJusticeCloak
 
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ChiefJusticeOuterClothing
 #  name: loadout-group-chiefjustice-outerclothing
 #  minLimit: 0
 #  loadouts:
 #  - ChiefJusticeRobe
 
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ChiefJusticeShoes
 #  name: loadout-group-chiefjustice-shoes
 #  loadouts:
@@ -170,14 +170,14 @@
 #  - LaceupShoes
 
 ## Clerk
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ClerkJumpsuit
 #  name: loadout-group-clerk-jumpsuit
 #  loadouts:
 #  - ClerkJumpsuit
 #  - ClerkJumpskirt
 
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ClerkNeck
 #  name: loadout-group-clerk-neck
 #  minLimit: 0
@@ -189,14 +189,14 @@
 #  - RedTie
 #  - WhiteTie
 
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ClerkOuterClothing
 #  name: loadout-group-clerk-outerclothing
 #  minLimit: 0
 #  loadouts:
 #  - ClerkVest
 
-#- type: loadoutGroup # Echo: No justice
+#- type: loadoutGroup # Echo: No Justice department
 #  id: ClerkShoes
 #  name: loadout-group-clerk-shoes
 #  loadouts:

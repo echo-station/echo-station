@@ -31,7 +31,7 @@
   - GroupSpeciesBreathToolCorpsman
 
 # Justice
-#- type: roleLoadout # Echo: No justice
+#- type: roleLoadout # Echo: No Justice department
 #  id: JobChiefJustice
 #  groups:
 #  - GroupTankHarness
@@ -46,7 +46,7 @@
 #  - Trinkets
 #  - GroupSpeciesBreathTool
 
-#- type: roleLoadout # Echo: No justice
+#- type: roleLoadout # Echo: No Justice department
 #  id: JobClerk
 #  groups:
 #  - GroupTankHarness

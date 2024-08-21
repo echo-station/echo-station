@@ -14,7 +14,7 @@
     state: nyanoMailCarrier
   jobName: job-name-courier
 
-#- type: jobIcon # Echo: No justice
+#- type: jobIcon # Echo: No Justice department
 #  parent: JobIcon
 #  id: JobIconChiefJustice
 #  icon:
@@ -22,7 +22,7 @@
 #    state: ChiefJustice
 #  jobName: job-name-chief-justice
 
-#- type: jobIcon # Echo: No justice
+#- type: jobIcon # Echo: No Justice department
 #  parent: JobIcon
 #  id: JobIconClerk
 #  icon:

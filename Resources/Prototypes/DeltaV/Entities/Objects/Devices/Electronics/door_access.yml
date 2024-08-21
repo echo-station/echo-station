@@ -94,7 +94,7 @@
   - type: AccessReader
     access: [["Mail"]]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: DoorElectronics
 #  id: DoorElectronicsChiefJustice
 #  suffix: ChiefJustice, Locked
@@ -102,7 +102,7 @@
 #  - type: AccessReader
 #    access: [["ChiefJustice"]]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: DoorElectronics
 #  id: DoorElectronicsJustice
 #  suffix: Justice, Locked
@@ -110,7 +110,7 @@
 #  - type: AccessReader
 #    access: [["Justice"]]
 
-- type: entity # Echo: No justice, Prosecutor is sec
+- type: entity # Echo: No Justice department, Prosecutor is sec
   parent: DoorElectronics
   id: DoorElectronicsProsecutor
   suffix: Prosecutor, Locked
@@ -118,7 +118,7 @@
   - type: AccessReader
     access: [["Prosecutor"]]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: DoorElectronics
 #  id: DoorElectronicsClerk
 #  suffix: Clerk, Locked

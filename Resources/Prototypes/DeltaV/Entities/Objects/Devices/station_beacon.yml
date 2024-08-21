@@ -145,7 +145,7 @@
 #    defaultText: station-beacon-justice
 #    color: "#6b2833"
 #
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: DefaultStationBeaconJustice
 #  id: DefaultStationBeaconChiefJustice
 #  suffix: Chief Justice
@@ -154,14 +154,14 @@
 #    defaultText: station-beacon-chiefjustice
 
 - type: entity
-  parent: DefaultStationBeaconSecurity # Echo: No justice, Prosecutor is sec
+  parent: DefaultStationBeaconSecurity # Echo: No Justice department, Prosecutor is sec
   id: DefaultStationBeaconProsecutor
   suffix: Prosecutor
   components:
   - type: NavMapBeacon
     defaultText: station-beacon-prosecutor
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: DefaultStationBeaconJustice
 #  id: DefaultStationBeaconClerk
 #  suffix: Clerk

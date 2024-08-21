@@ -1,8 +1,8 @@
-#- type: accessLevel # Echo: No justice
+#- type: accessLevel # Echo: No Justice department
 #  id: ChiefJustice
 #  name: id-card-access-level-chief-justice
 #
-#- type: accessLevel # Echo: No justice
+#- type: accessLevel # Echo: No Justice department
 #  id: Justice
 #  name: id-card-access-level-justice
 
@@ -10,11 +10,11 @@
   id: Prosecutor
   name: id-card-access-level-prosecutor
 
-#- type: accessLevel # Echo: No justice
+#- type: accessLevel # Echo: No Justice department
 #  id: Clerk
 #  name: id-card-access-level-clerk
 #
-#- type: accessGroup # Echo: No justice
+#- type: accessGroup # Echo: No Justice department
 #  id: Justice
 #  tags:
 #  - Justice

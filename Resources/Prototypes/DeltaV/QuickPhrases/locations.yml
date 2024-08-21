@@ -18,7 +18,7 @@
   id: BaseEpistemicsLocationPhrase
   abstract: true
 
-#- type: quickPhrase # Echo: No justice
+#- type: quickPhrase # Echo: No Justice department
 #  parent: [ BaseJusticePhrase, BaseLocationPhrase ]
 #  id: BaseJusticeLocationPhrase
 #  abstract: true
@@ -241,26 +241,26 @@
 # Justice
 
 - type: quickPhrase
-  parent: BaseCivilianLocationPhrase # Echo: No justice
+  parent: BaseCivilianLocationPhrase # Echo: No Justice department
   id: LocationCourtroomPhrase
   text: station-beacon-courtroom
 
 - type: quickPhrase
-  parent: BaseCivilianLocationPhrase # Echo: No justice, Lawyer is Civ
+  parent: BaseCivilianLocationPhrase # Echo: No Justice department, Lawyer is Civ
   id: LocationLawOfficePhrase
   text: station-beacon-law
 
 - type: quickPhrase
-  parent: BaseSecurityLocationPhrase # Echo: No justice, Prosecutor is Sec
+  parent: BaseSecurityLocationPhrase # Echo: No Justice department, Prosecutor is Sec
   id: LocationProsecutorPhrase
   text: station-beacon-prosecutor
 
-#- type: quickPhrase # Echo: No justice
+#- type: quickPhrase # Echo: No Justice department
 #  parent: BaseJusticeLocationPhrase
 #  id: LocationChiefJusticePhrase
 #  text: station-beacon-chiefjustice
 
-#- type: quickPhrase # Echo: No justice
+#- type: quickPhrase # Echo: No Justice department
 #  parent: BaseJusticeLocationPhrase
 #  id: LocationClerkPhrase
 #  text: station-beacon-clerk

@@ -33,8 +33,8 @@
             StationEngineer: [ 2, 3 ]
             TechnicalAssistant: [ 2, 2 ]
           #justice
-#            ChiefJustice: [ 1, 1 ] # Echo: No justice
-#            Clerk: [ 1, 1 ] # Echo: No justice
+#            ChiefJustice: [ 1, 1 ] # Echo: No Justice department
+#            Clerk: [ 1, 1 ] # Echo: No Justice department
             Lawyer: [ 1, 1 ]
             Prosecutor: [ 1, 1 ]
           #medical

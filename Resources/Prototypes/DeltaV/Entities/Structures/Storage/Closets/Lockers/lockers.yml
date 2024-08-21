@@ -1,4 +1,4 @@
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  id: LockerChiefJustice
 #  parent: LockerBaseSecure
 #  name: chief justice's locker
@@ -11,7 +11,7 @@
 #  - type: AccessReader
 #    access: [["ChiefJustice"]]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  id: LockerClerk
 #  parent: LockerBaseSecure
 #  name: clerk's locker

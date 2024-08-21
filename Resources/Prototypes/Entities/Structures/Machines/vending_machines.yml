@@ -1493,7 +1493,7 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: AccessReader
-    access: [["Lawyer", "Prosecutor"]] # Echo: No justice
+    access: [["Lawyer", "Prosecutor"]] # Echo: No Justice department
 
 - type: entity
   parent: VendingMachine

@@ -16,7 +16,7 @@
   canBeAntag: false
   access:
   - Prosecutor
-  - Security # Echo: No justice
+  - Security # Echo: No Justice department
   - Maintenance
   special: # Echo: Since Prosecutor is now Security, they get a mindshield
   - !type:AddImplantSpecial
@@ -30,7 +30,7 @@
     #back: ClothingBackpackLawyerFilled
     shoes: ClothingShoesBootsLaceup
     id: ProsecutorPDA
-    ears: ClothingHeadsetSecurity # Echo: No justice
+    ears: ClothingHeadsetSecurity # Echo: No Justice department
     # TODO add copy of space law
   inhand:
   - BriefcaseBrownFilled

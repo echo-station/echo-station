@@ -34,7 +34,7 @@
 #    containers:
 #      board: [ DoorElectronicsChiefJustice ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: WindoorSecure
 #  id: WindoorSecureJusticeLocked
 #  suffix: Justice, Locked
@@ -52,7 +52,7 @@
     containers:
       board: [ DoorElectronicsProsecutor ]
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: WindoorSecure
 #  id: WindoorSecureClerkLocked
 #  suffix: Clerk, Locked

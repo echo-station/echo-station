@@ -86,7 +86,7 @@
       - EncryptionKeySecurity
       - EncryptionKeyService
       - EncryptionKeyCommand
-#      - EncryptionKeyJustice #DeltaV - Justice dept # Echo: No justice
+#      - EncryptionKeyJustice #DeltaV - Justice dept # Echo: No Justice department
 
 - type: entity
   parent: TelecomServer
@@ -147,7 +147,7 @@
     containers:
       key_slots:
       - EncryptionKeySecurity
-#      - EncryptionKeyJustice #DeltaV - Justice dept # Echo: No justice
+#      - EncryptionKeyJustice #DeltaV - Justice dept # Echo: No Justice department
 
 - type: entity
   parent: TelecomServer

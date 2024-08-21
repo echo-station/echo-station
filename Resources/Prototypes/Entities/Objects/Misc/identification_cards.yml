@@ -360,8 +360,8 @@
     - type: Sprite
       layers:
         - state: default
-        #- sprite: DeltaV/Objects/Misc/id_cards.rsi # DeltaV - Give Lawyer ID Justice colors # Echo: No justice
-        - state: idlawyer # Echo: No justice
+        #- sprite: DeltaV/Objects/Misc/id_cards.rsi # DeltaV - Give Lawyer ID Justice colors # Echo: No Justice department
+        - state: idlawyer # Echo: No Justice department
     - type: PresetIdCard
       job: Lawyer
 

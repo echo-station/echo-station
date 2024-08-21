@@ -99,7 +99,7 @@
   - Brigmedic # DeltaV - Brigmedic, see Resources/Prototypes/DeltaV/Roles/Jobs/Security/brigmedic.yml
   - SecurityBorg # Delta-V : Security Borg
   - SeniorOfficer # Echo Station - Separate senior roles
-  - Prosecutor # Echo: No justice, Prosecutor is sec
+  - Prosecutor # Echo: No Justice department, Prosecutor is sec
 
 - type: department
   id: Epistemics # DeltaV - Epistemics Department replacing Science

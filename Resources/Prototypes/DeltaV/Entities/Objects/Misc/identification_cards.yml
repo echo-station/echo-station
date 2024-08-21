@@ -1,4 +1,4 @@
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: IDCardStandard
 #  id: ChiefJusticeIDCard
 #  name: chief justice ID card
@@ -11,7 +11,7 @@
 #    - sprite: DeltaV/Objects/Misc/id_cards.rsi
 #      state: idchiefjustice
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: IDCardStandard
 #  id: ClerkIDCard
 #  name: clerk ID card
@@ -24,7 +24,7 @@
 #    - sprite: DeltaV/Objects/Misc/id_cards.rsi
 #      state: idclerk
 
-- type: entity # Echo: No justice, Prosecutor is sec
+- type: entity # Echo: No Justice department, Prosecutor is sec
   parent: IDCardStandard
   id: ProsecutorIDCard
   name: prosecutor ID card

@@ -1,4 +1,4 @@
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: Airlock
 #  id: AirlockJustice
 #  suffix: Justice
@@ -10,7 +10,7 @@
 
 # Glass
 
-#- type: entity # Echo: No justice
+#- type: entity # Echo: No Justice department
 #  parent: AirlockGlass
 #  id: AirlockJusticeGlass
 #  suffix: Justice
