@@ -89,3 +89,9 @@ Entries:
       message: Prosecutor is now Security department
   id: 13
   time: '2024-08-21T15:51:39.0000000+00:00'
+- author: ProphetCrow
+  changes:
+    - type: Tweak
+      message: Shield stats have been modified
+  id: 14
+  time: '2024-08-21T16:32:59.0000000+00:00'
