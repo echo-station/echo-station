@@ -34,7 +34,7 @@
   - type: Sprite
     layers:
     - state: default
-    - sprite: DeltaV/Objects/Misc/id_cards.rsi
+    - sprite: _Echo/Objects/Misc/id_cards.rsi
       state: idprosecutor
 
 - type: entity
