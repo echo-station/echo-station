@@ -36,7 +36,7 @@ public sealed partial class AgeRequirement : JobRequirement
 
         if (!Inverted)
         {
-            if (profile.Age >= RequiredAge)
+            if (profile.Age > RequiredAge)
                 return true;
 
             details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-age-not-old-enough",
@@ -44,7 +44,7 @@ public sealed partial class AgeRequirement : JobRequirement
             return false;
         }
 
-        if (profile.Age <= RequiredAge)
+        if (profile.Age < RequiredAge)
             return true;
 
         details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-timer-age-not-young-enough",
