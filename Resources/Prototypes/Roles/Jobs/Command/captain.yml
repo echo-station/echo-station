@@ -25,6 +25,8 @@
     - !type:OverallPlaytimeRequirement # DeltaV - Playtime requirement
       time: 108000 # 30 hours
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
+    - !type:AgeRequirement
+      requiredAge: 21
   whitelisted: true # Echo Station: Require explicit role whitelisting
   weight: 20
   startingGear: CaptainGear

@@ -122253,13 +122253,11 @@ entities:
   - uid: 4884
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -5.5,-87.5
       parent: 6747
   - uid: 4914
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
       pos: -9.5,-87.5
       parent: 6747
 - proto: MachineCentrifuge
@@ -122871,7 +122869,7 @@ entities:
     - type: Transform
       pos: 43.567142,-35.436256
       parent: 6747
-- proto: MaterialDiamond
+- proto: MaterialDiamond1
   entities:
   - uid: 4036
     components:

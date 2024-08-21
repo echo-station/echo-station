@@ -13,8 +13,12 @@
     - !type:DepartmentTimeRequirement # DeltaV - Command dept time requirement
       department: Command
       time: 36000 # 10 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all security roles
-  whitelisted: true # Echo Station: Also require role specific whitelist
+    - !type:OverallPlaytimeRequirement
+      time: 90000 # DeltaV - 25 hours, was 40
+    - !type:WhitelistRequirement # Echo: Require server whitelisting for all security roles
+    - !type:AgeRequirement
+      requiredAge: 21
+  whitelisted: true # Echo: Also require role specific whitelist
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
