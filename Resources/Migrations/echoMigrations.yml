@@ -12,8 +12,8 @@ AirlockChiefJusticeLocked: AirlockSecurityLawyerLocked
 AirlockChiefJusticeGlassLocked: AirlockSecurityLawyerGlassLocked
 AirlockClerkLocked: AirlockSecurityLawyerLocked
 AirlockClerkGlassLocked: AirlockSecurityLawyerGlassLocked
-AirlockJustice: Airlock # AA department door becomes normal AA door
-AirlockJusticeGlass: AirlockGlass # AA department door becomes normal AA door
+AirlockJustice: AirlockSecurity # AA department door becomes security AA door
+AirlockJusticeGlass: AirlockSecurityGlass # AA department door becomes security AA door
 AirlockJusticeLocked: AirlockSecurityLawyerLocked
 AirlockJusticeGlassLocked: AirlockSecurityLawyerGlassLocked
 AirlockMaintChiefJusticeLocked: AirlockMaintSecurityLawyerLocked
@@ -40,13 +40,14 @@ DoorElectronicsJustice: DoorElectronicsSecurityLawyer
 DoorElectronicsClerk: DoorElectronicsSecurityLawyer
 DoorRemoteJustice: null
 EncryptionKeyJustice: null
-# Gavel/GavelBlock get to live :^)
+# Gavel: null # Gets to live :^)
+# GavelBlock: null # Gets to live :^)
 LockerChiefJustice: null
 LockerChiefJusticeFilled: null
 LockerClerk: null
 LockerClerkFilled: null
 MobCarpLegal: null
-# PaperStationWarrant: null Gets to live, description edited
+# PaperStationWarrant: null # Lives on, just without Justice-specific description
 RubberStampNotary: null
 RubberStampChiefJustice: null
 SignDirectionalJustice: null
@@ -57,5 +58,3 @@ SpawnPointClerk: null
 WindoorSecureChiefJusticeLocked: WindoorSecureSecurityLawyerLocked
 WindoorSecureJusticeLocked: WindoorSecureSecurityLawyerLocked
 WindoorSecureClerkLocked: WindoorSecureSecurityLawyerLocked
-
-# TODO: Surveillance camera justice to common
