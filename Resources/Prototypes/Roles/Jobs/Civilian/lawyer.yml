@@ -10,13 +10,13 @@
     - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
       department: Security
       time: 14400 # 4 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Justice roles
+    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all legal roles
   startingGear: LawyerGear
   icon: "JobIconLawyer"
-  supervisors: job-supervisors-cj  # Delta V - Change supervisor to chief justice
+  supervisors: job-supervisors-hop  # Delta V - Change supervisor to chief justice # Echo: No Justice department
   access:
-  # - Service - DeltaV, removed from service department
-  - Justice # DeltaV - Justice dept
+  #- Service - DeltaV, removed from service department
+  #- Justice # DeltaV - Justice dept # Echo: No Justice department
   - Lawyer
   - Maintenance
 
@@ -25,7 +25,7 @@
   equipment:
     shoes: ClothingShoesBootsLaceup
     id: LawyerPDA
-    ears: ClothingHeadsetJustice # DeltaV - Added lawyer to justice department
+    ears: ClothingHeadsetGrey # DeltaV - Added lawyer to justice department # Echo: No Justice department, lawyer is Civilian
   inhand:
     - BriefcaseBrownFilled
   storage:

@@ -60,10 +60,10 @@
       - Service
       - Theatre
       - Zookeeper #Delta V: Add Zookeeper Access
-      - ChiefJustice  #Delta V: Add Chief Justice Access
+#      - ChiefJustice  #Delta V: Add Chief Justice Access # Echo: No Justice department
       - Prosecutor  #Delta V: Add Prosecutor Access
-      - Justice  #Delta V: Add Justice Access
-      - Clerk  #Delta V: Add Clerk Access
+#      - Justice  #Delta V: Add Justice Access # Echo: No Justice department
+#      - Clerk  #Delta V: Add Clerk Access # Echo: No Justice department
       privilegedIdSlot:
         name: id-card-console-privileged-id
         ejectSound: /Audio/Machines/id_swipe.ogg

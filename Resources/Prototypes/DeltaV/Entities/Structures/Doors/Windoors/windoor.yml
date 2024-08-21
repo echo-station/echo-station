@@ -25,23 +25,23 @@
     containers:
       board: [ DoorElectronicsParamedic ]
 
-- type: entity
-  parent: WindoorSecure
-  id: WindoorSecureChiefJusticeLocked
-  suffix: Chief Justice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsChiefJustice ]
+#- type: entity # Echo: No Justice department
+#  parent: WindoorSecure
+#  id: WindoorSecureChiefJusticeLocked
+#  suffix: Chief Justice, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsChiefJustice ]
 
-- type: entity
-  parent: WindoorSecure
-  id: WindoorSecureJusticeLocked
-  suffix: Justice, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsJustice ]
+#- type: entity # Echo: No Justice department
+#  parent: WindoorSecure
+#  id: WindoorSecureJusticeLocked
+#  suffix: Justice, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsJustice ]
 
 - type: entity
   parent: WindoorSecure
@@ -52,14 +52,14 @@
     containers:
       board: [ DoorElectronicsProsecutor ]
 
-- type: entity
-  parent: WindoorSecure
-  id: WindoorSecureClerkLocked
-  suffix: Clerk, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsClerk ]
+#- type: entity # Echo: No Justice department
+#  parent: WindoorSecure
+#  id: WindoorSecureClerkLocked
+#  suffix: Clerk, Locked
+#  components:
+#  - type: ContainerFill
+#    containers:
+#      board: [ DoorElectronicsClerk ]
 
 - type: entity
   parent: WindoorSecure
