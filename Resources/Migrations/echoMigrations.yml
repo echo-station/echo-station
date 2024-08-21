@@ -39,11 +39,12 @@ DoorElectronicsJustice: DoorElectronicsSecurityLawyer
 DoorElectronicsClerk: DoorElectronicsSecurityLawyer
 DoorRemoteJustice: null
 EncryptionKeyJustice: null
+# Gavel/GavelBlock get to live :^)
 LockerChiefJustice: null
 LockerChiefJusticeFilled: null
 LockerClerk: null
 LockerClerkFilled: null
-# Gavel/GavelBlock get to live :^)
+MobCarpLegal: null
 # PaperStationWarrant: null Gets to live, description edited
 RubberStampNotary: null
 RubberStampChiefJustice: null

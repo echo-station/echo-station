@@ -57,49 +57,49 @@
   - type: StealTarget
     stealGroup: AnimalSecurity #DeltaV - Adjusts because we have multiple possible sec animals
 
-- type: entity
-  parent: MobCarp
-  id: MobCarpLegal
-  name: Carpy the Legal Carp
-  description: Has a degree in fish law.
-  components:
-  - type: NpcFactionMember
-    factions:
-    - PetsNT
-  - type: Sprite
-    sprite: DeltaV/Mobs/Pets/lawyercarp.rsi # Fancy Fishe
-    layers:
-      - map: [ "enum.DamageStateVisualLayers.Base" ]
-        state: alive
-      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
-        state: mouth
-        shader: unshaded
-      - map: [ "enum.DamageStateVisualLayers.BaseUnshadedAccessory" ]
-        state: suit
-  - type: TypingIndicator
-    proto: lawyer # incase of cognizine
-  - type: DamageStateVisuals
-    states:
-      Alive:
-        Base: alive
-        BaseUnshaded: mouth
-        BaseUnshadedAccessory: suit
-      Dead:
-        Base: dead
-        BaseUnshaded: dead_mouth
-        BaseUnshadedAccessory: suit_dead
-  - type: GhostRole
-    makeSentient: true
-    allowSpeech: true
-    allowMovement: true
-    name: "Carpy the Legal Carp"
-    description: "The real brains behind the Justice department. Your honour my client is not fishy!"
-    requirements:
-    - !type:DepartmentTimeRequirement
-      department: Justice
-      time: 3600 # 1 hours
-    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
-  - type: GhostTakeoverAvailable
+#- type: entity # Echo: No justice
+#  parent: MobCarp
+#  id: MobCarpLegal
+#  name: Carpy the Legal Carp
+#  description: Has a degree in fish law.
+#  components:
+#  - type: NpcFactionMember
+#    factions:
+#    - PetsNT
+#  - type: Sprite
+#    sprite: DeltaV/Mobs/Pets/lawyercarp.rsi # Fancy Fishe
+#    layers:
+#      - map: [ "enum.DamageStateVisualLayers.Base" ]
+#        state: alive
+#      - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+#        state: mouth
+#        shader: unshaded
+#      - map: [ "enum.DamageStateVisualLayers.BaseUnshadedAccessory" ]
+#        state: suit
+#  - type: TypingIndicator
+#    proto: lawyer # incase of cognizine
+#  - type: DamageStateVisuals
+#    states:
+#      Alive:
+#        Base: alive
+#        BaseUnshaded: mouth
+#        BaseUnshadedAccessory: suit
+#      Dead:
+#        Base: dead
+#        BaseUnshaded: dead_mouth
+#        BaseUnshadedAccessory: suit_dead
+#  - type: GhostRole
+#    makeSentient: true
+#    allowSpeech: true
+#    allowMovement: true
+#    name: "Carpy the Legal Carp"
+#    description: "The real brains behind the Justice department. Your honour my client is not fishy!"
+#    requirements:
+#    - !type:DepartmentTimeRequirement
+#      department: Justice
+#      time: 3600 # 1 hours
+#    - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all higher risk roles
+#  - type: GhostTakeoverAvailable
 
 - type: entity
   name: Silvia
