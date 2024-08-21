@@ -67,3 +67,9 @@ Entries:
       message: Merged upstream 2024-08-21
   id: 10
   time: '2024-08-21T10:45:44.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Add
+      message: Merged German accent from Wizden
+  id: 11
+  time: '2024-08-21T11:38:49.0000000+00:00'
