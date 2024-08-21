@@ -35,5 +35,5 @@
   description:  A direction sign, pointing out which way the court room is.
   components:
   - type: Sprite
-    sprite: _Echo/Structures/Wallmounts/signs.rsi # Echo: No Justice department
+    sprite: DeltaV/Structures/Wallmounts/signs.rsi
     state: direction_court

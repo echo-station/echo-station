@@ -49,7 +49,7 @@ MobCarpLegal: null
 RubberStampNotary: null
 RubberStampChiefJustice: null
 SignDirectionalJustice: null
-#SignDirectionaCourt: null # Lives on without Justice colors
+#SignDirectionaCourt: null # Lives on
 SpawnMobJusticePet: null
 SpawnPointChiefJustice: null
 SpawnPointClerk: null
