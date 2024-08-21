@@ -61,3 +61,9 @@ Entries:
       message: Recombined the EMAG
   id: 9
   time: '2024-08-20T18:11:01.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: Merged upstream 2024-08-21
+  id: 10
+  time: '2024-08-21T10:45:44.0000000+00:00'
