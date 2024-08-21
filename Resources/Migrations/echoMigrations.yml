@@ -6,3 +6,53 @@ PaperBiscuitCorporateFilled: null
 PaperBiscuitCorporateSpareID: null
 SpareIdCabinet: null
 SpareIdCabinetFilled: null
+
+# 2024-08-21 Delete Justice
+AirlockChiefJusticeLocked: AirlockSecurityLawyerLocked
+AirlockChiefJusticeGlassLocked: AirlockSecurityLawyerGlassLocked
+AirlockClerkLocked: AirlockSecurityLawyerLocked
+AirlockClerkGlassLocked: AirlockSecurityLawyerGlassLocked
+AirlockJustice: Airlock # AA department door becomes normal AA door
+AirlockJusticeGlass: AirlockGlass # AA department door becomes normal AA door
+AirlockJusticeLocked: AirlockSecurityLawyerLocked
+AirlockJusticeGlassLocked: AirlockSecurityLawyerGlassLocked # TODO
+AirlockMaintChiefJusticeLocked: AirlockMaintSecurityLawyerLocked # TODO
+AirlockMaintClerkLocked: AirlockMaintSecurityLawyerLocked # TODO
+BoxEncryptionKeyJustice: null
+ChiefJusticeIDCard: null
+ChiefJusticePDA: null
+ClerkIDCard: null
+ClerkPDA: null
+ClothingHeadHatCJToque: null
+ClothingHeadsetJustice: null
+ClothingHeadsetAltJustice: null
+ClothingNeckCloakCJ: null
+ClothingOuterChiefJustice: null
+ClothingOuterClerkVest: null
+ClothingUniformJumpskirtChiefJustice: null
+ClothingUniformJumpskirtClerk: null
+DefaultStationBeaconClerk: null
+DefaultStationBeaconChiefJustice: null
+DefaultStationBeaconJustice: null
+DoorElectronicsChiefJustice: null
+DoorElectronicsJustice: DoorElectronicsSecurityLawyer
+DoorElectronicsClerk: null
+DoorRemoteJustice: null
+EncryptionKeyJustice: null
+LockerChiefJustice: null
+LockerChiefJusticeFilled: null
+LockerClerk: null
+LockerClerkFilled: null
+# Gavel/GavelBlock get to live :^)
+# PaperStationWarrant: null Gets to live, description edited
+RubberStampNotary: null
+RubberStampChiefJustice: null
+SignDirectionalJustice: null
+SignDirectionaCourt: null # TODO
+SpawnPointChiefJustice: null
+SpawnPointClerk: null
+WindoorSecureChiefJusticeLocked: WindoorSecureSecurityLawyerLocked
+WindoorSecureJusticeLocked: WindoorSecureSecurityLawyerLocked
+WindoorSecureClerkLocked: WindoorSecureSecurityLawyerLocked
+
+# TODO: Surveillance camera justice to common

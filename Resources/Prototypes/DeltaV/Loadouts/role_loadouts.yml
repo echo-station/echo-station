@@ -31,34 +31,34 @@
   - GroupSpeciesBreathToolCorpsman
 
 # Justice
-- type: roleLoadout
-  id: JobChiefJustice
-  groups:
-  - GroupTankHarness
-  - ChiefJusticeHead
-  - ChiefJusticeJumpsuit
-  - ChiefJusticeNeck
-  - ChiefJusticeOuterClothing
-  - CommonBackpack
-  - ChiefJusticeShoes
-  - Glasses
-  - Survival
-  - Trinkets
-  - GroupSpeciesBreathTool
+#- type: roleLoadout # Echo: No justice
+#  id: JobChiefJustice
+#  groups:
+#  - GroupTankHarness
+#  - ChiefJusticeHead
+#  - ChiefJusticeJumpsuit
+#  - ChiefJusticeNeck
+#  - ChiefJusticeOuterClothing
+#  - CommonBackpack
+#  - ChiefJusticeShoes
+#  - Glasses
+#  - Survival
+#  - Trinkets
+#  - GroupSpeciesBreathTool
 
-- type: roleLoadout
-  id: JobClerk
-  groups:
-  - GroupTankHarness
-  - ClerkJumpsuit
-  - ClerkNeck
-  - ClerkOuterClothing
-  - CommonBackpack
-  - ClerkShoes
-  - Glasses
-  - Survival
-  - Trinkets
-  - GroupSpeciesBreathTool
+#- type: roleLoadout # Echo: No justice
+#  id: JobClerk
+#  groups:
+#  - GroupTankHarness
+#  - ClerkJumpsuit
+#  - ClerkNeck
+#  - ClerkOuterClothing
+#  - CommonBackpack
+#  - ClerkShoes
+#  - Glasses
+#  - Survival
+#  - Trinkets
+#  - GroupSpeciesBreathTool
 
 - type: roleLoadout
   id: JobProsecutor

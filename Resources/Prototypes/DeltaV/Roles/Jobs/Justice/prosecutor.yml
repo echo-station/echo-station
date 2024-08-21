@@ -9,14 +9,14 @@
   - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
     department: Security
     time: 21600 # 6 hours
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Justice roles
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Security roles
   startingGear: ProsecutorGear
   icon: "JobIconProsecutor"
-  supervisors: job-supervisors-cj
+  supervisors: job-supervisors-hos # Echo: No justice
   canBeAntag: false
   access:
   - Prosecutor
-  - Justice
+  - Security # Echo: No justice
   - Maintenance
 
 - type: startingGear
@@ -27,7 +27,7 @@
     #back: ClothingBackpackLawyerFilled
     shoes: ClothingShoesBootsLaceup
     id: ProsecutorPDA
-    ears: ClothingHeadsetJustice
+    ears: ClothingHeadsetSecurity # Echo: No justice
     # TODO add copy of space law
   inhand:
   - BriefcaseBrownFilled

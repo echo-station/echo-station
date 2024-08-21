@@ -47,7 +47,7 @@
     - Musician
     - Reporter
     - Zookeeper
-    - Justice
+#    - Justice # Echo: No justice
     - Prosecutor
-    - Clerk
+#    - Clerk # Echo: No justice
 

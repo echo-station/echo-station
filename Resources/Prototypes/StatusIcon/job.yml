@@ -137,7 +137,7 @@
   parent: JobIcon
   id: JobIconLawyer
   icon:
-    sprite: /Textures/DeltaV/Interface/Misc/job_icons.rsi # DeltaV - Move Lawyer into Justice
+    sprite: /Textures/Interface/Misc/job_icons.rsi # DeltaV - Move Lawyer into Justice # Echo: No justice
     state: Lawyer # DeltaV - Move Lawyer into Justice
   jobName: job-name-lawyer
 

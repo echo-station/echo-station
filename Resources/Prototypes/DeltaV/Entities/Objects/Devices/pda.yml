@@ -42,44 +42,44 @@
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
 
-- type: entity
-  parent: BasePDA
-  id: ChiefJusticePDA
-  name: chief justice PDA
-  description: Whosoever bears this PDA is the law.
-  components:
-  - type: Sprite
-    sprite: DeltaV/Objects/Devices/pda.rsi
-    layers:
-    - map: [ "enum.PdaVisualLayers.Base" ]
-    - state: "light_overlay"
-      map: [ "enum.PdaVisualLayers.Flashlight" ]
-      shader: "unshaded"
-      visible: false
-    - state: "id_overlay"
-      map: [ "enum.PdaVisualLayers.IdLight" ]
-      shader: "unshaded"
-      visible: false
-  - type: Pda
-    id: ChiefJusticeIDCard
-    state: pda-chiefjustice
-    penSlot:
-      startingItem: LuxuryPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-  - type: PdaBorderColor
-    borderColor: "#470823"
-  - type: Icon
-    sprite: DeltaV/Objects/Devices/pda.rsi
-    state: pda-chiefjustice
-  - type: CartridgeLoader
-    preinstalled:
-      - CrewManifestCartridge
-      - NotekeeperCartridge
-      - NewsReaderCartridge
-      - CrimeAssistCartridge
+#- type: entity # Echo: No justice
+#  parent: BasePDA
+#  id: ChiefJusticePDA
+#  name: chief justice PDA
+#  description: Whosoever bears this PDA is the law.
+#  components:
+#  - type: Sprite
+#    sprite: DeltaV/Objects/Devices/pda.rsi
+#    layers:
+#    - map: [ "enum.PdaVisualLayers.Base" ]
+#    - state: "light_overlay"
+#      map: [ "enum.PdaVisualLayers.Flashlight" ]
+#      shader: "unshaded"
+#      visible: false
+#    - state: "id_overlay"
+#      map: [ "enum.PdaVisualLayers.IdLight" ]
+#      shader: "unshaded"
+#      visible: false
+#  - type: Pda
+#    id: ChiefJusticeIDCard
+#    state: pda-chiefjustice
+#    penSlot:
+#      startingItem: LuxuryPen
+#      priority: -1
+#      whitelist:
+#        tags:
+#        - Write
+#  - type: PdaBorderColor
+#    borderColor: "#470823"
+#  - type: Icon
+#    sprite: DeltaV/Objects/Devices/pda.rsi
+#    state: pda-chiefjustice
+#  - type: CartridgeLoader
+#    preinstalled:
+#      - CrewManifestCartridge
+#      - NotekeeperCartridge
+#      - NewsReaderCartridge
+#      - CrimeAssistCartridge
 
 - type: entity
   parent: BasePDA
@@ -119,7 +119,7 @@
       - NotekeeperCartridge
       - NewsReaderCartridge
       - CrimeAssistCartridge
-      
+
 - type: entity
   parent: BasePDA
   id: ProsecutorPDA

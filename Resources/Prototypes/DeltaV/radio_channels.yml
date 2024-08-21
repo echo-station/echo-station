@@ -1,9 +1,9 @@
-- type: radioChannel
-  id: Justice
-  name: chat-radio-justice
-  keycode: "j"
-  frequency: 1420
-  color: "#c70667"
+#- type: radioChannel # Echo: No justice
+#  id: Justice
+#  name: chat-radio-justice
+#  keycode: "j"
+#  frequency: 1420
+#  color: "#c70667"
 
 - type: radioChannel
   id: Prison

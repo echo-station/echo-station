@@ -45,7 +45,7 @@
   - Reporter # DeltaV - Add Reporter access
   - Zookeeper # DeltaV - Add Zookeeper access
   - Justice # DeltaV - Add Justice dept access
-  - ChiefJustice # DeltaV - Add Chief Justice access
+#  - ChiefJustice # DeltaV - Add Chief Justice access # Echo: No justice
   - Prosecutor # DeltaV - Add Prosecutor access
-  - Clerk # DeltaV - Add Clerk access
+#  - Clerk # DeltaV - Add Clerk access # Echo: No justice
   - Corpsman # DeltaV - Add Corpsman access

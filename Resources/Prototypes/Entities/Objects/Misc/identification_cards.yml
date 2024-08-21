@@ -355,13 +355,13 @@
 - type: entity
   parent: IDCardStandard
   id: LawyerIDCard
-  name: attorney ID card # DeltaV - Changed Lawyer to Attorney
+  name: lawyer ID card # DeltaV - Changed Lawyer to Attorney # Echo: No justice
   components:
     - type: Sprite
       layers:
         - state: default
-        - sprite: DeltaV/Objects/Misc/id_cards.rsi # DeltaV - Give Lawyer ID Justice colors
-          state: idlawyer
+        #- sprite: DeltaV/Objects/Misc/id_cards.rsi # DeltaV - Give Lawyer ID Justice colors # Echo: No justice
+        - state: idlawyer # Echo: No justice
     - type: PresetIdCard
       job: Lawyer
 

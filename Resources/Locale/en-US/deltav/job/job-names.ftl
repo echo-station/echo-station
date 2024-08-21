@@ -1,8 +1,9 @@
 job-name-medical-borg = Medical Cyborg
-job-name-chief-justice = Chief Justice
-job-name-clerk = Clerk
+# job-name-chief-justice = Chief Justice # Echo: No justice
+# job-name-clerk = Clerk # Echo: No justice
 job-name-prosecutor = Prosecutor
-job-name-lawyer = Attorney
+# Echo: No justice, restored to Lawyer:
+job-name-lawyer = Lawyer
 job-name-courier = Courier
 job-name-security-borg = Security Cyborg
 # Used by the Agent ID

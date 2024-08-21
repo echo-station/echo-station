@@ -132,76 +132,76 @@
 
 # Justice
 ## Chief Justice
-- type: loadoutGroup
-  id: ChiefJusticeHead
-  name: loadout-group-chiefjustice-head
-  minLimit: 0
-  loadouts:
-  - CJToque
+#- type: loadoutGroup # Echo: No justice
+#  id: ChiefJusticeHead
+#  name: loadout-group-chiefjustice-head
+#  minLimit: 0
+#  loadouts:
+#  - CJToque
 
-- type: loadoutGroup
-  id: ChiefJusticeJumpsuit
-  name: loadout-group-chiefjustice-jumpsuit
-  loadouts:
-  - ChiefJusticeJumpsuit
-  - ChiefJusticeJumpskirt
-  - ChiefJusticeFormalJumpsuit
-  - ChiefJusticeWhiteJumpsuit
+#- type: loadoutGroup # Echo: No justice
+#  id: ChiefJusticeJumpsuit
+#  name: loadout-group-chiefjustice-jumpsuit
+#  loadouts:
+#  - ChiefJusticeJumpsuit
+#  - ChiefJusticeJumpskirt
+#  - ChiefJusticeFormalJumpsuit
+#  - ChiefJusticeWhiteJumpsuit
 
-- type: loadoutGroup
-  id: ChiefJusticeNeck
-  name: loadout-group-chiefjustice-neck
-  minLimit: 0
-  loadouts:
-  - ChiefJusticeCloak
+#- type: loadoutGroup # Echo: No justice
+#  id: ChiefJusticeNeck
+#  name: loadout-group-chiefjustice-neck
+#  minLimit: 0
+#  loadouts:
+#  - ChiefJusticeCloak
 
-- type: loadoutGroup
-  id: ChiefJusticeOuterClothing
-  name: loadout-group-chiefjustice-outerclothing
-  minLimit: 0
-  loadouts:
-  - ChiefJusticeRobe
+#- type: loadoutGroup # Echo: No justice
+#  id: ChiefJusticeOuterClothing
+#  name: loadout-group-chiefjustice-outerclothing
+#  minLimit: 0
+#  loadouts:
+#  - ChiefJusticeRobe
 
-- type: loadoutGroup
-  id: ChiefJusticeShoes
-  name: loadout-group-chiefjustice-shoes
-  loadouts:
-  - LeatherShoes
-  - LaceupShoes
+#- type: loadoutGroup # Echo: No justice
+#  id: ChiefJusticeShoes
+#  name: loadout-group-chiefjustice-shoes
+#  loadouts:
+#  - LeatherShoes
+#  - LaceupShoes
 
 ## Clerk
-- type: loadoutGroup
-  id: ClerkJumpsuit
-  name: loadout-group-clerk-jumpsuit
-  loadouts:
-  - ClerkJumpsuit
-  - ClerkJumpskirt
+#- type: loadoutGroup # Echo: No justice
+#  id: ClerkJumpsuit
+#  name: loadout-group-clerk-jumpsuit
+#  loadouts:
+#  - ClerkJumpsuit
+#  - ClerkJumpskirt
 
-- type: loadoutGroup
-  id: ClerkNeck
-  name: loadout-group-clerk-neck
-  minLimit: 0
-  loadouts:
-  - BlackTie
-  - BlueTie
-  - BrownTie
-  - GreenTie
-  - RedTie
-  - WhiteTie
+#- type: loadoutGroup # Echo: No justice
+#  id: ClerkNeck
+#  name: loadout-group-clerk-neck
+#  minLimit: 0
+#  loadouts:
+#  - BlackTie
+#  - BlueTie
+#  - BrownTie
+#  - GreenTie
+#  - RedTie
+#  - WhiteTie
 
-- type: loadoutGroup
-  id: ClerkOuterClothing
-  name: loadout-group-clerk-outerclothing
-  minLimit: 0
-  loadouts:
-  - ClerkVest
+#- type: loadoutGroup # Echo: No justice
+#  id: ClerkOuterClothing
+#  name: loadout-group-clerk-outerclothing
+#  minLimit: 0
+#  loadouts:
+#  - ClerkVest
 
-- type: loadoutGroup
-  id: ClerkShoes
-  name: loadout-group-clerk-shoes
-  loadouts:
-  - LaceupShoes
-  - LeatherShoes
+#- type: loadoutGroup # Echo: No justice
+#  id: ClerkShoes
+#  name: loadout-group-clerk-shoes
+#  loadouts:
+#  - LaceupShoes
+#  - LeatherShoes
 
 ## Prosecutor
 - type: loadoutGroup

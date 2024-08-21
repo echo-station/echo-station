@@ -1,36 +1,36 @@
-- type: entity
-  parent: IDCardStandard
-  id: ChiefJusticeIDCard
-  name: chief justice ID card
-  components:
-  - type: PresetIdCard
-    name: ChiefJustice
-  - type: Sprite
-    layers:
-    - state: default
-    - sprite: DeltaV/Objects/Misc/id_cards.rsi
-      state: idchiefjustice
+#- type: entity # Echo: No justice
+#  parent: IDCardStandard
+#  id: ChiefJusticeIDCard
+#  name: chief justice ID card
+#  components:
+#  - type: PresetIdCard
+#    name: ChiefJustice
+#  - type: Sprite
+#    layers:
+#    - state: default
+#    - sprite: DeltaV/Objects/Misc/id_cards.rsi
+#      state: idchiefjustice
 
-- type: entity
-  parent: IDCardStandard
-  id: ClerkIDCard
-  name: clerk ID card
-  components:
-  - type: PresetIdCard
-    name: Clerk
-  - type: Sprite
-    layers:
-    - state: default
-    - sprite: DeltaV/Objects/Misc/id_cards.rsi
-      state: idclerk
+#- type: entity # Echo: No justice
+#  parent: IDCardStandard
+#  id: ClerkIDCard
+#  name: clerk ID card
+#  components:
+#  - type: PresetIdCard
+#    name: Clerk
+#  - type: Sprite
+#    layers:
+#    - state: default
+#    - sprite: DeltaV/Objects/Misc/id_cards.rsi
+#      state: idclerk
 
-- type: entity
+- type: entity # Echo: No justice, Prosecutor is sec
   parent: IDCardStandard
   id: ProsecutorIDCard
-  name: presecutor ID card
+  name: prosecutor ID card
   components:
   - type: PresetIdCard
-    name: Prosecutor
+    job: Prosecutor
   - type: Sprite
     layers:
     - state: default

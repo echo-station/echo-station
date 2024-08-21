@@ -11,7 +11,7 @@
     layoutId: AirlockService
 
 - type: entity
-  parent: AirlockJustice # DeltaV - Lawyer is in Justice Dept
+  parent: AirlockServiceLocked # DeltaV - Lawyer is in Justice Dept # Echo: No justice
   id: AirlockLawyerLocked
   suffix: Lawyer, Locked
   components:
@@ -414,7 +414,7 @@
     layoutId: AirlockService
 
 - type: entity
-  parent: AirlockJusticeGlass
+  parent: AirlockServiceGlassLocked # Echo: No justice
   id: AirlockLawyerGlassLocked # DeltaV - Lawyer is in Justice Dept
   suffix: Lawyer, Locked
   components:
