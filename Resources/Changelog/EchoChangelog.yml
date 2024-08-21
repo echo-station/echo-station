@@ -73,3 +73,9 @@ Entries:
       message: Merged German accent from Wizden
   id: 11
   time: '2024-08-21T11:38:49.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: Speed up the Survival scheduler
+  id: 12
+  time: '2024-08-21T11:44:50.0000000+00:00'
