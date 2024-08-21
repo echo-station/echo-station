@@ -6,3 +6,55 @@ PaperBiscuitCorporateFilled: null
 PaperBiscuitCorporateSpareID: null
 SpareIdCabinet: null
 SpareIdCabinetFilled: null
+
+# 2024-08-21 Delete Justice department
+AirlockChiefJusticeLocked: AirlockSecurityLawyerLocked
+AirlockChiefJusticeGlassLocked: AirlockSecurityLawyerGlassLocked
+AirlockClerkLocked: AirlockSecurityLawyerLocked
+AirlockClerkGlassLocked: AirlockSecurityLawyerGlassLocked
+AirlockJustice: AirlockSecurity # AA department door becomes security AA door
+AirlockJusticeGlass: AirlockSecurityGlass # AA department door becomes security AA door
+AirlockJusticeLocked: AirlockSecurityLawyerLocked
+AirlockJusticeGlassLocked: AirlockSecurityLawyerGlassLocked
+AirlockMaintChiefJusticeLocked: AirlockMaintSecurityLawyerLocked
+AirlockMaintClerkLocked: AirlockMaintSecurityLawyerLocked
+AirlockMaintJusticeLocked: AirlockMaintSecurityLawyerLocked
+BoxEncryptionKeyJustice: null
+ChiefJusticeIDCard: null
+ChiefJusticePDA: null
+ClerkIDCard: null
+ClerkPDA: null
+ClothingHeadHatCJToque: null
+ClothingHeadsetJustice: null
+ClothingHeadsetAltJustice: null
+ClothingNeckCloakCJ: null
+ClothingOuterChiefJustice: null
+ClothingOuterClerkVest: null
+ClothingUniformJumpskirtChiefJustice: null
+ClothingUniformJumpskirtClerk: null
+DefaultStationBeaconClerk: null
+DefaultStationBeaconChiefJustice: null
+DefaultStationBeaconJustice: null
+DoorElectronicsChiefJustice: DoorElectronicsSecurityLawyer
+DoorElectronicsJustice: DoorElectronicsSecurityLawyer
+DoorElectronicsClerk: DoorElectronicsSecurityLawyer
+DoorRemoteJustice: null
+EncryptionKeyJustice: null
+# Gavel: null # Gets to live :^)
+# GavelBlock: null # Gets to live :^)
+LockerChiefJustice: null
+LockerChiefJusticeFilled: null
+LockerClerk: null
+LockerClerkFilled: null
+MobCarpLegal: null
+# PaperStationWarrant: null # Lives on, just without Justice-specific description
+RubberStampNotary: null
+RubberStampChiefJustice: null
+SignDirectionalJustice: null
+#SignDirectionaCourt: null # Lives on
+SpawnMobJusticePet: null
+SpawnPointChiefJustice: null
+SpawnPointClerk: null
+WindoorSecureChiefJusticeLocked: WindoorSecureSecurityLawyerLocked
+WindoorSecureJusticeLocked: WindoorSecureSecurityLawyerLocked
+WindoorSecureClerkLocked: WindoorSecureSecurityLawyerLocked

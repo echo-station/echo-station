@@ -2,7 +2,7 @@
   name: station warrant
   parent: Paper
   id: PaperStationWarrant
-  description: 'A paper warrant issued by the justice department.'
+  description: 'A paper warrant.' # Echo: No Justice department
   components:
   - type: Sprite
     sprite: Objects/Misc/bureaucracy.rsi

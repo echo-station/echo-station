@@ -79,3 +79,13 @@ Entries:
       message: Speed up the Survival scheduler
   id: 12
   time: '2024-08-21T11:44:50.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Remove
+      message: Deleted Justice department
+    - type: Tweak
+      message: Lawyer is now Civilian department
+    - type: Tweak
+      message: Prosecutor is now Security department
+  id: 13
+  time: '2024-08-21T15:51:39.0000000+00:00'
