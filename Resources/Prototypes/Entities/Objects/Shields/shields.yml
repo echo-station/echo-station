@@ -86,7 +86,7 @@
         coefficients:
           Heat: 0.3 #Echo
         flatReductions:
-          Heat: 2
+          Heat: 2 #Echo
 
 - type: entity
   name: ballistic shield #Echo was Riot Bullet Shield, there's a more elegant way to word that.
@@ -108,7 +108,7 @@
           Blunt: 0.7 #Echo
           Piercing: 0.4
         flatReductions:
-          Blunt: 1.5
+          Blunt: 1.5 #Echo
           Piercing: 1.5
 
 #Craftable shields
@@ -234,7 +234,7 @@
           Slash: 0.7
           Piercing: 0.7
         flatReductions:
-          Blunt: 1
+          Blunt: 1 #Echo
           Slash: 1
           Piercing: 1
     - type: Construction
