@@ -64074,6 +64074,7 @@ entities:
       parent: 2
     - type: PointLight
       color: '#FF3300FF'
+      enabled: true # Echo: TEG is always online
   - uid: 9349
     components:
     - type: Transform
@@ -64081,6 +64082,7 @@ entities:
       parent: 2
     - type: PointLight
       color: '#FF3300FF'
+      enabled: true # Echo: TEG is always online
 - proto: TelecomServerFilled
   entities:
   - uid: 9308
