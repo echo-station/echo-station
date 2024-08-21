@@ -1,5 +1,5 @@
-- type: deviceFrequency
-  id: SurveillanceCameraJustice
-  name: device-frequency-prototype-name-surveillance-camera-justice
-  frequency: 1420
+#- type: deviceFrequency # Echo: No Justice department
+#  id: SurveillanceCameraJustice
+#  name: device-frequency-prototype-name-surveillance-camera-justice
+#  frequency: 1420
 

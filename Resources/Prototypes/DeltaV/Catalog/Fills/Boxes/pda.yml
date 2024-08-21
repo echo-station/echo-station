@@ -8,7 +8,7 @@
     contents:
       - id: SecurityPDA
       - id: DetectivePDA
-      - id: WardenPDA
+      - id: ProsecutorPDA # Echo: I imagine a second Prosecutor is more likely than a second Warden
       - id: SeniorOfficerPDA
 
 - type: entity
@@ -75,15 +75,15 @@
       - id: MailCarrierPDA
         amount: 1
 
-- type: entity
-  name: justice PDA box
-  parent: BoxPDA
-  id: BoxPDAJustice
-  description: A box of spare PDA microcomputers for the justice department.
-  components:
-  - type: StorageFill
-    contents:
-      - id: LawyerPDA
-        amount: 2
-      - id: ProsecutorPDA
-      - id: ClerkPDA
+#- type: entity # Echo: No Justice department
+#  name: justice PDA box
+#  parent: BoxPDA
+#  id: BoxPDAJustice
+#  description: A box of spare PDA microcomputers for the justice department.
+#  components:
+#  - type: StorageFill
+#    contents:
+#      - id: LawyerPDA
+#        amount: 2
+#      - id: ProsecutorPDA
+#      - id: ClerkPDA

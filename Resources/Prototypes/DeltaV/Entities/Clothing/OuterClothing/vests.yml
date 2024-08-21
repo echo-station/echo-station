@@ -38,14 +38,14 @@
   - type: ExplosionResistance
     damageCoefficient: 0.9
 
-- type: entity
-  parent: ClothingOuterStorageBase
-  id: ClothingOuterClerkVest
-  name: clerk's vest
-  description: a silken magenta vest with a pocket to put your notary stamp.
-  components:
-  - type: Sprite
-    sprite: DeltaV/Clothing/OuterClothing/Vests/clerkvest.rsi
-  - type: Clothing
-    sprite: DeltaV/Clothing/OuterClothing/Vests/clerkvest.rsi
+#- type: entity # Echo: No Justice department
+#  parent: ClothingOuterStorageBase
+#  id: ClothingOuterClerkVest
+#  name: clerk's vest
+#  description: a silken magenta vest with a pocket to put your notary stamp.
+#  components:
+#  - type: Sprite
+#    sprite: DeltaV/Clothing/OuterClothing/Vests/clerkvest.rsi
+#  - type: Clothing
+#    sprite: DeltaV/Clothing/OuterClothing/Vests/clerkvest.rsi
 

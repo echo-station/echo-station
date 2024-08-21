@@ -51,20 +51,20 @@
       - MobSecDogLaika
       - MobSpiderShiva
 
-- type: entity
-  parent: MarkerBase
-  id: SpawnMobJusticePet
-  name: Justice Pet Spawner
-  components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Mobs/Aliens/Carps/space.rsi
-      state: icon
-  - type: ConditionalSpawner
-    prototypes:
-    - MobCarpLegal
-    
+#- type: entity # Echo: No Justice department
+#  parent: MarkerBase
+#  id: SpawnMobJusticePet
+#  name: Justice Pet Spawner
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: green
+#    - sprite: Mobs/Aliens/Carps/space.rsi
+#      state: icon
+#  - type: ConditionalSpawner
+#    prototypes:
+#    - MobCarpLegal
+
 - type: entity
   name: Silvia Spawner
   id: SpawnMobCMOPetSilvia
@@ -77,4 +77,4 @@
         sprite: DeltaV/Mobs/Pets/silvia.rsi
   - type: ConditionalSpawner
     prototypes:
-      - MobCobraSilvia      
+      - MobCobraSilvia
