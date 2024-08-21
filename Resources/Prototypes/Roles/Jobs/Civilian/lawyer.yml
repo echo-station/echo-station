@@ -15,7 +15,7 @@
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hop  # Delta V - Change supervisor to chief justice # Echo: No Justice department
   access:
-  #- Service #- DeltaV, removed from service department
+  #- Service - DeltaV, removed from service department
   #- Justice # DeltaV - Justice dept # Echo: No Justice department
   - Lawyer
   - Maintenance
