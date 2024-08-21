@@ -15,9 +15,9 @@ AirlockClerkGlassLocked: AirlockSecurityLawyerGlassLocked
 AirlockJustice: Airlock # AA department door becomes normal AA door
 AirlockJusticeGlass: AirlockGlass # AA department door becomes normal AA door
 AirlockJusticeLocked: AirlockSecurityLawyerLocked
-AirlockJusticeGlassLocked: AirlockSecurityLawyerGlassLocked # TODO
-AirlockMaintChiefJusticeLocked: AirlockMaintSecurityLawyerLocked # TODO
-AirlockMaintClerkLocked: AirlockMaintSecurityLawyerLocked # TODO
+AirlockJusticeGlassLocked: AirlockSecurityLawyerGlassLocked
+AirlockMaintChiefJusticeLocked: AirlockMaintSecurityLawyerLocked
+AirlockMaintClerkLocked: AirlockMaintSecurityLawyerLocked
 BoxEncryptionKeyJustice: null
 ChiefJusticeIDCard: null
 ChiefJusticePDA: null
@@ -34,9 +34,9 @@ ClothingUniformJumpskirtClerk: null
 DefaultStationBeaconClerk: null
 DefaultStationBeaconChiefJustice: null
 DefaultStationBeaconJustice: null
-DoorElectronicsChiefJustice: null
+DoorElectronicsChiefJustice: DoorElectronicsSecurityLawyer
 DoorElectronicsJustice: DoorElectronicsSecurityLawyer
-DoorElectronicsClerk: null
+DoorElectronicsClerk: DoorElectronicsSecurityLawyer
 DoorRemoteJustice: null
 EncryptionKeyJustice: null
 LockerChiefJustice: null
