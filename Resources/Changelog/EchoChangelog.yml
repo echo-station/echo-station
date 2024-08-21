@@ -101,3 +101,9 @@ Entries:
       message: Prosecutor PDA and ID are now properly Security colored
   id: 15
   time: '2024-08-21T16:44:12.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Fix
+      message: Lawyer and Prosecutor now show up on the AAC tablet correctly
+  id: 16
+  time: '2024-08-21T19:43:26.0000000+00:00'
