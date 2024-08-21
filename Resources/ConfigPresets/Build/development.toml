@@ -1,11 +1,11 @@
 ﻿[game]
 # Straight in-game baby
-lobbyenabled = true
+lobbyenabled = false
 # Dev map for faster loading & convenience
 map = "Dev"
-role_timers = true
+role_timers = false
 role_whitelist = false
-contraband_examine = false # DeltaV
+contraband_examine = true # Echo
 
 [server]
 rules_file = "EchoRuleset"
@@ -27,12 +27,12 @@ preload = false
 [salvage]
 expedition_cooldown = 30.0
 
-[shuttle]
-grid_fill = false
-auto_call_time = 0
-emergency = false
-arrivals = false
-preload_grids = false
+#[shuttle]
+#grid_fill = false
+#auto_call_time = 0
+#emergency = false
+#arrivals = false
+#preload_grids = false
 
 [admin]
 see_own_notes = true
