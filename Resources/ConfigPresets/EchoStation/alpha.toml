@@ -1,5 +1,5 @@
 ﻿[game]
-hostname = "[EN] 🔷 Echo Station: Alpha | Quality RP | Whitelist with Tryout slots [US East]"
+hostname = "[EN] 🔷 Echo Station: Alpha | Quality RP | Senior roles | Partial whitelist [US East]"
 
 # Role timers are now ON, but all time requirements are multiplied by the multiplier below.
 role_timers = true
@@ -9,8 +9,8 @@ role_whitelist = true
 [hub]
 # Appear in public listings.
 advertise = true
-# English, America > North America > East, High RP, don't guess tags based on server name.
-tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
+# English, America > North America > East, Med RP, don't guess tags based on server name.
+tags = "lang:en-US,region:am_n_e,rp:med,no_tag_infer"
 # URL of this server to advertise.
 server_url = "ss14://alpha.echo-station.org:1212"
 
