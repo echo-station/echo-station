@@ -107,3 +107,9 @@ Entries:
       message: Lawyer and Prosecutor now show up on the AAC tablet correctly
   id: 16
   time: '2024-08-21T19:43:26.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: Bump job time requirement multiplier from 0.2x to 0.3x
+  id: 17
+  time: '2024-08-24T09:22:30.0000000+00:00'
