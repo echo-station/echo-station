@@ -18,10 +18,10 @@
   id: BaseEpistemicsJobPhrase
   abstract: true
 
-- type: quickPhrase
-  parent: [ BaseJusticePhrase, BaseJobPhrase ]
-  id: BaseJusticeJobPhrase
-  abstract: true
+#- type: quickPhrase # Echo: No Justice department
+#  parent: [ BaseJusticePhrase, BaseJobPhrase ]
+#  id: BaseJusticeJobPhrase
+#  abstract: true
 
 - type: quickPhrase
   parent: [ BaseLogisticsPhrase, BaseJobPhrase ]
@@ -145,25 +145,25 @@
 
 # Justice
 
-- type: quickPhrase
-  parent: BaseJusticeJobPhrase
-  id: ChiefJusticePhrase
-  text: job-name-chief-justice
+#- type: quickPhrase # Echo: No Justice department
+#  parent: BaseJusticeJobPhrase
+#  id: ChiefJusticePhrase
+#  text: job-name-chief-justice
 
 - type: quickPhrase
-  parent: BaseJusticeJobPhrase
+  parent: BaseCivilianJobPhrase # Echo: No Justice department, Lawyer is Civ
   id: LawyerPhrase
   text: job-name-lawyer
 
 - type: quickPhrase
-  parent: BaseJusticeJobPhrase
+  parent: BaseSecurityJobPhrase # Echo: No Justice department, Prosecutor is Sec
   id: ProsecutorPhrase
   text: job-name-prosecutor
 
-- type: quickPhrase
-  parent: BaseJusticeJobPhrase
-  id: ClerkPhrase
-  text: job-name-clerk
+#- type: quickPhrase # Echo: No Justice department,
+#  parent: BaseJusticeJobPhrase
+#  id: ClerkPhrase
+#  text: job-name-clerk
 
 # Medical
 

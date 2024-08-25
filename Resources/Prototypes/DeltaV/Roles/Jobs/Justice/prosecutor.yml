@@ -4,20 +4,23 @@
   description: job-description-prosecutor
   playTimeTracker: JobProsecutor
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 36000 # 10 hrs
+#  - !type:OverallPlaytimeRequirement # Echo: No overall requirement (10hr sec == 10hr overall)
+#    time: 36000 # 10 hrs
   - !type:DepartmentTimeRequirement # DeltaV - Security dept time requirement
     department: Security
-    time: 21600 # 6 hours
-  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Justice roles
+    time: 36000 # 6 hours # Echo: 10 hrs
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Security roles
   startingGear: ProsecutorGear
   icon: "JobIconProsecutor"
-  supervisors: job-supervisors-cj
+  supervisors: job-supervisors-hos # Echo: No Justice department
   canBeAntag: false
   access:
   - Prosecutor
-  - Justice
+  - Security # Echo: No Justice department
   - Maintenance
+  special: # Echo: Since Prosecutor is now Security, they get a mindshield
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
 
 - type: startingGear
   id: ProsecutorGear
@@ -27,7 +30,7 @@
     #back: ClothingBackpackLawyerFilled
     shoes: ClothingShoesBootsLaceup
     id: ProsecutorPDA
-    ears: ClothingHeadsetJustice
+    ears: ClothingHeadsetSecurity # Echo: No Justice department
     # TODO add copy of space law
   inhand:
   - BriefcaseBrownFilled

@@ -33,7 +33,7 @@ linear_end_time = 90
 # Initial multiplier up to and including at StartTime.
 linear_start_multiplier = 1
 # Final multiplier, including after exceeding the EndTime.
-linear_end_multiplier = 0.2
+linear_end_multiplier = 0.25 # Last increased 2024-08-21 / round 161
 # Baseline minimum time between events. Multiplier by current modifier.
 linear_baseline_min_time = 900
 # Baseline maximum time between events. Multiplied by current modifier.
