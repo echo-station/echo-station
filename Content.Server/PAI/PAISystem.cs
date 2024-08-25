@@ -56,7 +56,7 @@ public sealed class PAISystem : SharedPAISystem
 
         _quickDialog.OpenDialog(actor.PlayerSession, "Rename", "Name", (string newName) =>
         {
-            _metaSystem.SetEntityName(args.Performer, $"pAI {newName}");
+            _metaSystem.SetEntityName(args.Performer, $"{Loc.GetString(component.NamePrefix)} {newName}");
             _actionsSystem.SetCooldown(args.Action, TimeSpan.FromSeconds(300));
         });
     }

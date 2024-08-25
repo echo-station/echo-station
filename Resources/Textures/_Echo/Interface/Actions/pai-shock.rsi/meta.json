@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/space-wizards/space-station-14/commit/0adb28e9837aad5c3f5c6fd6a4183a8562c6f5a7 and modified for shock by Brahex.",
+    "states": [
+        {
+            "name": "pai-shock"
+        }
+    ]
+}
