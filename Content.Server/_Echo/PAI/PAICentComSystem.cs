@@ -8,7 +8,6 @@ namespace Content.Server._Echo.PAI;
 
 public sealed class PAICentComSystem : SharedPAICentComSystem
 {
-    [Dependency] private readonly ActionsSystem _actionsSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly ElectrocutionSystem _electrocution = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
