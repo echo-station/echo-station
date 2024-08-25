@@ -18,6 +18,11 @@
     roleName: pai-system-role-name-centcom
     roleDescription: pai-system-role-description-centcom
     roleRules: ghost-role-information-familiar-rules
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - CentCom
+    - Command
   - type: IntrinsicRadioFromKeys
     permanentChannels:
     - Binary
