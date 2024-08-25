@@ -18,6 +18,16 @@
     roleName: pai-system-role-name-centcom
     roleDescription: pai-system-role-description-centcom
     roleRules: ghost-role-information-familiar-rules
+  - type: IntrinsicRadioFromKeys
+    permanentChannels:
+    - Binary
+    - CentCom
+    - Command
+  - type: ActiveRadio
+    channels:
+      - Binary
+      - CentCom
+      - Command
   - type: GenericVisualizer
     visuals:
       enum.ToggleableGhostRoleVisuals.Status:
