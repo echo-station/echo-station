@@ -30,9 +30,13 @@ public sealed class PAICentComSystem : SharedPAICentComSystem
     /// <param name="args"></param>
     private void OnElectrocuteAction(EntityUid uid, PAICentComComponent component, PAIElectrocuteActionEvent args)
     {
+        if (args.Handled)
+            return;
+
         foreach (var targetUid in _lookup.GetEntitiesInRange(_transform.GetMapCoordinates(uid), 0.2f))
             _electrocution.TryDoElectrocution(targetUid, uid, 5, TimeSpan.FromSeconds(3), false);
         _audio.PlayPvs(component.Sound, uid);
-        _actionsSystem.SetCooldown(args.Action, TimeSpan.FromSeconds(20));
+
+        args.Handled = true;
     }
 }
