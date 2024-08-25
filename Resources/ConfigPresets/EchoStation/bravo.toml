@@ -39,7 +39,7 @@ bind = "*:1213" # Must match net.port
 # Appear in public listings just yet.
 advertise = true
 # English, America > North America > East, High RP, don't guess tags based on server name.
-tags = "lang:en-US,region:am_n_e,rp:high,no_tag_infer"
+tags = "lang:en-US,region:am_n_e,rp:med,no_tag_infer"
 # URL of this server to advertise. Port must match net.port, status.bind
 server_url = "ss14://bravo.echo-station.org:1213"
 

@@ -89,3 +89,27 @@ Entries:
       message: Prosecutor is now Security department
   id: 13
   time: '2024-08-21T15:51:39.0000000+00:00'
+- author: ProphetCrow
+  changes:
+    - type: Tweak
+      message: Shield stats have been modified
+  id: 14
+  time: '2024-08-21T16:32:59.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Fix
+      message: Prosecutor PDA and ID are now properly Security colored
+  id: 15
+  time: '2024-08-21T16:44:12.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Fix
+      message: Lawyer and Prosecutor now show up on the AAC tablet correctly
+  id: 16
+  time: '2024-08-21T19:43:26.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: Bump job time requirement multiplier from 0.2x to 0.3x
+  id: 17
+  time: '2024-08-24T09:22:30.0000000+00:00'

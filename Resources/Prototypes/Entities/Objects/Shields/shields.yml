@@ -10,21 +10,20 @@
       state: riot-icon
     - type: Item
       sprite: Objects/Weapons/Melee/shields.rsi
-      size: Ginormous
-      heldPrefix: riot
+      size: Huge #Echo Ginormous -> Huge for backpacking
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.9
-          Slash: 0.9
-          Piercing: 0.9
-          Heat: 0.9
+          Blunt: 0.4 #Echo adjusted values to give shield effective damage resistance
+          Slash: 0.4
+          Piercing: 1.2
+          Heat: 1
       activeBlockModifier:
         coefficients:
-          Blunt: 0.8
-          Slash: 0.8
-          Piercing: 0.8
-          Heat: 0.8
+          Blunt: 0.4 #Echo
+          Slash: 0.4
+          Piercing: 1.2
+          Heat: 1
         flatReductions:
           Blunt: 1
           Slash: 1
@@ -36,13 +35,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 140
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 100 #This is probably enough damage before it breaks
+            damage: 200 #Echo, was 40, buffed to 100, effectively doubled dV buff since 100hp is still too fragile
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -66,28 +59,20 @@
   name: riot shield
   parent: [ BaseShield, BaseRestrictedContraband ]
   id: RiotShield
-  description: A large tower shield. Good for controlling crowds.
+  description: A large tower shield bearing security markings. An internal inscription reads 'Return with it, or on it'. #Echo Reflavor
   components:
     - type: StaticPrice
       price: 90
-    - type: Blocking
-      passiveBlockModifier:
-        coefficients:
-          Blunt: 0.7
-          Slash: 0.7
-      activeBlockModifier:
-        coefficients:
-          Blunt: 0.5
-          Slash: 0.5
-        flatReductions:
-          Blunt: 1
-          Slash: 1
+    - type: Item
+      size: Huge
+      shape:
+      - 0,0,4,2 #Echo 5 by 3 rectangle, consumes enough space to justify picking a dufflebag over the backpack without denying the option outright
 
 - type: entity
-  name: riot laser shield
-  parent: [ BaseShield, BaseRestrictedContraband ]
+  name: laser shield #Echo name was laser riot shield, riot felt redundant and unnessisary
+  parent: RiotShield #Echo parents the riot shield for backpack sizing
   id: RiotLaserShield
-  description: A riot shield built for withstanding lasers, but not much else.
+  description: A tall and specialized shield designed to resist energy based attacks. This one bears security markings. #Echo reflavor
   components:
     - type: Sprite
       state: riot_laser-icon
@@ -96,18 +81,18 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Heat: 0.7
+          Heat: 0.3 #Echo - only good at stopping lasers / heat attacks
       activeBlockModifier:
         coefficients:
-          Heat: 0.5
+          Heat: 0.3 #Echo
         flatReductions:
-          Heat: 1
+          Heat: 2 #Echo
 
 - type: entity
-  name: riot bullet shield
-  parent: [ BaseShield, BaseRestrictedContraband ]
+  name: ballistic shield #Echo was Riot Bullet Shield, there's a more elegant way to word that.
+  parent: RiotShield
   id: RiotBulletShield
-  description: A ballistic riot shield built for withstanding bullets, but not much else.
+  description: A bulletproof shield bearing security markings. An internal inscription reads 'Return with it, or on it'. #Echo reflavor
   components:
     - type: Sprite
       state: riot_bullet-icon
@@ -116,12 +101,15 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Piercing: 0.7
+          Blunt: 0.7 #Echo Good against bullets, blunt DR here for future proofing
+          Piercing: 0.4
       activeBlockModifier:
         coefficients:
-          Piercing: 0.5
+          Blunt: 0.7 #Echo
+          Piercing: 0.4
         flatReductions:
-          Piercing: 1
+          Blunt: 1.5 #Echo
+          Piercing: 1.5
 
 #Craftable shields
 
@@ -138,15 +126,15 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.95
-          Slash: 0.95
-          Piercing: 0.95
+          Blunt: 0.5 #Echo gave shield DR
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 2
       activeBlockModifier:
         coefficients:
-          Blunt: 0.85
-          Slash: 0.85
-          Piercing: 0.85
+          Blunt: 0.5 #Echo
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 2
         flatReductions:
           Blunt: 1
@@ -159,13 +147,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 60
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 30 #Weaker shield
+            damage: 120 #Echo, buffed to 60 in recent dV change, doubled health
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -193,15 +175,15 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.95
-          Slash: 0.95
-          Piercing: 0.95
+          Blunt: 0.5 #Echo gave shield DR
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 0.9
       activeBlockModifier:
         coefficients:
-          Blunt: 0.85
-          Slash: 0.85
-          Piercing: 0.85
+          Blunt: 0.5 #Echo
+          Slash: 0.5
+          Piercing: 0.8
           Heat: 0.8
         flatReductions:
           Blunt: 0.5
@@ -215,13 +197,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 40
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 20 #Very weak shield
+            damage: 100 #Echo, 20 to 40 in dV buff, effectively pentupled old value since 20HP was nothing
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -238,7 +214,7 @@
   name: web shield
   parent: BaseShield
   id: WebShield
-  description: A stringy shield. It's weak, and doesn't seem to do well against heat.
+  description: A surprisingly durable shield made entirely of spider silk. #Echo reflavor
   components:
     - type: Sprite
       sprite: Objects/Weapons/Melee/web-shield.rsi
@@ -249,18 +225,18 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.95
-          Slash: 0.95
-          Piercing: 0.95
+          Blunt: 0.7 #Echo spider silk is surprisingly durable, pound for pound. Its comparable to kevlar and steel
+          Slash: 0.7
+          Piercing: 0.7
       activeBlockModifier:
         coefficients:
-          Blunt: 0.85
-          Slash: 0.85
-          Piercing: 0.85
+          Blunt: 0.7 #Echo
+          Slash: 0.7
+          Piercing: 0.7
         flatReductions:
-          Blunt: 0.5
-          Slash: 0.5
-          Piercing: 0.5
+          Blunt: 1 #Echo
+          Slash: 1
+          Piercing: 1
     - type: Construction
       graph: WebObjects
       node: shield
@@ -268,13 +244,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 40
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 20
+            damage: 120 #Echo
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -322,7 +292,7 @@
   name: mirror shield
   parent: BaseShield
   id: MirrorShield
-  description: Eerily glows red... you hear the geometer whispering
+  description: Glows an eerie red. You hear the Geometer whispering... #Echo merge conflict, this description change is unimportant
   components:
     - type: Sprite
       state: mirror-icon
@@ -338,13 +308,13 @@
           Blunt: 1.2
           Slash: 1.2
           Piercing: 1.2
-          Heat: .7
+          Heat: 0.7 #Echo added a 0 infront of the .7 for formatting standardization
       activeBlockModifier:
         coefficients:
           Blunt: 1.2
           Slash: 1.2
           Piercing: 1.2
-          Heat: .6
+          Heat: 0.7 #Echo added a 0 infront of the .7 for formatting standardization
         flatReductions:
           Heat: 1
       blockSound: !type:SoundPathSpecifier
@@ -353,7 +323,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 40
+            damage: 80 #Echo doubled health
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -424,14 +394,14 @@
       passiveBlockModifier:
         coefficients:
           Blunt: 1.0
-          Slash: 0.9
-          Piercing: 0.85
+          Slash: 0.8 #Echo standardized damage between active and passive, made it a bit better overall
+          Piercing: 0.8
           Heat: 0.6
       activeBlockModifier:
         coefficients:
-          Blunt: 1.2
-          Slash: 0.85
-          Piercing: 0.5
+          Blunt: 1.0
+          Slash: 0.8 #Echo
+          Piercing: 0.8
           Heat: 0.4
         flatReductions:
           Heat: 1
@@ -443,13 +413,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 180
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 100
+            damage: 160 #Echo hp 100->160
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -524,13 +488,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 100
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 70
+            damage: 150 #Echo 70 -> 150
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
