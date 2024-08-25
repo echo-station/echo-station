@@ -6,6 +6,8 @@
   components:
   - type: PAI
     namePrefix: pai-system-name-prefix-centcom
+    paiName: pai-system-name-centcom
+    paiNameRaw: pai-system-name-raw-centcom
   - type: PAICentCom
   - type: Sprite
     sprite: _Echo/Objects/Fun/centcom_pai.rsi

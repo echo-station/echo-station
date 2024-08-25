@@ -73,7 +73,7 @@ public sealed class PAISystem : SharedPAISystem
             return;
 
         // Ownership tag
-        var val = Loc.GetString("pai-system-pai-name", ("owner", component.LastUser));
+        var val = Loc.GetString(Loc.GetString(component.PAIName), ("owner", component.LastUser));
 
         // TODO Identity? People shouldn't dox-themselves by carrying around a PAI.
         // But having the pda's name permanently be "old lady's PAI" is weird.
@@ -120,7 +120,7 @@ public sealed class PAISystem : SharedPAISystem
         }
 
         // add 's pAI to the scrambled name
-        var val = Loc.GetString("pai-system-pai-name-raw", ("name", name.ToString()));
+        var val = Loc.GetString(Loc.GetString(comp.PAINameRaw), ("name", name.ToString()));
         _metaData.SetEntityName(uid, val);
     }
 
