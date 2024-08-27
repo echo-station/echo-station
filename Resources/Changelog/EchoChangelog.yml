@@ -113,3 +113,9 @@ Entries:
       message: Bump job time requirement multiplier from 0.2x to 0.3x
   id: 17
   time: '2024-08-24T09:22:30.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Fix
+      message: Fixed non-senior jobs not spawning with PDAs
+  id: 18
+  time: '2024-08-27T15:55:48.0000000+00:00'
