@@ -31,17 +31,25 @@
     channels:
     - Binary
     - CentCom
-    - Command
   - type: IntrinsicRadioFromKeys
     permanentChannels:
     - Binary
     - CentCom
-    - Command
   - type: ActiveRadio
     channels:
       - Binary
       - CentCom
-      - Command
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCargo
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon
+      - EncryptionKeyEngineering
+      - EncryptionKeyMedical
+      - EncryptionKeyScience
+      - EncryptionKeySecurity
+      - EncryptionKeyService
   - type: GenericVisualizer
     visuals:
       enum.ToggleableGhostRoleVisuals.Status:
