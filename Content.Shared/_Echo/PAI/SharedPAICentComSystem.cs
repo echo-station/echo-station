@@ -20,11 +20,13 @@ namespace Content.Shared._Echo.PAI
         private void OnMapInit(EntityUid uid, PAICentComComponent component, MapInitEvent args)
         {
             _actionsSystem.AddAction(uid, ref component.ElectrocuteAction, component.ElectrocuteActionID);
+            _actionsSystem.AddAction(uid, ref component.UnlockAction, component.UnlockActionID);
         }
 
         private void OnShutdown(EntityUid uid, PAICentComComponent component, ComponentShutdown args)
         {
             _actionsSystem.RemoveAction(uid, component.ElectrocuteAction);
+            _actionsSystem.RemoveAction(uid, component.UnlockAction);
         }
     }
 }
