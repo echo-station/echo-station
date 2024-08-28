@@ -119,3 +119,9 @@ Entries:
       message: Fixed non-senior jobs not spawning with PDAs
   id: 18
   time: '2024-08-27T15:55:48.0000000+00:00'
+- author: Brahex
+  changes:
+    - type: Add
+      message: Added a CentCom pAI.
+  id: 19
+  time: '2024-08-28T16:33:04.0000000+00:00'
