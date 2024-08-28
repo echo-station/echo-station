@@ -56,7 +56,7 @@ public sealed class PAISystem : SharedPAISystem
 
         _quickDialog.OpenDialog(actor.PlayerSession, "Rename", "Name", (string newName) =>
         {
-            _metaSystem.SetEntityName(args.Performer, $"pAI {newName}");
+            _metaSystem.SetEntityName(args.Performer, $"{Loc.GetString(component.NamePrefix)} {newName}"); // Echo: Allow different name prefix
             _actionsSystem.SetCooldown(args.Action, TimeSpan.FromSeconds(300));
         });
     }
@@ -73,7 +73,7 @@ public sealed class PAISystem : SharedPAISystem
             return;
 
         // Ownership tag
-        var val = Loc.GetString("pai-system-pai-name", ("owner", component.LastUser));
+        var val = Loc.GetString(Loc.GetString(component.PAIName), ("owner", component.LastUser)); //Echo: Allow different name
 
         // TODO Identity? People shouldn't dox-themselves by carrying around a PAI.
         // But having the pda's name permanently be "old lady's PAI" is weird.
@@ -120,7 +120,7 @@ public sealed class PAISystem : SharedPAISystem
         }
 
         // add 's pAI to the scrambled name
-        var val = Loc.GetString("pai-system-pai-name-raw", ("name", name.ToString()));
+        var val = Loc.GetString(Loc.GetString(comp.PAINameRaw), ("name", name.ToString())); //Echo: Allow different name
         _metaData.SetEntityName(uid, val);
     }
 

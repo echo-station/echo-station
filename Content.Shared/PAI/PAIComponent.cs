@@ -59,6 +59,24 @@ public sealed partial class PAIComponent : Component
     /// </summary>
     [DataField]
     public string ScramblePopup = "pai-system-scramble-popup";
+
+    /// <summary>
+    /// Echo: Name prefix for custom pai names.
+    /// </summary>
+    [DataField("namePrefix")]
+    public string NamePrefix = "pai-system-name-prefix";
+
+    /// <summary>
+    /// Echo: Name for activated pAI.
+    /// </summary>
+    [DataField("paiName")]
+    public string PAIName = "pai-system-pai-name";
+
+    /// <summary>
+    /// Echo: Name for raw pAI.
+    /// </summary>
+    [DataField("paiNameRaw")]
+    public string PAINameRaw = "pai-system-pai-name-raw";
 }
 
 /// <summary>
