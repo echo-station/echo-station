@@ -72,7 +72,7 @@
       sprite: _Echo/Interface/Actions/pai-shock.rsi
       state: pai-shock
     event: !type:PAIElectrocuteActionEvent
-    useDelay: 60
+    useDelay: 15
 
 - type: entity
   id: PAIAllAccess
