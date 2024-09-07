@@ -7,8 +7,7 @@
   - type: Sprite
     sprite: Objects/Vehicles/basewheelchair.rsi
     state: vehicle_deployed
-    #layers:
-      # - state: vehicle_folded
-      #   map: [ "enum.SolutionContainerLayers.Folded" ]
-      # - state: vehicle_deployed
-      #   map: [ "enum.SolutionContainerLayers.Deployed" ]
+  - type: Strap
+  - type: Rotatable
+  - type: PilotOnBuckle
+  - type: InputMover
