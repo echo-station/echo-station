@@ -18,13 +18,13 @@
     - !type:WhitelistRequirement # Echo: Require server whitelisting for all security roles
     - !type:AgeRequirement
       requiredAge: 21
-  whitelisted: true # Echo: Also require role specific whitelist
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
   requireAdminNotify: true
   supervisors: job-supervisors-captain
   canBeAntag: false
+  whitelisted: true # DeltaV
   access:
   - HeadOfSecurity
   - Command
