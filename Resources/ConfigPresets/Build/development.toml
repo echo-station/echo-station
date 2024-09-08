@@ -36,3 +36,6 @@ expedition_cooldown = 30.0
 
 [admin]
 see_own_notes = true
+
+[server] # DeltaV
+rules_file = "DeltaVRuleset"

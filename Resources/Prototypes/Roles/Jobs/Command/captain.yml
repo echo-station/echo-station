@@ -27,7 +27,6 @@
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Command roles
     - !type:AgeRequirement
       requiredAge: 21
-  whitelisted: true # Echo Station: Require explicit role whitelisting
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"
@@ -35,6 +34,7 @@
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  whitelisted: true # DeltaV
   accessGroups:
   - AllAccess
   special:
