@@ -13,3 +13,4 @@
     SeismicCharge: 2 # DeltaV - upstream removed
     FultonBeacon: 1 # DeltaV - upstream removed
     Fulton: 2 # DeltaV - upstream removed
+    PinpointerSalvage: 3 # Echo: Added Salvage pinpointer
