@@ -10,7 +10,7 @@
     - Gladiator
     - Lawyer
     - Prosecutor
-    - Clerk
+    #- Clerk # Echo: No Justice department
     - Borg
 
 - type: whitelistTier
@@ -24,7 +24,7 @@
     - ChiefEngineer
     - ChiefMedicalOfficer
     - ResearchDirector
-    - ChiefJustice
+    #- ChiefJustice # Echo: No Justice department
 
 
 - type: whitelistTier
