@@ -63324,7 +63324,7 @@ entities:
       parent: 2
 - proto: SpawnPointSeniorEngineer
   entities:
-  - uid: 11414
+  - uid: 91414
     components:
     - type: Transform
       pos: 14.5,18.5
@@ -63336,7 +63336,7 @@ entities:
       parent: 2
 - proto: SpawnPointSeniorOfficer
   entities:
-  - uid: 11416
+  - uid: 91416
     components:
     - type: Transform
       pos: 10.5,-20.5
@@ -63348,7 +63348,7 @@ entities:
       parent: 2
 - proto: SpawnPointSeniorPhysician
   entities:
-  - uid: 11418
+  - uid: 91418
     components:
     - type: Transform
       pos: -23.5,4.5
@@ -63360,7 +63360,7 @@ entities:
       parent: 2
 - proto: SpawnPointSeniorResearcher
   entities:
-  - uid: 11420
+  - uid: 91420
     components:
     - type: Transform
       pos: -7.5,33.5
