@@ -8,10 +8,6 @@ soft_max_players = 130
 [server]
 rules_file = "MRPRuleset"
 
-[whitelist]
-enabled = true
-min_players = 15
-
 [shuttle]
 emergency_early_launch_allowed = true
 
