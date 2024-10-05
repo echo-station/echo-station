@@ -109,7 +109,7 @@
       sprite: Clothing/Neck/Scarfs/syndiered.rsi
 
 - type: entity
-  parent: ClothingScarfBase
+  parent: [ ClothingScarfBase, BaseCentcommContraband ]
   id: ClothingNeckScarfStripedCentcom
   name: striped CentCom scarf
   description: A stylish striped centcom colored scarf. The perfect winter accessory for those with a keen fashion sense, and those who need to do paperwork in the cold.
