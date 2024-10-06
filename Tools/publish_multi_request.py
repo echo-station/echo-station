@@ -14,8 +14,8 @@ RELEASE_DIR = "release"
 # CONFIGURATION PARAMETERS
 # Forks should change these to publish to their own infrastructure.
 #
-ROBUST_CDN_URL = "https://cdn.delta-v.org/"
-FORK_ID = "delta-v"
+ROBUST_CDN_URL = "https://cdn.echo-station.org/"
+FORK_ID = "echo-station"
 
 def main():
     session = requests.Session()
