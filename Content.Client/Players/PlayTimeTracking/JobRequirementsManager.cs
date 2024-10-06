@@ -1,4 +1,4 @@
-﻿using Content.Shared.CCVar;
+using Content.Shared.CCVar;
 using Content.Shared.Players;
 using Content.Shared.Players.JobWhitelist;
 using Content.Shared.Players.PlayTimeTracking;

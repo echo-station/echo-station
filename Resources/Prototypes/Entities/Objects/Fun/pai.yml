@@ -53,6 +53,8 @@
   - type: ActiveRadio
     channels: # Echo: Overridden by IntrinsicRadioFromKeys
       - Binary
+#    channels:
+#    - Common
   - type: DoAfter
   - type: Actions
   - type: TypingIndicator
