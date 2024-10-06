@@ -277,7 +277,7 @@
         tableId: CalmPestEventsTable
       - !type:NestedSelector
         tableId: SpicyPestEventsTable
-        
+
 
 - type: entityTable
   id: SpaceTrafficControlTable
@@ -339,7 +339,7 @@
 - type: entity
   id: LinearStationEventScheduler
   parent: BaseGameRule
-  noSpawn: true
+  #noSpawn: true
   components:
   - type: LinearStationEventScheduler
 
