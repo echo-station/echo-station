@@ -861,7 +861,7 @@
   components:
   - type: Pda
     id: VisitorIDCard
-    state: pda-visitor # DeltaV - visitor pda sprite
+    state: pda
 
 - type: entity
   parent: BasePDA
