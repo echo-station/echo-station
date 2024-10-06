@@ -100,9 +100,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: DeltaV/Structures/Windows/tinted_window.rsi #Delta V - Resprite windows
+    sprite: Structures/Windows/tinted_window.rsi
   - type: Icon
-    sprite: DeltaV/Structures/Windows/tinted_window.rsi #Delta V - Resprite windows
+    sprite: Structures/Windows/tinted_window.rsi
   - type: IconSmooth
     base: twindow
   - type: Construction
