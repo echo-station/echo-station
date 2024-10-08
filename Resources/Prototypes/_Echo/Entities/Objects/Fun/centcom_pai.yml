@@ -1,0 +1,91 @@
+- type: entity
+  parent: PersonalAI
+  id: CentComPersonalAI
+  name: CentCom personal ai device
+  description: Your Central Command pal who might be fun to be with!
+  components:
+  - type: PAI
+    namePrefix: pai-system-name-prefix-centcom
+    paiName: pai-system-name-centcom
+    paiNameRaw: pai-system-name-raw-centcom
+  - type: PAICentCom
+  - type: Sprite
+    sprite: _Echo/Objects/Fun/centcom_pai.rsi
+    layers:
+    - state: centcom-pai-base
+    - state: centcom-pai-off-overlay
+      shader: unshaded
+      map: [ "screen" ]
+  - type: ToggleableGhostRole
+    roleName: pai-system-role-name-centcom
+    roleDescription: pai-system-role-description-centcom
+    roleRules: ghost-role-information-familiar-rules
+  - type: Access
+    groups:
+    - AllAccess
+    enabled: false
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - CentCom
+  - type: IntrinsicRadioFromKeys
+    permanentChannels:
+    - Binary
+    - CentCom
+  - type: ActiveRadio
+    channels:
+      - Binary
+      - CentCom
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCargo
+      - EncryptionKeyCommand
+      - EncryptionKeyCommon
+      - EncryptionKeyEngineering
+      - EncryptionKeyMedical
+      - EncryptionKeyScience
+      - EncryptionKeySecurity
+      - EncryptionKeyService
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableGhostRoleVisuals.Status:
+        screen:
+          Off: { state: centcom-pai-off-overlay }
+          Searching: { state: centcom-pai-searching-overlay }
+          On: { state: centcom-pai-on-overlay }
+
+- type: entity
+  id: ActionPAIElectrocute
+  name: Electrocute
+  description: Electrocute whoever is near you.
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    itemIconStyle: BigAction
+    priority: 20
+    icon:
+      sprite: _Echo/Interface/Actions/pai-shock.rsi
+      state: pai-shock
+    event: !type:PAIElectrocuteActionEvent
+    useDelay: 15
+
+- type: entity
+  id: PAIAllAccess
+  name: All Access
+  description: For the next 30 seconds, whoever is holding you has full access to the station!
+  components:
+  - type: InstantAction
+    checkCanInteract: false
+    checkConsciousness: false
+    useDelay: 30
+    itemIconStyle: BigAction
+    icon:
+      sprite: Objects/Magic/magicactions.rsi
+      state: knock
+    event: !type:PAIUnlockActionEvent
+    priority: 30

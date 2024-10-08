@@ -84,7 +84,7 @@
   parent: MarkerBase
   components:
   - type: GhostRole
-    rules: ghost-role-information-nukeop-rules
+    rules: ghost-role-information-rules-default-team-antagonist
     raffle:
       settings: default
     requirements:
@@ -106,7 +106,7 @@
   - type: GhostRole
     name: ghost-role-information-loneop-name
     description: ghost-role-information-loneop-description
-    rules: ghost-role-information-loneop-rules
+    rules: ghost-role-information-rules-default-solo-antagonist
     requirements:
     - !type:OverallPlaytimeRequirement
       time: 172800 # DeltaV - 48 hours
@@ -130,6 +130,7 @@
   - type: GhostRole
     name: roles-antag-nuclear-operative-commander-name
     description: roles-antag-nuclear-operative-commander-objective
+    rules: ghost-role-information-rules-default-team-antagonist
     requirements:
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
@@ -141,6 +142,7 @@
   - type: GhostRole
     name: roles-antag-nuclear-operative-agent-name
     description: roles-antag-nuclear-operative-agent-objective
+    rules: ghost-role-information-rules-default-team-antagonist
     requirements:
     - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
 
@@ -152,6 +154,7 @@
   - type: GhostRole
     name: roles-antag-nuclear-operative-name
     description: roles-antag-nuclear-operative-objective
+    rules: ghost-role-information-rules-default-team-antagonist
 
 - type: entity
   categories: [ HideSpawnMenu, Spawner ]

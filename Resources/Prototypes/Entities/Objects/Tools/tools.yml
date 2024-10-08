@@ -273,10 +273,6 @@
       Plastic: 100
 #  - type: DynamicPrice
 #    price: 100
-  - type: ReverseEngineering # Nyano
-    difficulty: 2
-    recipes:
-      - PowerDrill
   - type: StaticPrice
     price: 100
   - type: MeleeWeapon
@@ -334,7 +330,7 @@
       Steel: 600
       Plastic: 100
   - type: StaticPrice
-    price: 100
+    price: 110
   - type: UserInterface
     interfaces:
       enum.RcdUiKey.Key:
@@ -526,3 +522,6 @@
   - type: Tag
     tags:
     - RollingPin
+  - type: Construction
+    graph: WoodenRollingPin
+    node: rollingpin

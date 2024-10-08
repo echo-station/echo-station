@@ -1,0 +1,17 @@
+- type: antag
+  id: Thief
+  name: roles-antag-thief-name
+  antagonist: true
+  setPreference: true
+  objective: roles-antag-thief-objective
+  guides: [ Thieves ]
+  requirements:
+  - !type:WhitelistRequirement # Echo Station: Require server whitelisting for all Antag roles
+
+- type: startingGear
+  id: ThiefGear
+  storage:
+    back:
+    - ToolboxThief
+    - ClothingHandsChameleonThief
+    - ThiefBeacon

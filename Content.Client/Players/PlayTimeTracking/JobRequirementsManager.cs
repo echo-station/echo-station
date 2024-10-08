@@ -1,4 +1,4 @@
-﻿using Content.Shared.CCVar;
+using Content.Shared.CCVar;
 using Content.Shared.Players;
 using Content.Shared.Players.JobWhitelist;
 using Content.Shared.Players.PlayTimeTracking;
@@ -145,6 +145,10 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         details = FormattedMessage.FromMarkupPermissive(Loc.GetString("role-whitelisted"));
 
         if (!_cfg.GetCVar(CCVars.GameRoleWhitelist))
+            return true;
+
+        // DeltaV - blanket whitelist check in client
+        if (_whitelisted)
             return true;
 
         if (job.Whitelisted && !_jobWhitelists.Contains(job.ID))

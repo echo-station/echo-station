@@ -193,6 +193,17 @@
   - type: Clothing
     sprite: DeltaV/Clothing/Head/Hats/beret_corpsman.rsi
 
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretDet
+  name: detective's beret
+  description: For forensic specialists and dogged investigators.
+  components:
+  - type: Sprite
+    sprite: DeltaV/Clothing/Head/Hats/beret_det.rsi
+  - type: Clothing
+    sprite: DeltaV/Clothing/Head/Hats/beret_det.rsi
+
 #- type: entity # Echo: No Justice department
 #  parent: ClothingHeadBase
 #  id: ClothingHeadHatCJToque

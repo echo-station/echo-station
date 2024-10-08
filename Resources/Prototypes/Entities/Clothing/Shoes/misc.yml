@@ -116,16 +116,17 @@
     price: 500
   - type: PowerCellDraw
     drawRate: 4
+  - type: ToggleCellDraw
   - type: ItemSlots
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
   - type: Tag
     tags: []
-  - type: ReverseEngineering # delta
+  - type: ReverseEngineering # DeltaV
     difficulty: 4
     recipes:
-      - ClothingShoesBootsSpeed
+    - ClothingShoesBootsSpeed
 
 - type: entity
   id: ActionToggleSpeedBoots
@@ -153,3 +154,7 @@
     price: 75
   - type: Tag
     tags: [ ]
+  - type: ReverseEngineering # DeltaV: upgrade moonboots T1 to speedboots T3
+    difficulty: 5
+    recipes:
+    - ClothingShoesBootsSpeed

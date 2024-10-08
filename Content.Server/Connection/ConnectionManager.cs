@@ -2,6 +2,7 @@ using System.Collections.Immutable;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using Content.Server.Chat.Managers;
 using Content.Server.Administration.Managers;
 using Content.Server.Database;
@@ -14,6 +15,7 @@ using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Network;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 
@@ -25,6 +27,7 @@ namespace Content.Server.Connection
     public interface IConnectionManager
     {
         void Initialize();
+        void PostInit();
 
         /// <summary>
         /// Temporarily allow a user to bypass regular connection requirements.
@@ -42,22 +45,23 @@ namespace Content.Server.Connection
     /// <summary>
     ///     Handles various duties like guest username assignment, bans, connection logs, etc...
     /// </summary>
-    public sealed class ConnectionManager : IConnectionManager
+    public sealed partial class ConnectionManager : IConnectionManager
     {
-        [Dependency] private readonly IServerDbManager _dbManager = default!;
         [Dependency] private readonly IPlayerManager _plyMgr = default!;
         [Dependency] private readonly IServerNetManager _netMgr = default!;
         [Dependency] private readonly IServerDbManager _db = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly ILocalizationManager _loc = default!;
         [Dependency] private readonly ServerDbEntryManager _serverDbEntry = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly ILogManager _logManager = default!;
         [Dependency] private readonly IChatManager _chatManager = default!;
         [Dependency] private readonly IAdminManager _adminManager = default!;
 
-        private readonly Dictionary<NetUserId, TimeSpan> _temporaryBypasses = [];
         private ISawmill _sawmill = default!;
+        private readonly Dictionary<NetUserId, TimeSpan> _temporaryBypasses = [];
+
 
         private List<NetUserId> _connectedWhitelistedPlayers = new(); // DeltaV - Soft whitelist improvements
 
@@ -206,7 +210,7 @@ namespace Content.Server.Connection
                 return null;
             }
 
-            var adminData = await _dbManager.GetAdminDataForAsync(e.UserId);
+            var adminData = await _db.GetAdminDataForAsync(e.UserId);
 
             if (_cfg.GetCVar(CCVars.PanicBunkerEnabled) && adminData == null)
             {
@@ -214,7 +218,7 @@ namespace Content.Server.Connection
                 var customReason = _cfg.GetCVar(CCVars.PanicBunkerCustomReason);
 
                 var minMinutesAge = _cfg.GetCVar(CCVars.PanicBunkerMinAccountAge);
-                var record = await _dbManager.GetPlayerRecordByUserId(userId);
+                var record = await _db.GetPlayerRecordByUserId(userId);
                 var validAccountAge = record != null &&
                                       record.FirstSeenTime.CompareTo(DateTimeOffset.UtcNow - TimeSpan.FromMinutes(minMinutesAge)) <= 0;
                 var bypassAllowed = _cfg.GetCVar(CCVars.BypassBunkerWhitelist) && await _db.GetWhitelistStatusAsync(userId);
@@ -275,11 +279,14 @@ namespace Content.Server.Connection
             var connectedPlayers = _plyMgr.PlayerCount;
             var connectedWhitelist = _connectedWhitelistedPlayers.Count;
 
-            if (_cfg.GetCVar(CCVars.WhitelistEnabled))
+            if (_cfg.GetCVar(CCVars.WhitelistEnabled) && adminData is null)
             {
-                var min = _cfg.GetCVar(CCVars.WhitelistMinPlayers);
-                var max = _cfg.GetCVar(CCVars.WhitelistMaxPlayers);
-                var playerCountValid = _plyMgr.PlayerCount >= min && _plyMgr.PlayerCount < max;
+                if (_whitelists is null)
+                {
+                    _sawmill.Error("Whitelist enabled but no whitelists loaded.");
+                    // Misconfigured, deny everyone.
+                    return (ConnectionDenyReason.Whitelist, Loc.GetString("whitelist-misconfigured"), null);
+                }
 
                 // Echo Station: BEGIN Tryout slots
                 // Fetch configuration.
@@ -297,44 +304,42 @@ namespace Content.Server.Connection
                 var tryoutSlotAvailable = tryoutSlotsEnabled && theoreticalSlots - usedSlots > 0;
                 // Echo Station: END Tryout slots
 
-                if (playerCountValid && await _db.GetWhitelistStatusAsync(userId) == false
-                                     && adminData is null
-                                     && !tryoutSlotAvailable) // Echo Station: Allow entry if tryout slot is available
+                foreach (var whitelist in _whitelists)
                 {
-                    var msg = Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason));
+                    if (!IsValid(whitelist, _plyMgr.PlayerCount))
+                    {
+                        // Not valid for current player count.
+                        continue;
+                    }
 
-                    // Echo Station: If the tryout slot count is nonzero, return "slots are full" error
-                    if (tryoutSlotsEnabled)
+                    var whitelistStatus = await IsWhitelisted(whitelist, e.UserData, _sawmill);
+                    if (!whitelistStatus.isWhitelisted)
                     {
-                        msg += " " + Loc.GetString(theoreticalSlots > 0
-                                       ? "whitelist-tryout-slots-full"
-                                       : "whitelist-tryout-slots-zero",
-                            ("slots", theoreticalSlots));
+                        // Not whitelisted.
+                        return (ConnectionDenyReason.Whitelist, Loc.GetString("whitelist-fail-prefix", ("msg", whitelistStatus.denyMessage!)), null);
                     }
-                    else if (min > 0 || max < int.MaxValue)
-                    {
-                        // was the whitelist playercount changed?
-                        msg += " " + Loc.GetString("whitelist-playercount-invalid", ("min", min), ("max", max));
-                    }
-                    return (ConnectionDenyReason.Whitelist, msg, null);
+
+                    // Whitelisted, don't check any more.
+                    break;
                 }
             }
 
             // Echo Station: Remove whitelist changes that were done without modifying the documentation ;-;
-            // DeltaV - Soft whitelist improvements
+            // // DeltaV - Soft whitelist improvements
+            // // TODO: replace this with a whitelist config prototype with a connected whitelisted players condition
             // if (_cfg.GetCVar(CCVars.WhitelistEnabled))
             // {
             //     var connectedPlayers = _plyMgr.PlayerCount;
             //     var connectedWhitelist = _connectedWhitelistedPlayers.Count;
             //
-            //     var slots = _cfg.GetCVar(CCVars.WhitelistMinPlayers);
+            //     var slots = 25;
             //
             //     var noSlotsOpen = slots > 0 && slots < connectedPlayers - connectedWhitelist;
             //
             //     if (noSlotsOpen && await _db.GetWhitelistStatusAsync(userId) == false
             //                          && adminData is null)
             //     {
-            //         var msg = Loc.GetString(_cfg.GetCVar(CCVars.WhitelistReason));
+            //         var msg = Loc.GetString("whitelist-not-whitelisted-peri");
             //
             //         if (slots > 0)
             //             msg += "\n" + Loc.GetString("whitelist-playercount-invalid", ("min", slots), ("max", _cfg.GetCVar(CCVars.SoftMaxPlayers)));
@@ -359,7 +364,7 @@ namespace Content.Server.Connection
             var maxPlaytimeMinutes = _cfg.GetCVar(CCVars.BabyJailMaxOverallMinutes);
 
             // Wait some time to lookup data
-            var record = await _dbManager.GetPlayerRecordByUserId(userId);
+            var record = await _db.GetPlayerRecordByUserId(userId);
 
             // No player record = new account or the DB is having a skill issue
             if (record == null)
