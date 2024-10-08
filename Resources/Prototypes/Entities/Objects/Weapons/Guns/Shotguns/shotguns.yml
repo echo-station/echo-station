@@ -12,6 +12,8 @@
   - type: Item
     # If you update this also update the bulldog's size.
     size: Large
+    shape:
+    - 0,0,4,1 #Echo 5x2, long rifle size
   - type: Clothing
     sprite: DeltaV/Objects/Weapons/Guns/Shotguns/db_shotgun.rsi # Delta-V
     quickEquip: false
@@ -59,6 +61,8 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Item
     size: Large
+    shape:
+    - 0,0,4,1 #Echo 5x2
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
     quickEquip: false
@@ -112,7 +116,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,4,0
+    - 0,0,4,1 #Echo .,4,0 -> .,4,1 for standardization
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
@@ -166,7 +170,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,4,0
+    - 0,0,4,1 #Echo .,4,0 -> .,4,1 for standardization
     sprite: Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
   - type: Sprite
     sprite: DeltaV/Objects/Weapons/Guns/Shotguns/pump.rsi # Delta-V
@@ -190,10 +194,12 @@
   - type: Clothing
     sprite: DeltaV/Objects/Weapons/Guns/Shotguns/sawn.rsi # Delta-V
   - type: Item
-    size: Small
+    size: Normal #Echo was small
+    shape:
+    - 0,0,2,1 #Echo : 3x2 , signifigantly shorter than DB but not pocket sized
     sprite: Objects/Weapons/Guns/Shotguns/sawn_inhands_64x.rsi
   - type: Gun
-    fireRate: 4
+    fireRate: 2 #Echo adjusted from 4 to 2 to match DB shotgun
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
@@ -223,11 +229,17 @@
   components:
   - type: Item
     size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1 #Echo 1x2 banana/pistol shape
     storedRotation: 90
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
+    slots: #Echo, adjusting equip regions to match pistols
+    - suitStorage
+    - Belt
   - type: Gun
     fireRate: 4
   - type: BallisticAmmoProvider
@@ -249,7 +261,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,4,0
+    - 0,0,4,1 #Echo .,4,0 -> .,4,1 for standardization
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/blunderbuss.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
@@ -273,7 +285,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,4,0
+    - 0,0,4,1 #Echo .,4,0 -> .,4,1 for standardization
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun

@@ -8,6 +8,8 @@
   - type: Sprite
   - type: Item
     size: Large
+    shape:
+    - 0,0,3,1 #Echo 4x2, standardizes SMG sizes to be that of drozd and c20 size
   - type: Clothing
     sprite: Objects/Weapons/Guns/SMGs/atreides.rsi
     quickEquip: false

@@ -6,6 +6,8 @@
   - type: Sprite
   - type: Item
     size: Huge
+    shape:
+    - 0,0,4,1 #Echo 5x2, Long rifle size
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
     quickEquip: false
@@ -39,6 +41,8 @@
   - type: Sprite
   - type: Item
     size: Huge
+    shape:
+    - 0,0,4,1 #Echo 5x2, long rifle size
   - type: AmmoCounter
   - type: Gun
     fireRate: 2
@@ -94,6 +98,9 @@
   components:
   - type: Item
     size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1 #Echo standardizing shape
   - type: Tag
     tags:
     - Sidearm
@@ -103,6 +110,7 @@
     quickEquip: false
     slots:
     - Belt
+    - suitStorage #Echo standardizing slots
 
 - type: entity
   name: svalinn laser pistol
@@ -348,6 +356,10 @@
   - type: HitscanBatteryAmmoProvider
     proto: RedHeavyLaser
     fireCost: 100
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,2 #Echo 5x3
 
 - type: entity
   name: portable particle decelerator
@@ -407,6 +419,10 @@
     steps: 5
     zeroVisible: true
   - type: Appearance
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,2 #Echo 5x3
 
 - type: entity
   name: practice disabler
@@ -483,6 +499,8 @@
   components:
   - type: Item
     size: Large
+    shape:
+    - 0,0,3,1 #Echo 4x2, standard SMG shape
   - type: Tag
     tags:
       - Taser
@@ -593,6 +611,11 @@
     flavorKind: station-event-random-sentience-flavor-inanimate
     weight: 0.0002 # 5,000 times less likely than 1 regular animal
     # not putting a BlockMovement component here cause that's funny.
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1 #Echo 2x2
+
 
 - type: entity
   name: advanced laser pistol
@@ -601,7 +624,9 @@
   description: An experimental high-energy laser pistol with a self-charging nuclear battery.
   components:
   - type: Item
-    size: Normal  # Intentionally larger than other pistols
+    size: Normal
+    shape:
+    - 0,0,2,1  # Intentionally larger than other pistols
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
     layers:

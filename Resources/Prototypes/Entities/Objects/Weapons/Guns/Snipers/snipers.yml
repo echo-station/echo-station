@@ -11,6 +11,8 @@
       map: ["enum.GunVisualLayers.Base"]
   - type: Item
     size: Huge
+    shape:
+    - 0,0,5,1 #Echo: Longer than rifle size, 5x2
   - type: Clothing
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
     quickEquip: false
@@ -73,6 +75,8 @@
   - type: Sharp
   - type: Item
     size: Large
+    shape:
+    - 0,0,4,1 #Echo 5x2
   - type: Sprite
     sprite: Objects/Weapons/Guns/Snipers/musket.rsi
     state: base

@@ -116,6 +116,10 @@
     price: 750
   - type: StealTarget
     stealGroup: WeaponEnergyGunMultiphase
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1 #Echo 2x2
 
 - type: entity
   name: miniature energy gun
