@@ -62,7 +62,7 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,4,1
+    - 0,0,4,1 #Echo 5x2
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
     quickEquip: false
@@ -231,7 +231,7 @@
     size: Small
     shape:
     - 0,0,1,0
-    - 0,1,0,1
+    - 0,1,0,1 #Echo 1x2 banana/pistol shape
     storedRotation: 90
   - type: Sprite
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi

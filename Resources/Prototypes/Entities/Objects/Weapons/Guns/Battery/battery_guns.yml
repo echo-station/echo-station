@@ -359,7 +359,7 @@
   - type: Item
     size: Huge
     shape:
-    - 0,0,4,2
+    - 0,0,4,2 #Echo 5x3
 
 - type: entity
   name: portable particle decelerator
@@ -422,7 +422,7 @@
   - type: Item
     size: Huge
     shape:
-    - 0,0,4,2
+    - 0,0,4,2 #Echo 5x3
 
 - type: entity
   name: practice disabler
@@ -614,7 +614,7 @@
   - type: Item
     size: Small
     shape:
-    - 0,0,1,1
+    - 0,0,1,1 #Echo 2x2
 
 
 - type: entity
