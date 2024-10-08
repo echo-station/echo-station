@@ -616,6 +616,7 @@
     shape:
     - 0,0,1,1
 
+
 - type: entity
   name: advanced laser pistol
   parent: [ BaseWeaponBatterySmall, BaseRestrictedContraband]
