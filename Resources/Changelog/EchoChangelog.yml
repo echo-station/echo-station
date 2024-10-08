@@ -137,3 +137,9 @@ Entries:
       message: Merged upstream 2024-10-05
   id: 21
   time: '2024-10-06T08:33:31.0000000+00:00'
+- author: Crow
+  changes:
+    - type: Tweak
+      message: Adjusted grid inventory sizes for rifles
+  id: 22
+  time: '2024-10-08T16:48:12.0000000+00:00'
