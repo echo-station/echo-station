@@ -143,3 +143,9 @@ Entries:
       message: Adjusted grid inventory sizes for rifles
   id: 22
   time: '2024-10-08T16:48:12.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Tweak
+      message: Merged upstream 2024-10-12
+  id: 23
+  time: '2024-10-12T17:45:39.0000000+00:00'
