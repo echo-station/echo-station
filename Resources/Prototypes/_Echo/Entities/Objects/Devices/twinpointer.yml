@@ -20,7 +20,7 @@
 # Echo: Add left half of Twinpointer
 - type: entity
   name: twinpointer (left)
-  description: The left half of a pair of twinpointers. For when you're never in the right.
+  description: The left half of a pair of twinpointers. Great when you're never in the right.
   id: TwinPointerLeft
   parent: PinpointerBase
   components:
