@@ -272,6 +272,7 @@
       - id: ModularReceiver
       - id: WeaponFlareGun
       - id: BarberScissors
+      - id: TwinPointerBox # Echo: Added twinpointer to maints loot
       - !type:GroupSelector
         children:
         - id: DrinkSpaceGlue

@@ -139,6 +139,12 @@
             "name": "pinpointer-salvage"
         },
         {
+            "name": "twinpointer-left"
+        },
+        {
+            "name": "twinpointer-right"
+        },
+        {
             "name": "inhand-left",
             "directions": 4
         },
