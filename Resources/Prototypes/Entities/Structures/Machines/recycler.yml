@@ -90,7 +90,7 @@
   - type: Rotatable
   - type: Repairable
     doAfterDelay: 5
-    fuelCost: 25
+    fuelCost: 10
   - type: Destructible
     thresholds:
     - trigger:

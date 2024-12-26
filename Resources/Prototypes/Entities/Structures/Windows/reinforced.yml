@@ -9,7 +9,7 @@
   - type: Icon
     sprite: Structures/Windows/reinforced_window.rsi
   - type: Repairable
-    fuelCost: 10
+    fuelCost: 6
     doAfterDelay: 2
   - type: Damageable
     damageContainer: StructuralInorganic
