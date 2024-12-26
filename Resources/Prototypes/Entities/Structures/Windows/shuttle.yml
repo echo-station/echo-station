@@ -9,7 +9,7 @@
   - type: Icon
     sprite: Structures/Windows/shuttle_window.rsi
   - type: Repairable
-    fuelCost: 15
+    fuelCost: 10
     doAfterDelay: 3
   - type: Damageable
     damageContainer: StructuralInorganic
