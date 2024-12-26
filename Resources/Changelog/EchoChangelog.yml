@@ -149,3 +149,11 @@ Entries:
       message: Merged upstream 2024-10-12
   id: 23
   time: '2024-10-12T17:45:39.0000000+00:00'
+- author: redmushie
+  changes:
+    - type: Add
+      message: Added twinpointers, a pair of pinpointers that point at each other
+    - type: Tweak
+      message: Added twinpointers to maintenance loot table
+  id: 24
+  time: '2024-12-26T21:00:42.0000000+00:00'
